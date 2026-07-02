@@ -1,7 +1,7 @@
 import Navbar from "@/components/shared/Navbar";
 import MobNav from "@/components/shared/MobNav";
-import About from "@/components/sections/home/About";
-import Ecosystem from "@/components/sections/home/Ecosystem";
+// import About from "@/components/sections/home/About";
+import Ecosystem from "@/components/sections/about/Ecosystem";
 import Footer from "@/components/shared/Footer";
 import AboutMetrics from "@/components/sections/about/AboutMetrics";
 import OurStory from "@/components/sections/about/OurStory";

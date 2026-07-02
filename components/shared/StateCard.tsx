@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { ProjectData } from "/data/project";
+import { ProjectData } from "@/types";
 
 interface StateCardProps {
   project: ProjectData;
