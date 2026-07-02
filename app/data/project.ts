@@ -1,0 +1,88 @@
+import { ProjectData } from "@/types";
+
+export const projects: ProjectData[] = [
+  {
+    id: "gujarat",
+    stateName: "Gujarat",
+    number: "01",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop",
+    projectName: "Sabarmati Riverside",
+    type: "Mixed Use Development",
+    city: "Ahmedabad",
+    area: "4.2 Lac Sq.Ft.",
+    svgStateId: ["gujarat"],
+    cardPosition: "left",
+    connectorCoordinates: { mapX: 18, mapY: 38, cardSide: "left" },
+  },
+  {
+    id: "rajasthan",
+    stateName: "Rajasthan",
+    number: "02",
+    image:
+      "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=400&h=250&fit=crop",
+    projectName: "Pink City Towers",
+    type: "Luxury Residential",
+    city: "Jaipur",
+    area: "6.8 Lac Sq.Ft.",
+    svgStateId: ["rajasthan"],
+    cardPosition: "left",
+    connectorCoordinates: { mapX: 22, mapY: 28, cardSide: "left" },
+  },
+  {
+    id: "maharashtra",
+    stateName: "Maharashtra",
+    number: "03",
+    image:
+      "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=400&h=250&fit=crop",
+    projectName: "BKC Business Hub",
+    type: "Commercial Complex",
+    city: "Mumbai",
+    area: "12.5 Lac Sq.Ft.",
+    svgStateId: ["maharashtra"],
+    cardPosition: "left",
+    connectorCoordinates: { mapX: 22, mapY: 58, cardSide: "left" },
+  },
+  {
+    id: "karnataka",
+    stateName: "Karnataka",
+    number: "04",
+    image:
+      "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=400&h=250&fit=crop",
+    projectName: "Silicon Valley Park",
+    type: "IT & Tech Campus",
+    city: "Bengaluru",
+    area: "9.3 Lac Sq.Ft.",
+    svgStateId: ["karnataka"],
+    cardPosition: "right",
+    connectorCoordinates: { mapX: 30, mapY: 75, cardSide: "right" },
+  },
+  {
+    id: "telangana",
+    stateName: "Telangana",
+    number: "05",
+    image:
+      "https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=400&h=250&fit=crop",
+    projectName: "HITEC Nexus",
+    type: "Commercial Hub",
+    city: "Hyderabad",
+    area: "7.1 Lac Sq.Ft.",
+    svgStateId: ["telangana"],
+    cardPosition: "right",
+    connectorCoordinates: { mapX: 38, mapY: 65, cardSide: "right" },
+  },
+  {
+    id: "delhi",
+    stateName: "Delhi NCR",
+    number: "06",
+    image:
+      "https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?w=400&h=250&fit=crop",
+    projectName: "Connaught Square",
+    type: "Retail & Office",
+    city: "New Delhi",
+    area: "5.5 Lac Sq.Ft.",
+    svgStateId: ["delhi"],
+    cardPosition: "right",
+    connectorCoordinates: { mapX: 34, mapY: 20, cardSide: "right" },
+  },
+];
