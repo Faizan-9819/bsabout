@@ -51,12 +51,12 @@ const textVariants = {
   center: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
   exit: {
     opacity: 0,
     y: -20,
-    transition: { duration: 0.35, ease: "easeIn" as const },
+    transition: { duration: 0.35, ease: "easeIn" },
   },
 };
 
@@ -68,7 +68,7 @@ const cardVariants = {
     transition: {
       delay: 0.5 + i * 0.12,
       duration: 0.55,
-      ease: [0.22, 1, 0.36, 1] as const,
+      ease: "easeOut",
     },
   }),
 };
