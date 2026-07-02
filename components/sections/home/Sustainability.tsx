@@ -586,7 +586,7 @@ export default function Sustainability() {
       {/* ── CENTRAL STAGING VIEWPORT CANVAS LAYER ── */}
       <div className="relative fix flex flex-col items-center justify-end lg:h-[520px] xl:h-[500px]">
         {/* Giant Bottom-Centered Globe Graphic */}
-        <div className=" w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[850px] xl:max-w-[1250px] mx-auto lg:absolute lg:left-1/2 lg:bottom-[-45%] lg:-translate-x-1/2 z-0 pointer-events-none">
+        <div className="hidden sm: w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[850px] xl:max-w-[1250px] mx-auto lg:absolute lg:left-1/2 lg:bottom-[-45%] lg:-translate-x-1/2 z-0 pointer-events-none">
           <motion.img
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -616,3 +616,5 @@ export default function Sustainability() {
     </section>
   );
 }
+
+//s
