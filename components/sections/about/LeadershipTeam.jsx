@@ -11,27 +11,27 @@ const TEAM_MEMBERS = [
   {
     name: "Rohan Latad",
     role: "Co-Founder & Director",
-    image: "/about/team/team1.webp", // Update paths to match your assets directory
+    image: "/about/Team/team1.webp", // Update paths to match your assets directory
     bio: "Over 15 years of experience in industrial infrastructure development, with leadership across more than 30 million sq. ft. of warehousing and industrial real estate projects.",
     linkedin: "#",
   },
   {
     name: "Pankaj Kakde",
     role: "Co-Founder & Director",
-    image: "/about/team/team2.webp",
+    image: "/about/Team/team2.webp",
     bio: "Specialist in master planning, design engineering, and project execution with over 25 years of experience across industrial, logistics, CFS, SEZ, and port-led infrastructure developments.",
     linkedin: "#",
   },
   {
     name: "Nitin Mumbaikar",
     role: "Co-Founder & Director",
-    image: "/about/team/team3.webp",
+    image: "/about/Team/team3.webp",
     bio: "Infrastructure and engineering leader with over 25 years of experience delivering large-scale industrial and logistics developments spanning master planning, execution, and asset creation.",
     linkedin: "#",
   },
 ];
 
-export default function   LeadershipTeam() {
+export default function LeadershipTeam() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
 
@@ -51,7 +51,7 @@ export default function   LeadershipTeam() {
       {/* Global Framework Width Constraint */}
 
       <img
-        src="/about/team/teambg.webp"
+        src="/about/Team/teambg.webp"
         className="absolute inset-0 -z-10 w-full h-full object-cover pointer-events-none"
         alt=""
       />
