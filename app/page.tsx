@@ -25,14 +25,14 @@ export default function Home() {
       <Map />
       <BuildspaceModel />
       {/* {/* <PortfolioSection /> */}
-      <ProjectSpotlights />
+      {/* <ProjectSpotlights /> */}
       {/* <Developments /> */}
-      <LifestyleValueW />
+      {/* <LifestyleValueW />
       <Industries />
       <Sustainability />
       <Insights />
       <Ecosystem />
-      <Footer /> */}
+      <Footer />  */}
     </main>
   );
 }
