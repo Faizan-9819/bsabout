@@ -217,6 +217,103 @@
 //   );
 // }
 
+// "use client";
+
+// import React from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const slideData = {
+//   bg: "/about/hero/hero1.webp",
+//   eyebrow: "About BuildSpace",
+//   headline: "Building Infrastructure.",
+//   sub: "Creating Value.",
+//   sub2: "Enabling Growth.",
+// };
+
+// const textVariants = {
+//   enter: { opacity: 0, y: 28 },
+//   center: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { duration: 0.6, ease: "easeOut" },
+//   },
+//   exit: {
+//     opacity: 0,
+//     y: -20,
+//     transition: { duration: 0.35, ease: "easeIn" },
+//   },
+// };
+
+// export default function Hero() {
+//   return (
+//     <section className="relative w-full h-screen overflow-hidden bg-[#001433]">
+//       {/* Background Media Slot */}
+//       <div className="absolute inset-0">
+//         <div className="relative w-full h-full">
+//           <img
+//             src={slideData.bg}
+//             alt=""
+//             className="absolute inset-0 w-full h-full object-cover object-center"
+//             draggable={false}
+//           />
+//         </div>
+//       </div>
+
+//       {/* Full-height layout engine */}
+//       <div className="relative z-10 h-full flex items-end xl:items-stretch fix">
+//         {/* Main Content Layout Block */}
+//         <div className="flex flex-col justify-end xl:justify-center pb-[104px] xl:pb-0 flex-1 min-w-0 xl:pr-16">
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               initial="enter"
+//               animate="center"
+//               exit="exit"
+//               className="flex flex-col gap-5 mb-8 xl:mb-10"
+//             >
+//               <motion.p
+//                 variants={textVariants}
+//                 className="eyebrow text-white/60"
+//               >
+//                 {slideData.eyebrow}
+//               </motion.p>
+
+//               <motion.h1
+//                 variants={textVariants}
+//                 className="text-white font-bold md:leading-[1.15] leading-[1] tracking-[-1.6px]"
+//                 style={{ fontSize: "clamp(36px, 4.5vw, 60px)" }}
+//               >
+//                 {slideData.headline}
+//                 <br />
+//                 <span className="font-light text-white/80">
+//                   {slideData.sub}
+//                 </span>
+//                 <br />
+//                 {slideData.sub2}
+//               </motion.h1>
+//             </motion.div>
+//           </AnimatePresence>
+//         </div>
+//       </div>
+
+//       {/* BUILD watermark */}
+//       <div
+//         className="absolute bottom-0 left-0 plcont lg:-ml-4 select-none pointer-events-none font-extrabold leading-none"
+//         style={{
+//           fontSize: "clamp(100px, 18vw, 250px)",
+//           background:
+//             "linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 80%, rgba(255,255,255,0) 100%)",
+//           WebkitBackgroundClip: "text",
+//           WebkitTextFillColor: "transparent",
+//           transform: "translateY(12%)",
+//         }}
+//         aria-hidden
+//       >
+//         ABOUT
+//       </div>
+//     </section>
+//   );
+// }
+
 "use client";
 
 import React from "react";
@@ -279,7 +376,7 @@ export default function Hero() {
 
               <motion.h1
                 variants={textVariants}
-                className="text-white font-bold leading-[1.15] tracking-[-1.6px]"
+                className="text-white font-bold md:leading-[1.15] leading-[1] tracking-[-1.6px]"
                 style={{ fontSize: "clamp(36px, 4.5vw, 60px)" }}
               >
                 {slideData.headline}
@@ -295,20 +392,36 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* BUILD watermark */}
+      {/* BUILD watermark Container with Responsive Breadcrumb added */}
       <div
         className="absolute bottom-0 left-0 plcont lg:-ml-4 select-none pointer-events-none font-extrabold leading-none"
-        style={{
-          fontSize: "clamp(100px, 18vw, 250px)",
-          background:
-            "linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 80%, rgba(255,255,255,0) 100%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          transform: "translateY(12%)",
-        }}
-        aria-hidden
+        style={{ transform: "none" }} /* Keeps layout predictable */
       >
-        ABOUT
+        {/* Responsive Breadcrumb Text sitting safely over the watermark */}
+        <div className="fix absolute md:bottom-12 bottom-28 xl:pl-6! 2xl:pl-8  tracking-[0.2em] font-medium text-white/50 uppercase text-[10px] md:text-xs">
+          Home &gt; About
+        </div>
+
+        {/* Original Big ABOUT Watermark element */}
+        {/* <div
+          style={{
+            fontSize: "clamp(100px, 18vw, 250px)",
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 80%, rgba(255,255,255,0) 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            transform: "translateY(12%)",
+          }}
+          aria-hidden
+        >
+          ABOUT
+        </div> */}
+        <div
+          className="select-none pointer-events-none font-extrabold leading-none text-transparent bg-clip-text bg-gradient-to-b from-white/22 via-white/10 to-transparent md:from-white/12! md:via-white/3! md:via-[90%] md:to-transparent  text-[88px] md:text-[clamp(100px,18vw,250px)] translate-y-[12%]"
+          aria-hidden
+        >
+          ABOUT
+        </div>
       </div>
     </section>
   );

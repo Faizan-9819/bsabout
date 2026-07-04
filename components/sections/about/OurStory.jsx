@@ -35,7 +35,7 @@ export default function OurStory() {
             Our Story
           </div>
           {/* Main Section Heading */}
-          <h1 className="md:text-[56px] text-[26px] leading-tighter md:leading-[59.92px] tracking-[-1.568px]">
+          <h1 className="md:text-[56px] text-[26px] leading-[1.1] md:leading-[59.92px] tracking-[-0.995px] md:tracking-[-1.568px]">
             <span className=" font-bold bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent ">
               From Opportunity
             </span>{" "}

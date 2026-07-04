@@ -64,7 +64,7 @@ export default function LeadershipTeam() {
             Leadership Team
           </div>
 
-          <h2 className="text-h1 text-[#E27244]! text-[56px] font-bold tracking-[-1.568px] leading-[110%] text-navy mb-5">
+          <h2 className="text-h1 text-[#E27244]! text-[56px] font-bold tracking-[-1.568px] leading-[1.08] md:leading-[110%] text-navy mb-5">
             Built by people who have shaped <br /> industrial infrastructure at
             scale.
           </h2>
@@ -104,7 +104,7 @@ export default function LeadershipTeam() {
           >
             {TEAM_MEMBERS.map((member, index) => (
               <SwiperSlide key={index} className="h-auto flex ">
-                <div className="w-full bg-[#fcfbfa] border border-[#f3efe8] rounded-[20px] p-[15px] flex flex-col justify-between transition-all duration-300  group">
+                <div className="w-full bg-[#fff] border border-[#fff] shadow-[0_0_63px_0_rgba(0,20,51,0.06)] rounded-[20px] p-[15px] flex flex-col justify-between transition-all duration-300  group">
                   <div>
                     {/* Portrait Image Block Container */}
                     <div className="w-full aspect-[4/3] md:h-[370px] rounded-[14px] overflow-hidden mb-6 bg-[#eae6df]">
@@ -135,7 +135,7 @@ export default function LeadershipTeam() {
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex text-[13px] px-[8px] leading-normal  font-body font-medium text-[#E27244] hover:text-orange/80 underline underline-offset-4 decoration-1 mt-auto w-max"
+                    className="inline-flex text-[13px] px-[8px] leading-normal font-semibold font-body font-medium text-[#E27244] hover:text-orange/80 underline underline-offset-4 decoration-1 mt-auto w-max"
                   >
                     Connect on LinkedIn
                   </a>

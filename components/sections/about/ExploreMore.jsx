@@ -44,11 +44,11 @@ export default function ExploreMore() {
           {CARDS.map((card, index) => (
             <div
               key={index}
-              className="w-[calc(50%-16px)] max-sm:w-full bg-[#fcfbfa] border border-[#f3efe8] rounded-[24px] p-6 max-sm:p-5 flex flex-col justify-between transition-all duration-300  group"
+              className="w-[calc(50%-16px)] max-sm:w-full bg-[#FFF] border border-[0.8px] border-[#ECE8E0] rounded-[24px] p-6 max-sm:p-5 flex flex-col justify-between transition-all duration-300  group"
             >
               <div>
                 {/* Visual Thumbnail Frame */}
-                <div className="w-full aspect-[16/10] rounded-[16px] overflow-hidden mb-12 bg-[#eae6df]">
+                <div className="w-full aspect-[16/10] rounded-[16px] overflow-hidden mb-5 md:mb-12 bg-[#eae6df]">
                   <img
                     src={card.image}
                     alt={card.tag}
@@ -58,12 +58,12 @@ export default function ExploreMore() {
                 </div>
 
                 {/* Info Text Stack */}
-                <h3 className="text-[27px] font-bold leading-normal text-[#222] mb-10">
+                <h3 className="md:text-[27px]  font-bold leading-normal text-[#222] md:mb-10 mb-3 ">
                   {card.tag}
                 </h3>
 
                 <p
-                  className="text-body font-body text-charcoal/70 leading-[var(--lh-body)] mb-8 max-sm:mb-6"
+                  className="text-body font-body text-charcoal/70 leading-[var(--lh-body)] md:mb-8 mb-4 max-sm:mb-6"
                   dangerouslySetInnerHTML={{ __html: card.description }}
                 >
                   {/* {card.description}  */}
@@ -73,7 +73,7 @@ export default function ExploreMore() {
               {/* Action Redirection Anchor */}
               <a
                 href={card.linkUrl}
-                className="inline-flex items-center gap-2  hover:gap-3 transition-all duration-200 mt-auto w-max text-[#E27244] text-[15.5px]!"
+                className="inline-flex items-center gap-2 font-semibold  hover:gap-3 transition-all duration-200 mt-auto w-max text-[#E27244] text-[15.5px]!"
               >
                 {card.linkText}
                 <ArrowRight size={16} strokeWidth={2} />
