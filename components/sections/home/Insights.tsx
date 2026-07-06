@@ -367,7 +367,7 @@ const img1 = "/home/insights/insight1.webp";
 const img2 = "/home/insights/insight2.webp";
 const img3 = "/home/insights/insight3.webp";
 const img4 = "/home/insights/insight4.webp";
-const img5 = "/home/insights/insight4.webp";
+const img5 = "/home/insights/insight5.webp";
 
 const articles = [
   {
