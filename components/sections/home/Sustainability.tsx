@@ -164,7 +164,8 @@ export default function Sustainability() {
       {/* ── CENTRAL STAGING VIEWPORT CANVAS LAYER ── */}
       <div className="relative fix flex flex-col items-center justify-end lg:h-[520px] xl:h-[500px]">
         {/* Giant Bottom-Centered Globe Graphic */}
-        <div className="hidden sm:block w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[850px] xl:max-w-[1250px] mx-auto lg:absolute lg:left-1/2 lg:bottom-[-45%] lg:-translate-x-1/2 z-0 pointer-events-none">
+        <div className="hidden sm:block fix lg:absolute lg:left-1/2 lg:bottom-[-45%] lg:-translate-x-1/2 z-0 pointer-events-none">
+          {/* <div className="hidden sm:block w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[850px] xl:max-w-[1250px] mx-auto lg:absolute lg:left-1/2 lg:bottom-[-45%] lg:-translate-x-1/2 z-0 pointer-events-none"> */}
           <motion.img
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -189,7 +190,7 @@ export default function Sustainability() {
         </div>
 
         {/* Floating Matrix Overlay Controls */}
-        <div className="sm:pt-0 pt-4 w-full flex flex-col items-center gap-6 lg:absolute lg:inset-x-0 lg:bottom-4 xl:bottom-12 lg:flex-row lg:justify-between lg:px-12 xl:px-16 z-10 pointer-events-none">
+        <div className="sm:pt-0 pt-4 w-full flex flex-col items-center gap-6 lg:absolute lg:inset-x-0 lg:bottom-4 xl:bottom-12 lg:flex-row lg:justify-between  z-10 pointer-events-none">
           {/* LEFT COLUMN MATRIX STACK (Cards 01 & 02 shifted slightly upwards on desktop layout) */}
           <div className="w-full lg:w-auto flex flex-col gap-5 sm:gap-6 pointer-events-auto items-center lg:items-start lg:max-w-[380px] xl:max-w-[420px] lg:-translate-y-12">
             <PillarCard pillar={pillars[0]} index={0} />

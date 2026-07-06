@@ -201,7 +201,7 @@ export default function FullLifecycleApproach() {
     <section
       ref={sectionRef}
       id="lifecycle"
-      className="relative bg-[url('/home/footer/bsfbg.webp')] bg-cover bg-center bg-no-repeat py-[80px] lg:py-[100px] text-white"
+      className="relative bg-[url('/home/footer/bsfbg.webp')] bg-cover bg-center bg-no-repeat py-[50px] lg:py-[100px] text-white"
     >
       <div className="fix">
         {/* ── Header Block ── */}
@@ -242,7 +242,7 @@ export default function FullLifecycleApproach() {
             engineered in from the start.
           </p> */}
           <Btn
-            className="bg-[#F56E6A]!"
+            className="bg-[#F56E6A]! hidden lg:block"
             label="Explore Our Approach"
             icon="arrow-right"
           />

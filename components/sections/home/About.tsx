@@ -36,7 +36,7 @@ export default function About() {
       <div className="absolute inset-y-0 left-1/2 w-px bg-[rgba(0,59,157,0.05)] -translate-x-1/2 hidden lg:block" />
 
       {/* Content */}
-      <div className="relative z-10 fix py-[60px] md:py-[90px] lg:py-[70px] w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8">
+      <div className="relative z-10 fix py-[50px] md:py-0 ">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Left col — headline */}
           <div className="flex flex-col gap-7 w-full lg:w-1/2">

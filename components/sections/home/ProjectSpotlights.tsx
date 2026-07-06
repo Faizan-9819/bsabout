@@ -9,7 +9,7 @@ const initialProjectsData = [
     id: 1,
     tag: "SAHAKAR LOGISTICS",
     title: "Sahakar Logistics Park - Bhiwandi, Mumbai",
-    desc: "Development of industrial and logistics infrastructure supporting occupier readiness, operational efficiency, and long-term value creation.",
+    desc: "42-acre Grade-A logistics park, master-planned and delivered end to end through integrated development management.",
     image1: "/log1.webp",
   },
   {
@@ -57,11 +57,11 @@ export default function ProjectSpotlights() {
   };
 
   return (
-    <section className="relative bg-[url('/home/Spotlight/bgspot.webp')] bg-cover bg-center overflow-hidden py-16 lg:py-24 font-sans select-none">
+    <section className="relative bg-[url('/home/Spotlight/bgspot.webp')] bg-cover bg-center overflow-hidden py-[50px] lg:py-[100px] font-sans select-none">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none custom-topo-lines" />
 
       {/* 💡 Added default bounding layout pads to prevent component edge clipping on mobile viewports */}
-      <div className="relative z-10 px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="relative z-10 fix">
         {/* Eyebrow */}
         <div className="mb-6 flex items-center gap-2">
           <div className="h-px w-6 bg-[#e27244]" />
@@ -168,16 +168,16 @@ export default function ProjectSpotlights() {
                       </p>
                     </div>
 
-                    <div className="mt-6 pt-2">
-                      <a
+                    <div className="mt-6 flex gap-[9px] pt-2 ">
+                      {/* <a
                         href="#"
                         className="inline-flex items-center gap-2.5 text-[12px] font-bold text-[#003b9d] group"
-                      />
+                      /> */}
                       <span className="group-hover:underline decoration-2 underline-offset-4 transition-all">
                         View Case Study
                       </span>
-                      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#003b9d] text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                        <ArrowUpRight size={12} strokeWidth={2.5} />
+                      <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#003b9d] text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                        <ArrowUpRight size={17} strokeWidth={2.5} />
                       </div>
                     </div>
                   </div>

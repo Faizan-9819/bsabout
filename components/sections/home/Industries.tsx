@@ -368,7 +368,7 @@ export default function Industries() {
     setIndStart((prev) => Math.min(industries.length - 1, prev + 1));
   };
   return (
-    <section id="industries" className="bg-white py-[80px] lg:py-[100px]">
+    <section id="industries" className="bg-white py-[50px] lg:py-[100px]">
       <div className="fix">
         {/* Header */}
         {/* <motion.div

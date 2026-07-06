@@ -20,14 +20,14 @@ const verticals = [
   {
     name: "Build",
     bold: "VALUE",
-    img: imgValue,
+    img: imgWealth,
     href: "#model",
     desc: "Unlocking land value for owners, operators, and investors.",
   },
   {
     name: "Build",
     bold: "WEALTH",
-    img: imgWealth,
+    img: imgValue,
     href: "#model",
     desc: "Long-term participation in industrial growth.",
   },
@@ -46,7 +46,7 @@ export default function Ecosystem() {
   return (
     <section
       id="ecosystem"
-      className="relative overflow-hidden py-[78px] lg:py-[84px]"
+      className="relative overflow-hidden py-[50px] lg:py-[100px]"
     >
       {/* Background image with dark overlay */}
       <div className="absolute inset-0">

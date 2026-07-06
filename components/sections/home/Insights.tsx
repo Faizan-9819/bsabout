@@ -443,7 +443,7 @@ export default function Insights() {
   return (
     <section
       id="insights"
-      className="bg-white py-[80px] lg:py-[100px] overflow-hidden"
+      className="bg-white py-[50px] lg:py-[100px] overflow-hidden"
     >
       <div className="fix">
         {/* Header row */}

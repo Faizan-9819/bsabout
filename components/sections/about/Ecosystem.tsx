@@ -20,14 +20,14 @@ const verticals = [
   {
     name: "Build",
     bold: "VALUE",
-    img: imgValue,
+    img: imgWealth,
     href: "#model",
     desc: "Unlocking land value for owners, operators, and investors.",
   },
   {
     name: "Build",
     bold: "WEALTH",
-    img: imgWealth,
+    img: imgValue,
     href: "#model",
     desc: "Long-term participation in industrial growth.",
   },

@@ -588,9 +588,9 @@ export default function BuildspaceModel() {
   return (
     <section
       id="model"
-      className="bg-[#fafaf8] py-[80px] lg:py-[100px] overflow-hidden"
+      className="bg-[#fafaf8] py-[50px] lg:py-[100px] overflow-hidden"
     >
-      <div className="fix px-4 max-w-[1440px] mx-auto">
+      <div className="fix mx-auto">
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[200px] mb-[56px] lg:mb-[64px]">
           <motion.div
