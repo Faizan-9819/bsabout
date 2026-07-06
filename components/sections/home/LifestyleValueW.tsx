@@ -9,61 +9,61 @@ import {
   Variants,
 } from "framer-motion";
 import { ArrowLeft, Plus, Minus } from "lucide-react";
+import Btn from "@/components/shared/Btn";
 
 const stages = [
   {
     num: "01",
-    title: "Opportunity Identification",
-    desc: "Sourcing development opportunities in high-demand industrial and logistics corridors.",
-    strategicValue: "Exposure originates in genuine, demand-backed locations.",
-    image: "/wealth/w1.jpg",
+    title: "Land Identification & Feasibility",
+    desc: "Corridor and catchment analysis, parcel due diligence, and infrastructure proximity scoring to establish what a site can become.",
+    strategicValue:
+      "De-risks the location decision before capital is committed.",
+    image: "/home/lifecycle/lifecycle1.webp",
   },
   {
     num: "02",
-    title: "Feasibility & Evaluation",
-    desc: "Technical, commercial, and risk evaluation to confirm the asset thesis before capital commitment.",
-    strategicValue: "Conviction is earned through diligence, not assumed.",
-    image: "/wealth/OpportunityIdentification.jpg",
+    title: "Master Planning & Design",
+    desc: "Highest-use planning, parcelisation, utility envelope, and circulation design built around operational reality and future expansion",
+    strategicValue: "Plans the asset around performance, not just footprint.",
+    image: "/home/lifecycle/lifecycle1.webp",
   },
   {
     num: "03",
-    title: "Development Strategy",
-    desc: "Defining the optimal asset type, scale, and structure for the corridor and the capital.",
+    title: "Approvals & Compliance",
+    desc: "Zoning, environmental, and statutory clearances managed proactively through a live compliance matrix, run parallel to engineering.",
     strategicValue:
-      "A clear path from opportunity to a defined, investable asset.",
-    image: "/wealth/feas.jpg",
+      " Stops approvals from becoming the critical-path bottleneck.",
+    image: "/home/lifecycle/lifecycle1.webp",
   },
   {
     num: "04",
-    title: "Infrastructure Creation",
-    desc: "Developing the asset to Grade-A standard through BuildSpace's integrated development management.",
+    title: "Engineering & Development",
+    desc: "Civil, structural, MEP, and external infrastructure packages coordinated under a single development framework",
     strategicValue:
-      "Quality and basis controlled at source — built, not bought at a premium.",
-    image: "/wealth/DevelopmentStrategy.jpg",
+      " Builds constructibility and scalability in from the start.",
+    image: "/home/lifecycle/lifecycle1.webp",
   },
   {
     num: "05",
-    title: "Occupier Alignment",
-    desc: "Securing credible, long-term occupiers that underwrite the asset's income.",
+    title: "Construction & Handover",
+    desc: "Multi-contractor execution coordinated under integrated development management, built to spec, time, and budget.",
     strategicValue:
-      "Income durability through quality tenancy — the asset begins to perform.",
-    image: "/wealth/wl.jpg",
+      "One partner owns the outcome, not just a construction scope.",
+    image: "/home/lifecycle/lifecycle1.webp",
   },
   {
     num: "06",
-    title: "Asset Stabilisation",
-    desc: "Bringing the asset to stabilised, income-producing performance.",
-    strategicValue:
-      "A de-risked, cash-generating asset with an established track record.",
-    image: "/wealth/f2.jpg",
+    title: "Marketing & leasing",
+    desc: "Positioning the developed asset within its corridor and attracting credible, long-term occupiers aligned to its performance.",
+    strategicValue: "Converts a built asset into a performing one.",
+    image: "/home/lifecycle/lifecycle1.webp",
   },
   {
     num: "07",
-    title: "Long-Term Asset Management",
-    desc: "Lifecycle stewardship — optimisation, capital-cycle planning, and sustained value creation.",
-    strategicValue:
-      "Performance compounds, with ownership and alignment held throughout.",
-    image: "/wealth/AssetStabilisation.jpg",
+    title: "Asset Management & Value Creation",
+    desc: "Supporting long-term asset performance through optimisation, lifecycle planning, and strategic asset stewardship.",
+    strategicValue: "Sustains and compounds returns over time.",
+    image: "/home/lifecycle/lifecycle1.webp",
   },
 ];
 
@@ -217,19 +217,20 @@ export default function FullLifecycleApproach() {
             <div className="flex items-center mb-4">
               <div className="h-[2px] w-6 bg-white me-2" />
               <span className="text-[12px] font-semibold tracking-[2px] uppercase text-white">
-                LIFECYCLE
+                One Development Platform. Three Stakeholder Journeys.
               </span>
             </div>
             <h2
-              className="font-bold text-white leading-[1.1] tracking-[-1.3px]"
-              style={{ fontSize: "clamp(28px, 3.8vw, 44px)" }}
+              className="font-bold text-white leading-[1.1] tracking-[-1.3px] text-[28px] md:text-[38px]"
+              // style={{ fontSize: "clamp(28px, 3.8vw, 44px)" }}
             >
-              From land to long-term value{" "}
-              <br className="hidden lg:inline-block" />A continuous process.
+              Partnering with occupiers, landowners &
+              <br className="hidden lg:inline-block" />
+              investors across the entire asset lifecycle
             </h2>
           </motion.div>
 
-          <p className="lg:text-[18px] text-[14px] leading-[140%]">
+          {/* <p className="lg:text-[18px] text-[14px] leading-[140%]">
             Investment-grade assets aren't found — they're developed.{" "}
             <br className="hidden lg:inline-block" />
             BuildWEALTH applies the full BuildSpace lifecycle to create assets{" "}
@@ -239,7 +240,12 @@ export default function FullLifecycleApproach() {
             accountable process so capital participates in quality that is{" "}
             <br className="hidden lg:inline-block" />
             engineered in from the start.
-          </p>
+          </p> */}
+          <Btn
+            className="bg-[#F56E6A]!"
+            label="Explore Our Approach"
+            icon="arrow-right"
+          />
         </div>
 
         {/* ── ======================================================== ── */}

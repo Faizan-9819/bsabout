@@ -31,17 +31,17 @@ const slides = [
 const navCards = [
   {
     bold: "INFRA",
-    img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80",
+    img: "/home/Spotlight/infra.jpg",
     href: "/infra",
   },
   {
-    bold: "WEALTH",
-    img: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&q=80",
+    bold: "VALUE",
+    img: "/home/Spotlight/value.webp",
     href: "/wealth",
   },
   {
-    bold: "VALUE",
-    img: "https://www.figma.com/api/mcp/asset/ff139710-2a2e-4328-a425-cb2a4354ed8a",
+    bold: "WEALTH",
+    img: "/home/Spotlight/wealth.webp",
     href: "/value",
   },
 ];

@@ -363,16 +363,11 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-const img1 =
-  "https://www.figma.com/api/mcp/asset/38d6db67-758d-44d4-8f53-18677632af81";
-const img2 =
-  "https://www.figma.com/api/mcp/asset/36ed8db7-2022-4c1e-8209-3d00967058fc";
-const img3 =
-  "https://www.figma.com/api/mcp/asset/1c3b7cb5-20a1-46f2-829f-d5286ad6bcc8";
-const img4 =
-  "https://www.figma.com/api/mcp/asset/0bc793ac-d527-46e1-95ef-ecdf9a953ea3";
-const img5 =
-  "https://www.figma.com/api/mcp/asset/95d5a61e-241f-4cbe-bdc5-213534f5f9fd";
+const img1 = "/home/insights/insight1.webp";
+const img2 = "/home/insights/insight2.webp";
+const img3 = "/home/insights/insight3.webp";
+const img4 = "/home/insights/insight4.webp";
+const img5 = "/home/insights/insight4.webp";
 
 const articles = [
   {

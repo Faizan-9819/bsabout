@@ -533,10 +533,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
-const imgInfra =
-  "https://www.figma.com/api/mcp/asset/2ee1a2a9-1a6b-43db-8207-8839f931d669";
-const imgInfra2 =
-  "https://www.figma.com/api/mcp/asset/8b6e8d84-d348-4782-8581-73c5ea3d0284";
+const imgInfra = "/home/bsmodel/imgInfra.webp";
+const imgInfra2 = "/home/bsmodel/imgInfra.webp";
 
 const rows = [
   {
