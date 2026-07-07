@@ -299,7 +299,7 @@ export default function BuildSpaceHero() {
         {/* Decorative Large Text (Right Side on Desktop / Horizontal at Bottom on Mobile) */}
         <div className="pointer-events-none select-none w-full md:w-auto flex justify-start md:justify-end">
           <h2
-            className="flex flex-row md:flex-col items-center text-[64px] sm:text-[80px] md:text-[120px] font-extrabold leading-none md:leading-[0.82] tracking-normal md:tracking-[-4px] uppercase select-none pointer-events-none"
+            className="flex flex-row mt-20 md:flex-col items-center text-[64px] sm:text-[80px] md:text-[120px] font-extrabold leading-none md:leading-[0.82] tracking-normal md:tracking-[-4px] uppercase select-none pointer-events-none"
             style={{
               background:
                 "linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.28) 52%, rgba(255, 255, 255, 0.20) 100%)",

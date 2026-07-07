@@ -56,7 +56,7 @@ const Second = () => {
                 <h2 className="text-[20px] lg:text-[30px] font-bold tracking-tight text-white mb-2">
                   {box.value}
                 </h2>
-                <p className="text-[11px] tracking-widest text-white/80 pt-4 uppercase font-medium leading-relaxed max-w-[240px]">
+                <p className="text-[11px] tracking-widest text-white/80 pt-4 uppercase font-medium leading-relaxed max-w-[220px]">
                   {box.label}
                 </p>
               </div>

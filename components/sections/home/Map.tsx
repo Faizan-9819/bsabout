@@ -1408,46 +1408,6 @@ function StateMarker({
   );
 }
 
-// function StateItem({
-//   state,
-//   active,
-//   onClick,
-// }: {
-//   state: StateData;
-//   active: boolean;
-//   onClick: () => void;
-// }) {
-//   return (
-//     <motion.button
-//       onClick={onClick}
-//       whileHover={{ scale: 1.01 }}
-//       className={`w-full flex items-center gap-3 px-4 h-14 rounded-2xl bg-white transition-all duration-200 text-left ${
-//         active
-//           ? "border border-[#FF6F69] shadow-lg shadow-[#FF6F69]/10"
-//           : "border border-transparent shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:shadow-md"
-//       }`}
-//       aria-pressed={active}
-//     >
-//       <span
-//         className={`w-8 h-8 rounded-full border flex items-center justify-center flex-shrink-0 text-[11px] font-medium transition-colors duration-200 ${
-//           active
-//             ? "border-[#FF6F69] text-[#FF6F69]"
-//             : "border-gray-300 text-gray-500"
-//         }`}
-//       >
-//         {String(state.count).padStart(2, "0")}
-//       </span>
-//       <span className="flex-1 text-[14px] font-medium text-[#111]">
-//         {state.name}
-//       </span>
-//       <ChevronDown
-//         size={16}
-//         className={`text-gray-400 transition-transform duration-200 ${active ? "-rotate-180" : ""}`}
-//       />
-//     </motion.button>
-//   );
-// }
-
 interface AssetData {
   image: string;
   title: string;
@@ -1463,174 +1423,348 @@ interface StateData {
   assets: AssetData[];
 }
 
-export function StateItem({
-  state,
-  active,
-  onClick,
-}: {
-  state: StateData;
-  active: boolean;
-  onClick: () => void;
-}) {
-  const [assetIdx, setAssetIdx] = useState(0);
-  const asset = state.assets?.[assetIdx] ?? state.assets?.[0];
+// export function StateItem({
+//   state,
+//   active,
+//   onClick,
+// }: {
+//   state: StateData;
+//   active: boolean;
+//   onClick: () => void;
+// }) {
+//   const [assetIdx, setAssetIdx] = useState(0);
+//   const asset = state.assets?.[assetIdx] ?? state.assets?.[0];
 
-  return (
-    <motion.div
-      layout
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      style={{
-        width: "322px",
-        // FIX: Forces this card to sit on top of everything else when opened
-        zIndex: active ? 50 : 10,
-        position: "relative",
-      }}
-      className={`bg-white rounded-[24px] overflow-hidden border transition-all duration-200 ${
-        active
-          ? "border-[#FF6F69] shadow-xl shadow-[#FF6F69]/10"
-          : "border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-md"
-      }`}
-    >
-      {/* Header Row: Locked at exactly 67px height */}
-      <button
-        type="button"
-        onClick={onClick}
-        style={{ height: "67px" }}
-        className="w-full flex items-center gap-3.5 px-5 text-left relative focus:outline-none"
-        aria-pressed={active}
-      >
-        {/* Number Circle */}
-        <span
-          className={`w-9 h-9 rounded-full border flex items-center justify-center flex-shrink-0 text-[12px] font-medium transition-colors duration-200 ${
-            active
-              ? "border-[#FF6F69] text-[#FF6F69]"
-              : "border-gray-200 text-gray-400"
-          }`}
-        >
-          {String(state.count).padStart(2, "0")}
-        </span>
+//   return (
+//     <motion.div
+//       layout
+//       // Explicitly control zIndex transition so it applies instantly before layout shifts
+//       transition={{
+//         type: "spring",
+//         stiffness: 300,
+//         damping: 30,
+//         zIndex: { duration: 0 },
+//       }}
+//       style={{
+//         width: "322px",
+//         position: "relative",
+//         // Force high priority z-index directly into the motion engine layout context
+//         zIndex: active ? 99 : 1,
+//       }}
+//       className={`bg-white rounded-[24px] overflow-hidden border transition-all duration-200 ${
+//         active
+//           ? "border-[#FF6F69] shadow-xl shadow-[#FF6F69]/10"
+//           : "border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-md"
+//       }`}
+//     >
+//       {/* Header Row: Locked at exactly 67px height */}
+//       <button
+//         type="button"
+//         onClick={onClick}
+//         style={{ height: "67px" }}
+//         className="w-full flex items-center gap-3.5 px-5 text-left relative focus:outline-none"
+//         aria-pressed={active}
+//       >
+//         {/* Number Circle */}
+//         <span
+//           className={`w-9 h-9 rounded-full border flex items-center justify-center flex-shrink-0 text-[12px] font-medium transition-colors duration-200 ${
+//             active
+//               ? "border-[#FF6F69] text-[#FF6F69]"
+//               : "border-gray-200 text-gray-400"
+//           }`}
+//         >
+//           {String(state.count).padStart(2, "0")}
+//         </span>
 
-        {/* State Name */}
-        <span className="flex-1 text-[16px] font-medium text-gray-800 tracking-wide">
-          {state.name}
-        </span>
+//         {/* State Name */}
+//         <span className="flex-1 text-[16px] font-medium text-gray-800 tracking-wide">
+//           {state.name}
+//         </span>
 
-        {/* Pagination Controls inside the header if active */}
-        <AnimatePresence>
-          {active && state.assets?.length > 1 && (
-            <motion.div
-              initial={{ opacity: 0, x: 5 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 5 }}
-              className="flex items-center gap-1 mr-1"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                type="button"
-                onClick={() => setAssetIdx((i) => Math.max(0, i - 1))}
-                disabled={assetIdx === 0}
-                className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
-              >
-                <ArrowLeft size={12} />
-              </button>
-              <button
-                type="button"
-                onClick={() =>
-                  setAssetIdx((i) => Math.min(state.assets.length - 1, i + 1))
-                }
-                disabled={assetIdx === state.assets.length - 1}
-                className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
-              >
-                <ArrowRight size={12} />
-              </button>
-            </motion.div>
-          )}
-        </AnimatePresence>
+//         {/* Pagination Controls inside the header if active */}
+//         <AnimatePresence>
+//           {active && state.assets?.length > 1 && (
+//             <motion.div
+//               initial={{ opacity: 0, x: 5 }}
+//               animate={{ opacity: 1, x: 0 }}
+//               exit={{ opacity: 0, x: 5 }}
+//               className="flex items-center gap-1 mr-1"
+//               onClick={(e) => e.stopPropagation()}
+//             >
+//               <button
+//                 type="button"
+//                 onClick={() => setAssetIdx((i) => Math.max(0, i - 1))}
+//                 disabled={assetIdx === 0}
+//                 className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
+//               >
+//                 <ArrowLeft size={12} />
+//               </button>
+//               <button
+//                 type="button"
+//                 onClick={() =>
+//                   setAssetIdx((i) => Math.min(state.assets.length - 1, i + 1))
+//                 }
+//                 disabled={assetIdx === state.assets.length - 1}
+//                 className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
+//               >
+//                 <ArrowRight size={12} />
+//               </button>
+//             </motion.div>
+//           )}
+//         </AnimatePresence>
 
-        {/* Chevron Arrow */}
-        <ChevronDown
-          size={18}
-          className={`text-gray-400 transition-transform duration-200 flex-shrink-0 ${
-            active ? "-rotate-180" : ""
-          }`}
-        />
-      </button>
+//         {/* Chevron Arrow */}
+//         <ChevronDown
+//           size={18}
+//           className={`text-gray-400 transition-transform duration-200 flex-shrink-0 ${
+//             active ? "-rotate-180" : ""
+//           }`}
+//         />
+//       </button>
 
-      {/* Expandable Body */}
-      <AnimatePresence initial={false}>
-        {active && asset && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="border-t border-gray-50"
-          >
-            <div className="pt-2 pb-5">
-              {/* Image Section */}
-              <div className="mx-5 mb-4 rounded-2xl overflow-hidden bg-gray-100 h-[140px]">
-                <img
-                  src={asset.image}
-                  alt={asset.title}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src =
-                      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80";
-                  }}
-                />
-              </div>
+//       {/* Expandable Body */}
+//       <AnimatePresence initial={false}>
+//         {active && asset && (
+//           <motion.div
+//             initial={{ height: 0, opacity: 0 }}
+//             animate={{ height: "auto", opacity: 1 }}
+//             exit={{ height: 0, opacity: 0 }}
+//             transition={{ duration: 0.25, ease: "easeInOut" }}
+//             className="border-t border-gray-50"
+//           >
+//             <div className="pt-2 pb-5">
+//               {/* Image Section */}
+//               <div className="mx-5 mb-4 rounded-2xl overflow-hidden bg-gray-100 h-[140px]">
+//                 <img
+//                   src={asset.image}
+//                   alt={asset.title}
+//                   className="w-full h-full object-cover"
+//                   onError={(e) => {
+//                     (e.target as HTMLImageElement).src =
+//                       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80";
+//                   }}
+//                 />
+//               </div>
 
-              {/* Asset Details Inside */}
-              <div className="px-5">
-                <div className="text-[11px] text-gray-400 mb-0.5 font-medium tracking-wide">
-                  ASSET {String(assetIdx + 1).padStart(2, "0")}
-                </div>
-                <div className="text-[16px] font-semibold text-gray-900 mb-3.5 leading-tight">
-                  {asset.title}
-                </div>
+//               {/* Asset Details Inside */}
+//               <div className="px-5">
+//                 <div className="text-[11px] text-gray-400 mb-0.5 font-medium tracking-wide">
+//                   ASSET {String(assetIdx + 1).padStart(2, "0")}
+//                 </div>
+//                 <div className="text-[16px] font-semibold text-gray-900 mb-3.5 leading-tight">
+//                   {asset.title}
+//                 </div>
 
-                {/* Info Rows */}
-                <div className="space-y-2.5 mb-4.5 border-b border-gray-100 pb-4">
-                  {[
-                    { label: "Type", value: asset.type },
-                    { label: "City", value: asset.city },
-                    { label: "Total Area", value: asset.area },
-                  ].map((row) => (
-                    <div
-                      key={row.label}
-                      className="flex items-center justify-between"
-                    >
-                      <span className="text-[13px] text-gray-400">
-                        {row.label}
-                      </span>
-                      <span className="text-[13px] text-gray-800 font-medium">
-                        {row.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+//                 {/* Info Rows */}
+//                 <div className="space-y-2.5 mb-4.5 border-b border-gray-100 pb-4">
+//                   {[
+//                     { label: "Type", value: asset.type },
+//                     { label: "City", value: asset.city },
+//                     { label: "Total Area", value: asset.area },
+//                   ].map((row) => (
+//                     <div
+//                       key={row.label}
+//                       className="flex items-center justify-between"
+//                     >
+//                       <span className="text-[13px] text-gray-400">
+//                         {row.label}
+//                       </span>
+//                       <span className="text-[13px] text-gray-800 font-medium">
+//                         {row.value}
+//                       </span>
+//                     </div>
+//                   ))}
+//                 </div>
 
-                {/* View Details Call To Action */}
-                <button
-                  type="button"
-                  className="flex items-center gap-2 group focus:outline-none mt-4"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <span className="text-[13px] font-semibold text-[#003b9d] group-hover:underline">
-                    View Details
-                  </span>
-                  <span className="w-6 h-6 rounded-full bg-[#003b9d] flex items-center justify-center group-hover:bg-[#0046c0] transition-colors">
-                    <ArrowUpRight size={12} className="text-white" />
-                  </span>
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  );
-}
+//                 {/* View Details Call To Action */}
+//                 <button
+//                   type="button"
+//                   className="flex items-center gap-2 group focus:outline-none mt-4"
+//                   onClick={(e) => e.stopPropagation()}
+//                 >
+//                   <span className="text-[13px] font-semibold text-[#003b9d] group-hover:underline">
+//                     View Details
+//                   </span>
+//                   <span className="w-6 h-6 rounded-full bg-[#003b9d] flex items-center justify-center group-hover:bg-[#0046c0] transition-colors">
+//                     <ArrowUpRight size={12} className="text-white" />
+//                   </span>
+//                 </button>
+//               </div>
+//             </div>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//     </motion.div>
+//   );
+// }
+// export function StateItem({
+//   state,
+//   active,
+//   onClick,
+// }: {
+//   state: StateData;
+//   active: boolean;
+//   onClick: () => void;
+// }) {
+//   const [assetIdx, setAssetIdx] = useState(0);
+//   const asset = state.assets?.[assetIdx] ?? state.assets?.[0];
+
+//   return (
+//     <motion.div
+//       layout
+//       transition={{ type: "spring", stiffness: 300, damping: 30 }}
+//       style={{
+//         width: "322px",
+//         // FIX: Forces this card to sit on top of everything else when opened
+//         zIndex: active ? 50 : 10,
+//         position: "relative",
+//       }}
+//       className={`bg-white rounded-[24px] overflow-hidden border transition-all duration-200 ${
+//         active
+//           ? "border-[#FF6F69] shadow-xl shadow-[#FF6F69]/10"
+//           : "border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-md"
+//       }`}
+//     >
+//       {/* Header Row: Locked at exactly 67px height */}
+//       <button
+//         type="button"
+//         onClick={onClick}
+//         style={{ height: "67px" }}
+//         className="w-full flex items-center gap-3.5 px-5 text-left relative focus:outline-none"
+//         aria-pressed={active}
+//       >
+//         {/* Number Circle */}
+//         <span
+//           className={`w-9 h-9 rounded-full border flex items-center justify-center flex-shrink-0 text-[12px] font-medium transition-colors duration-200 ${
+//             active
+//               ? "border-[#FF6F69] text-[#FF6F69]"
+//               : "border-gray-200 text-gray-400"
+//           }`}
+//         >
+//           {String(state.count).padStart(2, "0")}
+//         </span>
+
+//         {/* State Name */}
+//         <span className="flex-1 text-[16px] font-medium text-gray-800 tracking-wide">
+//           {state.name}
+//         </span>
+
+//         {/* Pagination Controls inside the header if active */}
+//         <AnimatePresence>
+//           {active && state.assets?.length > 1 && (
+//             <motion.div
+//               initial={{ opacity: 0, x: 5 }}
+//               animate={{ opacity: 1, x: 0 }}
+//               exit={{ opacity: 0, x: 5 }}
+//               className="flex items-center gap-1 mr-1"
+//               onClick={(e) => e.stopPropagation()}
+//             >
+//               <button
+//                 type="button"
+//                 onClick={() => setAssetIdx((i) => Math.max(0, i - 1))}
+//                 disabled={assetIdx === 0}
+//                 className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
+//               >
+//                 <ArrowLeft size={12} />
+//               </button>
+//               <button
+//                 type="button"
+//                 onClick={() =>
+//                   setAssetIdx((i) => Math.min(state.assets.length - 1, i + 1))
+//                 }
+//                 disabled={assetIdx === state.assets.length - 1}
+//                 className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
+//               >
+//                 <ArrowRight size={12} />
+//               </button>
+//             </motion.div>
+//           )}
+//         </AnimatePresence>
+
+//         {/* Chevron Arrow */}
+//         <ChevronDown
+//           size={18}
+//           className={`text-gray-400 transition-transform duration-200 flex-shrink-0 ${
+//             active ? "-rotate-180" : ""
+//           }`}
+//         />
+//       </button>
+
+//       {/* Expandable Body */}
+//       <AnimatePresence initial={false}>
+//         {active && asset && (
+//           <motion.div
+//             initial={{ height: 0, opacity: 0 }}
+//             animate={{ height: "auto", opacity: 1 }}
+//             exit={{ height: 0, opacity: 0 }}
+//             transition={{ duration: 0.25, ease: "easeInOut" }}
+//             className="border-t border-gray-50"
+//           >
+//             <div className="pt-2 pb-5">
+//               {/* Image Section */}
+//               <div className="mx-5 mb-4 rounded-2xl overflow-hidden bg-gray-100 h-[140px]">
+//                 <img
+//                   src={asset.image}
+//                   alt={asset.title}
+//                   className="w-full h-full object-cover"
+//                   onError={(e) => {
+//                     (e.target as HTMLImageElement).src =
+//                       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80";
+//                   }}
+//                 />
+//               </div>
+
+//               {/* Asset Details Inside */}
+//               <div className="px-5">
+//                 <div className="text-[11px] text-gray-400 mb-0.5 font-medium tracking-wide">
+//                   ASSET {String(assetIdx + 1).padStart(2, "0")}
+//                 </div>
+//                 <div className="text-[16px] font-semibold text-gray-900 mb-3.5 leading-tight">
+//                   {asset.title}
+//                 </div>
+
+//                 {/* Info Rows */}
+//                 <div className="space-y-2.5 mb-4.5 border-b border-gray-100 pb-4">
+//                   {[
+//                     { label: "Type", value: asset.type },
+//                     { label: "City", value: asset.city },
+//                     { label: "Total Area", value: asset.area },
+//                   ].map((row) => (
+//                     <div
+//                       key={row.label}
+//                       className="flex items-center justify-between"
+//                     >
+//                       <span className="text-[13px] text-gray-400">
+//                         {row.label}
+//                       </span>
+//                       <span className="text-[13px] text-gray-800 font-medium">
+//                         {row.value}
+//                       </span>
+//                     </div>
+//                   ))}
+//                 </div>
+
+//                 {/* View Details Call To Action */}
+//                 <button
+//                   type="button"
+//                   className="flex items-center gap-2 group focus:outline-none mt-4"
+//                   onClick={(e) => e.stopPropagation()}
+//                 >
+//                   <span className="text-[13px] font-semibold text-[#003b9d] group-hover:underline">
+//                     View Details
+//                   </span>
+//                   <span className="w-6 h-6 rounded-full bg-[#003b9d] flex items-center justify-center group-hover:bg-[#0046c0] transition-colors">
+//                     <ArrowUpRight size={12} className="text-white" />
+//                   </span>
+//                 </button>
+//               </div>
+//             </div>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//     </motion.div>
+//   );
+// }
 // function AssetCard({
 //   state,
 //   onClose,
@@ -2182,6 +2316,181 @@ export function StateItem({
 //   );
 // }
 
+export function StateItem({
+  state,
+  active,
+  onClick,
+}: {
+  state: StateData;
+  active: boolean;
+  onClick: () => void;
+}) {
+  const [assetIdx, setAssetIdx] = useState(0);
+  const asset = state.assets?.[assetIdx] ?? state.assets?.[0];
+
+  return (
+    <motion.div
+      layout
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        // Keeps the zIndex calculation prioritized during layout shifts
+        zIndex: { duration: 0 },
+      }}
+      style={{
+        width: "322px",
+        position: "relative",
+        // Keep the active card above sibling cards without overtaking the navbar.
+        zIndex: active ? 40 : 1,
+      }}
+      // 'isolation-auto' ensures it respects the absolute priority z-index layer
+      className={`bg-white rounded-[24px] overflow-hidden border transition-all duration-200 isolation-auto ${
+        active
+          ? "border-[#FF6F69] shadow-xl shadow-[#FF6F69]/10"
+          : "border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-md"
+      }`}
+    >
+      {/* Header Row: Locked at exactly 67px height */}
+      <button
+        type="button"
+        onClick={onClick}
+        style={{ height: "67px" }}
+        className="w-full flex items-center gap-3.5 px-5 text-left relative focus:outline-none"
+        aria-pressed={active}
+      >
+        {/* Number Circle */}
+        <span
+          className={`w-9 h-9 rounded-full border flex items-center justify-center flex-shrink-0 text-[12px] font-medium transition-colors duration-200 ${
+            active
+              ? "border-[#FF6F69] text-[#FF6F69]"
+              : "border-gray-200 text-gray-400"
+          }`}
+        >
+          {String(state.count).padStart(2, "0")}
+        </span>
+
+        {/* State Name */}
+        <span className="flex-1 text-[16px] font-medium text-gray-800 tracking-wide">
+          {state.name}
+        </span>
+
+        {/* Pagination Controls inside the header if active */}
+        <AnimatePresence>
+          {active && state.assets?.length > 1 && (
+            <motion.div
+              initial={{ opacity: 0, x: 5 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 5 }}
+              className="flex items-center gap-1 mr-1"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setAssetIdx((i) => Math.max(0, i - 1))}
+                disabled={assetIdx === 0}
+                className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
+              >
+                <ArrowLeft size={12} />
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  setAssetIdx((i) => Math.min(state.assets.length - 1, i + 1))
+                }
+                disabled={assetIdx === state.assets.length - 1}
+                className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
+              >
+                <ArrowRight size={12} />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Chevron Arrow */}
+        <ChevronDown
+          size={18}
+          className={`text-gray-400 transition-transform duration-200 flex-shrink-0 ${
+            active ? "-rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {/* Expandable Body */}
+      <AnimatePresence initial={false}>
+        {active && asset && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="border-t border-gray-50"
+          >
+            <div className="pt-2 pb-5">
+              {/* Image Section */}
+              <div className="mx-5 mb-4 rounded-2xl overflow-hidden bg-gray-100 h-[140px]">
+                <img
+                  src={asset.image}
+                  alt={asset.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src =
+                      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80";
+                  }}
+                />
+              </div>
+
+              {/* Asset Details Inside */}
+              <div className="px-5">
+                <div className="text-[11px] text-gray-400 mb-0.5 font-medium tracking-wide">
+                  ASSET {String(assetIdx + 1).padStart(2, "0")}
+                </div>
+                <div className="text-[16px] font-semibold text-gray-900 mb-3.5 leading-tight">
+                  {asset.title}
+                </div>
+
+                {/* Info Rows */}
+                <div className="space-y-2.5 mb-4.5 border-b border-gray-100 pb-4">
+                  {[
+                    { label: "Type", value: asset.type },
+                    { label: "City", value: asset.city },
+                    { label: "Total Area", value: asset.area },
+                  ].map((row) => (
+                    <div
+                      key={row.label}
+                      className="flex items-center justify-between"
+                    >
+                      <span className="text-[13px] text-gray-400">
+                        {row.label}
+                      </span>
+                      <span className="text-[13px] text-gray-800 font-medium">
+                        {row.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* View Details Call To Action */}
+                <button
+                  type="button"
+                  className="flex items-center gap-2 group focus:outline-none mt-4"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <span className="text-[13px] font-semibold text-[#003b9d] group-hover:underline">
+                    View Details
+                  </span>
+                  <span className="w-6 h-6 rounded-full bg-[#003b9d] flex items-center justify-center group-hover:bg-[#0046c0] transition-colors">
+                    <ArrowUpRight size={12} className="text-white" />
+                  </span>
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}
 function ConnectorLine({
   x1, // Map Marker X
   y1, // Map Marker Y
@@ -2241,7 +2550,7 @@ function IndiaMap({
   return (
     <svg
       width="100%"
-      viewBox={`0 0 ${SVG_W} ${SVG_H}`}
+      viewBox={`-80 0 ${SVG_W} ${SVG_H}`}
       xmlns="http://www.w3.org/2000/svg"
       className="max-w-[520px] mx-auto overflow-visible"
     >
@@ -2938,7 +3247,7 @@ export default function PortfolioSection() {
           </svg>
 
           {/* Map */}
-          <div className="w-full flex justify-center relative z-0">
+          <div className="absolute inset-x-0 top-0 z-0 flex justify-center">
             <IndiaMap
               activeId={activeId}
               visibleIds={visibleIds}
@@ -2950,11 +3259,12 @@ export default function PortfolioSection() {
           {leftStates.map((s) => (
             <div
               key={s.id}
-              className="absolute z-20"
+              className="absolute"
               style={{
                 left: s.x,
                 top: s.y,
                 transform: "translate(-50%, -50%)",
+                zIndex: activeId === s.id ? 40 : 20,
               }}
             >
               <StateItem
@@ -2969,11 +3279,12 @@ export default function PortfolioSection() {
           {rightStates.map((s) => (
             <div
               key={s.id}
-              className="absolute z-20"
+              className="absolute"
               style={{
                 left: s.x,
                 top: s.y,
                 transform: "translate(-50%, -50%)",
+                zIndex: activeId === s.id ? 40 : 20,
               }}
             >
               <StateItem

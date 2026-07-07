@@ -15,31 +15,31 @@ export default function WhyUsAccordion() {
       id: 1,
       title: "Development Opportunities",
       description:
-        "Participate from the development stage, sharing in the value created as a parcel becomes a Grade-A asset.",
+        "Participate from the development stage and share in the value created as land becomes a Grade-A asset, entering at a basis earned rather than paid at market.",
     },
     {
       id: 2,
       title: "Industrial Infrastructure Assets",
       description:
-        "Exposure to stabilised, income-producing industrial and logistics assets developed to institutional standards.",
+        "Take direct exposure to stabilised, income-producing industrial and logistics assets, developed to institutional standards and held for durable yield.",
     },
     {
       id: 3,
       title: "Strategic Partnerships",
       description:
-        "Long-term capital partnerships aligned to a shared asset thesis and governance framework.",
+        "Long-term capital partnerships built on a shared asset thesis, aligned incentives, and an institutional governance framework.",
     },
     {
       id: 4,
       title: "Co-Development Opportunities",
       description:
-        "Participate alongside BuildSpace and landowners in the creation of new infrastructure assets.",
+        "Participate alongside BuildSpace and landowners in creating new assets, capturing development value from the ground up.",
     },
     {
       id: 5,
       title: "Long-Term Asset Platforms",
       description:
-        "Scaled, multi-asset participation as the BuildSpace portfolio grows across corridors and asset classes.",
+        "Scaled, multi-asset participation as the BuildSpace portfolio compounds across corridors and asset classes over the cycle.",
     },
   ];
 

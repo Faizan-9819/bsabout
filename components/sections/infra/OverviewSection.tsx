@@ -43,7 +43,7 @@ export default function OverviewSection() {
         {/* Right Column */}
         <div className="flex flex-col space-y-10 lg:pt-14">
           {/* Secondary Informational Paragraph */}
-          <p className="text-sm md:text-base text-[#222] leading-relaxed font-normal max-w-xl">
+          <p className="text-sm md:text-base text-[#54514C] leading-relaxed font-normal max-w-xl">
             BuildINFRA closes that gap as your solution partner, taking your
             land and <br className="hidden lg:inline-block" />
             developing it into a facility built for your own operations under a

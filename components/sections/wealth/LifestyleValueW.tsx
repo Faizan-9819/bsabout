@@ -13,22 +13,24 @@ import { ArrowLeft, Plus, Minus } from "lucide-react";
 const stages = [
   {
     num: "01",
-    title: "Opportunity Identification",
-    desc: "Sourcing development opportunities in high-demand industrial and logistics corridors.",
-    strategicValue: "Exposure originates in genuine, demand-backed locations.",
+    title: "Opportunity Origination",
+    desc: "Development opportunities sourced in high-demand industrial and logistics corridors.",
+    strategicValue:
+      "Your exposure originates in genuine, demand-backed locations, not competitively bid stock.",
     image: "/wealth/w1.jpg",
   },
   {
     num: "02",
-    title: "Feasibility & Evaluation",
-    desc: "Technical, commercial, and risk evaluation to confirm the asset thesis before capital commitment.",
-    strategicValue: "Conviction is earned through diligence, not assumed.",
+    title: "Feasibility & Underwriting",
+    desc: "Technical, commercial, and risk evaluation to confirm the asset thesis before any capital is committed.",
+    strategicValue:
+      "Conviction earned through diligence, so capital commits to a tested thesis.",
     image: "/wealth/OpportunityIdentification.jpg",
   },
   {
     num: "03",
     title: "Development Strategy",
-    desc: "Defining the optimal asset type, scale, and structure for the corridor and the capital.",
+    desc: "Defining the optimal asset type, scale, and structure for the corridor and the capital behind it.",
     strategicValue:
       "A clear path from opportunity to a defined, investable asset.",
     image: "/wealth/feas.jpg",
@@ -38,15 +40,15 @@ const stages = [
     title: "Infrastructure Creation",
     desc: "Developing the asset to Grade-A standard through BuildSpace's integrated development management.",
     strategicValue:
-      "Quality and basis controlled at source — built, not bought at a premium.",
+      "Quality and basis controlled at source, built rather than bought at a premium.",
     image: "/wealth/DevelopmentStrategy.jpg",
   },
   {
     num: "05",
-    title: "Occupier Alignment",
-    desc: "Securing credible, long-term occupiers that underwrite the asset's income.",
+    title: "Tenant Alignment",
+    desc: "Securing credible, long-term tenants whose covenants underwrite the asset's income.",
     strategicValue:
-      "Income durability through quality tenancy — the asset begins to perform.",
+      "Income durability through quality tenancy, as the asset begins to perform.",
     image: "/wealth/wl.jpg",
   },
   {
@@ -54,15 +56,15 @@ const stages = [
     title: "Asset Stabilisation",
     desc: "Bringing the asset to stabilised, income-producing performance.",
     strategicValue:
-      "A de-risked, cash-generating asset with an established track record.",
+      "A de-risked, cash-generating asset with an established operating record.",
     image: "/wealth/f2.jpg",
   },
   {
     num: "07",
     title: "Long-Term Asset Management",
-    desc: "Lifecycle stewardship — optimisation, capital-cycle planning, and sustained value creation.",
+    desc: "Lifecycle stewardship: optimisation, capital-cycle planning, and sustained value creation.",
     strategicValue:
-      "Performance compounds, with ownership and alignment held throughout.",
+      "Returns compound, with ownership and alignment held throughout the hold.",
     image: "/wealth/AssetStabilisation.jpg",
   },
 ];
