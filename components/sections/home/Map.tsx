@@ -1335,6 +1335,8 @@ const STATES: StateData[] = [
 // ];
 const LEFT_STATES = STATES.filter((s) => s.connector === "left");
 const RIGHT_STATES = STATES.filter((s) => s.connector === "right");
+const DESKTOP_LAYOUT_WIDTH = 1200;
+const DESKTOP_LAYOUT_HEIGHT = 650;
 
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
@@ -3200,6 +3202,9 @@ function IndiaMapPaths({
 export default function PortfolioSection() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>("all");
+  const desktopLayoutRef = useRef<HTMLDivElement>(null);
+  const mobileCardsRef = useRef<HTMLDivElement>(null);
+  const [desktopScale, setDesktopScale] = useState(1);
 
   const visibleIds = STATES.filter((s) => s.filter.includes(filter)).map(
     (s) => s.id,
@@ -3208,10 +3213,36 @@ export default function PortfolioSection() {
   const handleStateClick = useCallback(
     (id: string) => {
       if (!visibleIds.includes(id)) return;
-      setActiveId((prev) => (prev === id ? null : id));
+      setActiveId((prev) => {
+        const next = prev === id ? null : id;
+        if (next && window.innerWidth < 1024) {
+          requestAnimationFrame(() => {
+            mobileCardsRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        }
+        return next;
+      });
     },
     [visibleIds],
   );
+
+  useEffect(() => {
+    const node = desktopLayoutRef.current;
+    if (!node) return;
+
+    const updateScale = () => {
+      setDesktopScale(Math.min(1, node.getBoundingClientRect().width / DESKTOP_LAYOUT_WIDTH));
+    };
+
+    updateScale();
+    const observer = new ResizeObserver(updateScale);
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, []);
 
   // Clear active if it's no longer visible
   useEffect(() => {
@@ -3271,23 +3302,112 @@ export default function PortfolioSection() {
         </motion.div>
 
         {/* Desktop layout */}
-        <div className="hidden lg:block relative min-h-[650px] w-full">
-          {/* SVG Connecting Lines Layer */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
-            {/* {[...leftStates, ...rightStates].map((s) => (
-              <ConnectorLine
-                key={`line-${s.id}`}
-                x1={s.markerX} // Map point start
-                y1={s.markerY}
-                x2={s.x} // Card position end
-                y2={s.y}
-                active={activeId === s.id}
-              />
-            ))} */}
-          </svg>
+        <div
+          ref={desktopLayoutRef}
+          className="hidden lg:block relative w-full"
+          style={{ height: DESKTOP_LAYOUT_HEIGHT * desktopScale }}
+        >
+          <div
+            className="relative mx-auto"
+            style={{
+              width: DESKTOP_LAYOUT_WIDTH,
+              height: DESKTOP_LAYOUT_HEIGHT,
+              transform: `scale(${desktopScale})`,
+              transformOrigin: "top center",
+            }}
+          >
+            {/* SVG Connecting Lines Layer */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
+              {/* {[...leftStates, ...rightStates].map((s) => (
+                <ConnectorLine
+                  key={`line-${s.id}`}
+                  x1={s.markerX} // Map point start
+                  y1={s.markerY}
+                  x2={s.x} // Card position end
+                  y2={s.y}
+                  active={activeId === s.id}
+                />
+              ))} */}
+            </svg>
 
-          {/* Map */}
-          <div className="w-full flex justify-center relative z-0">
+            {/* Map */}
+            <div className="w-full flex justify-center relative z-0">
+              <IndiaMap
+                activeId={activeId}
+                visibleIds={visibleIds}
+                onStateClick={handleStateClick}
+              />
+            </div>
+
+            {/* Left States */}
+            {leftStates.map((s) => (
+              <div
+                key={s.id}
+                className="absolute"
+                style={{
+                  left: s.x,
+                  top: s.y,
+                  transform: "translate(-50%, -50%)",
+                  zIndex: activeId === s.id ? 40 : 20,
+                }}
+              >
+                <StateItem
+                  state={s}
+                  active={activeId === s.id}
+                  onClick={() => handleStateClick(s.id)}
+                />
+              </div>
+            ))}
+
+            {/* Right States */}
+            {rightStates.map((s) => (
+              <div
+                key={s.id}
+                className="absolute"
+                style={{
+                  left: s.x,
+                  top: s.y,
+                  transform: "translate(-50%, -50%)",
+                  zIndex: activeId === s.id ? 40 : 20,
+                }}
+              >
+                <StateItem
+                  state={s}
+                  active={activeId === s.id}
+                  onClick={() => handleStateClick(s.id)}
+                />
+              </div>
+            ))}
+
+            {/* Asset card */}
+            {/* <div className="absolute bottom-4 left-4 z-30">
+              <AnimatePresence mode="wait">
+                {activeState && (
+                  <AssetCard
+                    key={activeState.id}
+                    state={activeState}
+                    onClose={() => setActiveId(null)}
+                  />
+                )}
+              </AnimatePresence>
+            </div> */}
+
+            {/* Place this right at the bottom of your desktop layout div container */}
+            <AnimatePresence mode="wait">
+              {/* {activeState && (
+                <AssetCard
+                  key={activeState.id} // Changing the key ensures layout triggers clean exit/entry states
+                  state={activeState}
+                  onClose={() => setActiveId(null)}
+                />
+              )} */}
+            </AnimatePresence>
+          </div>
+        </div>
+
+        {/* Mobile layout */}
+        <div className="lg:hidden flex flex-col gap-6">
+          <div className="w-full">
             <IndiaMap
               activeId={activeId}
               visibleIds={visibleIds}
@@ -3295,101 +3415,16 @@ export default function PortfolioSection() {
             />
           </div>
 
-          {/* Left States */}
-          {leftStates.map((s) => (
-            <div
-              key={s.id}
-              className="absolute"
-              style={{
-                left: s.x,
-                top: s.y,
-                transform: "translate(-50%, -50%)",
-                zIndex: activeId === s.id ? 40 : 20,
-              }}
-            >
-              <StateItem
-                state={s}
-                active={activeId === s.id}
-                onClick={() => handleStateClick(s.id)}
-              />
-            </div>
-          ))}
-
-          {/* Right States */}
-          {rightStates.map((s) => (
-            <div
-              key={s.id}
-              className="absolute"
-              style={{
-                left: s.x,
-                top: s.y,
-                transform: "translate(-50%, -50%)",
-                zIndex: activeId === s.id ? 40 : 20,
-              }}
-            >
-              <StateItem
-                state={s}
-                active={activeId === s.id}
-                onClick={() => handleStateClick(s.id)}
-              />
-            </div>
-          ))}
-
-          {/* Asset card */}
-          {/* <div className="absolute bottom-4 left-4 z-30">
-            <AnimatePresence mode="wait">
-              {activeState && (
-                <AssetCard
-                  key={activeState.id}
-                  state={activeState}
-                  onClose={() => setActiveId(null)}
-                />
-              )}
-            </AnimatePresence>
-          </div> */}
-
-          {/* Place this right at the bottom of your desktop layout div container */}
-          <AnimatePresence mode="wait">
-            {/* {activeState && (
-              <AssetCard
-                key={activeState.id} // Changing the key ensures layout triggers clean exit/entry states
-                state={activeState}
-                onClose={() => setActiveId(null)}
-              />
-            )} */}
-          </AnimatePresence>
-        </div>
-
-        {/* Mobile layout */}
-        <div className="lg:hidden flex flex-col gap-6">
-          <IndiaMap
-            activeId={activeId}
-            visibleIds={visibleIds}
-            onStateClick={handleStateClick}
-          />
-
-          <div className="flex flex-col gap-3">
-            {STATES.filter((s) => visibleIds.includes(s.id)).map((s) => (
-              <StateItem
-                key={s.id}
-                state={s}
-                active={activeId === s.id}
-                onClick={() => handleStateClick(s.id)}
-              />
-            ))}
-          </div>
-
-          <AnimatePresence mode="wait">
+          <div ref={mobileCardsRef} className="flex justify-center">
             {activeState && (
-              <div className="flex justify-center">
-                {/* <AssetCard
-                  key={activeState.id}
-                  state={activeState}
-                  onClose={() => setActiveId(null)}
-                /> */}
-              </div>
+              <StateItem
+                key={activeState.id}
+                state={activeState}
+                active
+                onClick={() => handleStateClick(activeState.id)}
+              />
             )}
-          </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>
