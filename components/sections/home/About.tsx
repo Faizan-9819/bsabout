@@ -83,12 +83,8 @@ export default function About() {
             className="flex flex-col gap-[10px] pt-2 w-full lg:w-1/2"
           >
             <p className="text-[#222] text-[20px] font-normal leading-[1.4]">
-<<<<<<< Updated upstream
-              The success of industrial and logistics infrastructure is
-=======
               The success of industrial and logistics infrastructure is{" "}
               <br className="hidden lg:inline-block" />
->>>>>>> Stashed changes
               determined long before construction begins.
             </p>
             <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
