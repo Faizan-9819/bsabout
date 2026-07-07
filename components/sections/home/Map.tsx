@@ -1034,7 +1034,21 @@ const STATES: StateData[] = [
         area: "0.36 MN SQ FT",
       },
       {
-        title: "Navi Mumbai Warehouse",
+        title: "lorem ipsum",
+        image: "/projects/park.webp",
+        type: "lorem ipsum",
+        city: "Navi Mumbai",
+        area: "0.28 MN SQ FT",
+      },
+      {
+        title: "lorem ipsum",
+        image: "/projects/park.webp",
+        type: "Warehouse",
+        city: "Navi Mumbai",
+        area: "0.28 MN SQ FT",
+      },
+      {
+        title: "lorem ipsum",
         image: "/projects/park.webp",
         type: "Warehouse",
         city: "Navi Mumbai",
@@ -1337,12 +1351,12 @@ function FilterTabs({
     { key: "land", label: "Land Parcels" },
   ];
   return (
-    <div className="flex items-center gap-2 flex-wrap justify-center">
+    <div className="flex items-center gap-[10px] flex-wrap justify-center">
       {tabs.map((t) => (
         <button
           key={t.key}
           onClick={() => onChange(t.key)}
-          className={`px-4 py-1.5 rounded-full text-[13px] font-medium border transition-all duration-200 ${
+          className={`px-4 py-1.5  text-[14px] tracking-[-0.14px] font-medium border transition-all duration-200 ${
             active === t.key
               ? "bg-[#FF6F69] text-white border-[#FF6F69]"
               : "bg-white text-[#222] border-gray-200 hover:border-gray-400"
@@ -3184,7 +3198,7 @@ function IndiaMapPaths({
 // }
 
 export default function PortfolioSection() {
-  const [activeId, setActiveId] = useState<string | null>("maharashtra");
+  const [activeId, setActiveId] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>("all");
 
   const visibleIds = STATES.filter((s) => s.filter.includes(filter)).map(
@@ -3222,22 +3236,26 @@ export default function PortfolioSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col items-center text-center gap-4 mb-10"
+          className="flex flex-col items-center text-center gap-4 mb-[18.9px]"
         >
           <div className="flex items-center gap-2">
-            <span className="w-8 h-px bg-[#003b9d]" />
-            <span className="text-[11px] font-semibold tracking-[0.12em] text-[#003b9d] uppercase">
+            <span className="w-[28px] h-[2px] bg-[#003b9d]" />
+            <span className="text-[12px] font-semibold tracking-[3.13px] leading-normal text-[#003b9d] uppercase">
               Developments &amp; Strategic Assets
             </span>
-            <span className="w-8 h-px bg-[#003b9d]" />
+            {/* <span className="w-8 h-px bg-[#003b9d]" /> */}
           </div>
           <h2
-            className="font-bold text-[#FF6F69] leading-[1.15] tracking-[-0.5px]"
-            style={{ fontSize: "clamp(28px, 4vw, 50px)" }}
+            className="font-bold  leading-[1.15] text-[24px] md:text-[43.2px] tracking-[-0.5px]"
+            // style={{ fontSize: "clamp(28px, 4vw, 50px)" }}
           >
-            A Diverse Development Portfolio
+            <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+              A Diverse Development Portfolio
+            </span>
             <br />
-            Across Region
+            <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+              Across Region
+            </span>
           </h2>
         </motion.div>
 

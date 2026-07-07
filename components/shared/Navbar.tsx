@@ -196,7 +196,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 
-const logo = "/bsd.svg";
+const logo = "/BuildSpace1.svg";
+const whiteLogo = "/BuildSpace.svg";
 
 const H_CLOSED = 104;
 const H_OPEN = 205;
@@ -271,12 +272,9 @@ export default function Navbar() {
       <div className="fix flex items-center justify-between h-[104px]">
         <a href="/" aria-label="BuildSpace home">
           <img
-            src={logo}
+            src={isWhite ? whiteLogo : logo}
             alt="BuildSpace"
             className="h-11 w-auto transition-[filter] duration-400 ease-out"
-            style={{
-              filter: isWhite ? "invert(1)" : "none",
-            }}
           />
         </a>
 
