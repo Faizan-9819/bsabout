@@ -2363,8 +2363,8 @@ export function StateItem({
       style={{
         width: "322px",
         position: "relative",
-        // Forces the currently active card above all other cards
-        zIndex: isMounted && active ? 9999 : 1,
+        // Keep active cards above sibling cards, but below the z-50 navbar.
+        zIndex: isMounted && active ? 40 : 1,
       }}
       className={`bg-white rounded-[24px] overflow-hidden border transition-all duration-200 isolation-auto ${
         active
@@ -3281,11 +3281,12 @@ export default function PortfolioSection() {
           {leftStates.map((s) => (
             <div
               key={s.id}
-              className="absolute z-20"
+              className="absolute"
               style={{
                 left: s.x,
                 top: s.y,
                 transform: "translate(-50%, -50%)",
+                zIndex: activeId === s.id ? 40 : 20,
               }}
             >
               <StateItem
@@ -3300,11 +3301,12 @@ export default function PortfolioSection() {
           {rightStates.map((s) => (
             <div
               key={s.id}
-              className="absolute z-20"
+              className="absolute"
               style={{
                 left: s.x,
                 top: s.y,
                 transform: "translate(-50%, -50%)",
+                zIndex: activeId === s.id ? 40 : 20,
               }}
             >
               <StateItem

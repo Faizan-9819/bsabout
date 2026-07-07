@@ -82,37 +82,25 @@ export default function About() {
             viewport={{ once: true, margin: "-80px" }}
             className="flex flex-col gap-[10px] pt-2 w-full lg:w-1/2"
           >
-            <p
-              className="text-[#222] font-normal leading-[1.4]"
-              style={{ fontSize: "18px" }}
-            >
+            <p className="text-[#222] text-[20px] font-normal leading-[1.4]">
               The success of industrial and logistics infrastructure is
               determined long before construction begins.
             </p>
-            <p
-              className="text-[#54514c] font-normal leading-[1.4]"
-              style={{ fontSize: "16px" }}
-            >
+            <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
               With over 50 years of combined experience, BuildSpace develops
               industrial and logistics assets through a fully integrated
               approach that brings together land strategy, master planning,
               engineering, approvals, compliance, development, and operational
               readiness.
             </p>
-            <p
-              className="text-[#54514c] font-normal leading-[1.4]"
-              style={{ fontSize: "clamp(14px, 1.2vw, 18px)" }}
-            >
+            <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
               As a 100% compliant industrial & logistics infrastructure
               developer, we manage every stage of the development lifecycle—from
               identifying the right opportunity and securing approvals to
               delivering institutional-grade assets built for long-term
               performance.
             </p>
-            <p
-              className="text-[#54514c] font-normal leading-[1.4] max-w-[554px]"
-              style={{ fontSize: "clamp(14px, 1.2vw, 18px)" }}
-            >
+            <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4] max-w-[554px]">
               By integrating development expertise, execution capability, and
               lifecycle thinking within a single platform, BuildSpace creates
               infrastructure that supports business growth, operational
