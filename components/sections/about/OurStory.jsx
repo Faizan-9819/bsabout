@@ -73,13 +73,13 @@ export default function OurStory() {
               variants={itemVariants}
               className="space-y-4  leading-[1.4] text-[18px]  "
             >
-              <p className="text-[#222]">
+              <p className="text-[#222] text-[20px]">
                 Industrial growth begins long before construction starts. It
                 begins with identifying the right opportunity, understanding
                 what land can become, and building a strategy that turns
                 possibility into performance.
               </p>
-              <p className="text-[#54514C]">
+              <p className="text-[#54514C] text-[18px]">
                 BuildSpace is created to bridge the gap that fragments most
                 industrial development — between land opportunity,
                 infrastructure execution, and long-term value creation. We bring

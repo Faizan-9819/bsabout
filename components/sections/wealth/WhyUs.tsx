@@ -55,7 +55,7 @@ export default function WhyUsAccordion() {
         {/* Left Column */}
         <div className="lg:col-span-6 w-full h-[350px] lg:min-h-[450px] lg:h-full rounded-2xl overflow-hidden relative">
           <img
-            src="/value/why/whyus.jpg"
+            src="/wealth/whyW.webp"
             alt="Hand pointing choosing right option workflow"
             className="w-full h-full object-cover absolute inset-0"
           />

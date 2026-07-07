@@ -17,7 +17,7 @@ const stages = [
     desc: "Assessing the connectivity, catchment, and development potential of the land you already own, and confirming what it can support.",
     strategicValue:
       "You know exactly what your site can carry before any capital is committed.",
-    image: "/infra/lifecycle/lifeF.jpg",
+    image: "/infra/lifecycle/life1.jpg",
   },
   {
     num: "02",
@@ -25,7 +25,7 @@ const stages = [
     desc: "Highest-use planning, layout, MEP envelope, circulation, and safety design, shaped around your operations.",
     strategicValue:
       "A facility planned around how you operate and how you will grow, not just the footprint.",
-    image: "/infra/lifecycle/life1.jpg",
+    image: "/infra/lifecycle/life2.jpg",
   },
   {
     num: "03",
@@ -33,7 +33,7 @@ const stages = [
     desc: "Zoning, environmental, and statutory clearances secured in parallel with engineering.",
     strategicValue:
       "Approvals stop being the bottleneck standing between you and operations.",
-    image: "/infra/lifecycle/life2.jpg",
+    image: "/infra/lifecycle/life3.jpg",
   },
   {
     num: "04",
@@ -41,7 +41,7 @@ const stages = [
     desc: "Civil, structural, MEP, and external infrastructure engineering packages.",
     strategicValue:
       "Constructability and scalability designed in from the start, not retrofitted later.",
-    image: "/infra/lifecycle/life3.jpg",
+    image: "/infra/lifecycle/infra5.jpg",
   },
   {
     num: "05",
@@ -49,7 +49,7 @@ const stages = [
     desc: "Multi-contractor execution coordinated under integrated development management.",
     strategicValue:
       "One partner owns the build outcome, not just a defined construction scope.",
-    image: "/infra/lifecycle/life4.jpg",
+    image: "/infra/lifecycle/life5.jpg",
   },
   {
     num: "06",
@@ -57,7 +57,7 @@ const stages = [
     desc: "Commissioning, certifications, and fit-out coordination for day-one readiness.",
     strategicValue:
       "You take over a facility that is ready to run, not merely ready to occupy.",
-    image: "/infra/lifecycle/life5.jpg",
+    image: "/infra/lifecycle/life6.jpg",
   },
   {
     num: "07",
@@ -65,7 +65,7 @@ const stages = [
     desc: "Lifecycle stewardship: optimisation, maintenance strategy, and capital-cycle planning.",
     strategicValue:
       "Your facility keeps performing and holding value long after handover.",
-    image: "/infra/lifecycle/life6.jpg",
+    image: "/infra/lifecycle/lifeF.jpg",
   },
 ];
 
@@ -207,7 +207,7 @@ export default function FullLifecycleApproach() {
     >
       <div className="fix">
         {/* ── Header Block ── */}
-        <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-9 lg:mb-16">
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-7 lg:mb-16">
           <motion.div
             variants={fadeUp}
             custom={0}

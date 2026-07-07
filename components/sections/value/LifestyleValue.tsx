@@ -17,7 +17,7 @@ const stages = [
     desc: "Assessing the industrial and logistics development potential of the land you already own.",
     strategicValue:
       "A clear starting point, grounded in what your site can realistically support.",
-    image: "/value/value1.jpg",
+    image: "/value/value2.jpg",
   },
   {
     num: "02",
@@ -25,7 +25,7 @@ const stages = [
     desc: "Feasibility and risk evaluation to confirm what your land can sustainably become.",
     strategicValue:
       "Confidence before capital, with the development thesis tested early.",
-    image: "/value/value2.jpg",
+    image: "/value/value3.jpg",
   },
   {
     num: "03",
@@ -33,7 +33,7 @@ const stages = [
     desc: "Defining the optimal asset type, scale, and phasing for your land and its market.",
     strategicValue:
       "A clear, value-maximising path from parcel to income-producing asset.",
-    image: "/value/value3.jpg",
+    image: "/value/value4.jpg",
   },
   {
     num: "04",
@@ -41,14 +41,14 @@ const stages = [
     desc: "Master planning and engineering the utilities, access, and envelope that make your land development-ready.",
     strategicValue:
       "Development-readiness designed in from the start, not retrofitted later.",
-    image: "/value/value4.jpg",
+    image: "/value/value5.jpg",
   },
   {
     num: "05",
     title: "Market Positioning",
     desc: "Positioning the developed asset within its corridor and tenant market.",
     strategicValue: "The asset is built toward real demand, not in hope of it.",
-    image: "/value/value5.jpg",
+    image: "/value/val6.jpg",
   },
   {
     num: "06",
@@ -56,14 +56,14 @@ const stages = [
     desc: "Attracting credible, long-term tenants aligned to the asset and your income objectives.",
     strategicValue:
       "Income security through quality tenancy, as the asset begins to perform.",
-    image: "/value/value6.jpg",
+    image: "/value/value7.jpg",
   },
   {
     num: "07",
     title: "Asset Value Creation",
     desc: "Long-term stewardship: optimisation, lifecycle planning, and sustained income and capital appreciation.",
     strategicValue: "Value compounds, and ownership stays with you throughout.",
-    image: "/value/value7.jpg",
+    image: "/value/value1.jpg",
   },
 ];
 

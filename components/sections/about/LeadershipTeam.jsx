@@ -64,12 +64,12 @@ export default function LeadershipTeam() {
             Leadership Team
           </div>
 
-          <h2 className="text-h1 text-[#E27244]! text-[56px] font-bold tracking-[-1.568px] leading-[1.08] md:leading-[110%] text-navy mb-5">
+          <h2 className="text-h1 bg-gradient-to-r from-[rgba(191,88,79,1)] to-[rgba(246,115,106,1)] bg-clip-text text-transparent  text-[56px] font-bold tracking-[-1.568px] leading-[1.08] md:leading-[110%] mb-5">
             Built by people who have shaped <br /> industrial infrastructure at
             scale.
           </h2>
 
-          <p className="text-charcoal/70 text-[17px] font-light leading-[normal]">
+          <p className="text-[#000] text-[17px] font-light leading-[normal]">
             Decades of combined experience across infrastructure development,
             master <br /> planning, execution, and industrial asset creation.
           </p>

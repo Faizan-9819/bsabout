@@ -4,15 +4,17 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 
-const mapImg = "https://www.figma.com/api/mcp/asset/3ef6634d-2f3c-40d8-a778-e45ad208d214";
-const projectImg = "https://www.figma.com/api/mcp/asset/3ef6634d-2f3c-40d8-a778-e45ad208d214";
+const mapImg =
+  "https://www.figma.com/api/mcp/asset/3ef6634d-2f3c-40d8-a778-e45ad208d214";
+const projectImg =
+  "https://www.figma.com/api/mcp/asset/3ef6634d-2f3c-40d8-a778-e45ad208d214";
 
 const filters = ["All Assets", "Industrial & Logistics Parks", "Land Parcels"];
 
 const regions = [
-  { id: "01", name: "Gujarat",        x: "26%", y: "35%" },
-  { id: "01", name: "Uttar Pradesh",  x: "58%", y: "28%" },
-  { id: "01", name: "Tamil Nadu",     x: "55%", y: "75%" },
+  { id: "01", name: "Gujarat", x: "26%", y: "35%" },
+  { id: "01", name: "Uttar Pradesh", x: "58%", y: "28%" },
+  { id: "01", name: "Tamil Nadu", x: "55%", y: "75%" },
   { id: "01", name: "Andhra Pradesh", x: "62%", y: "62%" },
 ];
 
@@ -31,7 +33,8 @@ const projects = [
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   show: (i: number) => ({
-    opacity: 1, y: 0,
+    opacity: 1,
+    y: 0,
     transition: { delay: i * 0.1, duration: 0.65, ease: "easeOut" as const },
   }),
 };
@@ -43,7 +46,10 @@ export default function Developments() {
     <section
       id="developments"
       className="relative overflow-hidden py-[90px] lg:py-[100px]"
-      style={{ background: "linear-gradient(180deg, #120500 0%, #250b00 44%, #401300 100%)" }}
+      style={{
+        background:
+          "linear-gradient(180deg, #120500 0%, #250b00 44%, #401300 100%)",
+      }}
     >
       <div className="fix relative z-10">
         {/* Header */}
@@ -55,12 +61,16 @@ export default function Developments() {
           viewport={{ once: true, margin: "-60px" }}
           className="flex flex-col items-center text-center gap-5 mb-10"
         >
-          <div className="eyebrow text-white/80">Developments & Strategic Assets</div>
+          <div className="eyebrow text-white/80">
+            Developments & Strategic Assets
+          </div>
           <h2
             className="font-bold text-white leading-[1.08] tracking-[-1.3px]"
             style={{ fontSize: "clamp(28px, 3.2vw, 43px)" }}
           >
-            A Diverse Development Portfolio<br />Across Region
+            A Diverse Development Portfolio
+            <br className="hidden lg:inline-block" />
+            Across Region
           </h2>
         </motion.div>
 
@@ -112,9 +122,17 @@ export default function Developments() {
                 initial={{ scale: 0, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3 + i * 0.08, type: "spring", stiffness: 300 }}
+                transition={{
+                  delay: 0.3 + i * 0.08,
+                  type: "spring",
+                  stiffness: 300,
+                }}
                 className="absolute z-20"
-                style={{ left: r.x, top: r.y, transform: "translate(-50%, -50%)" }}
+                style={{
+                  left: r.x,
+                  top: r.y,
+                  transform: "translate(-50%, -50%)",
+                }}
               >
                 {/* Pulse ring */}
                 <div className="relative">
@@ -140,7 +158,9 @@ export default function Developments() {
                 <span className="w-9 h-9 rounded-full border border-[#868686] flex items-center justify-center text-[#212121] text-[15px] font-normal flex-shrink-0">
                   {r.id}
                 </span>
-                <span className="text-[#212121] text-[19px] font-normal tracking-tight">{r.name}</span>
+                <span className="text-[#212121] text-[19px] font-normal tracking-tight">
+                  {r.name}
+                </span>
                 <span className="w-[42px] h-[42px] rounded-full border border-black/16 flex items-center justify-center">
                   <ChevronLeft size={16} className="opacity-60" />
                   <ChevronRight size={16} className="opacity-60" />
@@ -164,7 +184,9 @@ export default function Developments() {
                 <span className="w-9 h-9 rounded-full border border-[#868686] flex items-center justify-center text-[15px] text-[#212121] font-normal">
                   04
                 </span>
-                <span className="text-[#212121] text-[19px] font-normal tracking-tight">Maharashtra</span>
+                <span className="text-[#212121] text-[19px] font-normal tracking-tight">
+                  Maharashtra
+                </span>
                 <div className="flex gap-2">
                   {[ChevronLeft, ChevronRight].map((Icon, i) => (
                     <button
@@ -179,14 +201,20 @@ export default function Developments() {
 
               {/* Image */}
               <div className="bg-[#e3e3e3] h-[141px] overflow-hidden rounded-[9.5px] mx-4 my-3">
-                <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Details */}
               <div className="px-5 pb-5">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-[#787878] text-[22px]">{p.num}</span>
-                  <span className="text-[#212121] text-[19px] font-normal tracking-tight">{p.name}</span>
+                  <span className="text-[#212121] text-[19px] font-normal tracking-tight">
+                    {p.name}
+                  </span>
                 </div>
 
                 <div className="flex flex-col gap-[10px] text-[15px] text-[#787878] font-normal mb-4">
@@ -195,7 +223,10 @@ export default function Developments() {
                     { key: "City", val: p.city },
                     { key: "Total Area", val: p.area },
                   ].map(({ key, val }) => (
-                    <div key={key} className="flex items-center justify-between">
+                    <div
+                      key={key}
+                      className="flex items-center justify-between"
+                    >
                       <span>{key}</span>
                       <span className="text-[#212121]">{val}</span>
                     </div>
