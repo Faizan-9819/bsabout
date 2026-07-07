@@ -57,9 +57,19 @@ export default function About() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-80px" }}
-              className="font-bold text-[#BF584F] leading-[1.1] md:leading-[1.07] tracking-[-1px] md:tracking-[-1.6px] text-[32px] md:text-[40px] lg:text-[48px]"
+              className="font-bold  leading-[1.1] md:leading-[1.07] tracking-[-1px] md:tracking-[-1.6px] text-[32px] md:text-[40px] lg:text-[48px]"
             >
-              Development Expertise Across Industrial & Logistics Assets
+              <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+                Development Expertise
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+                Across Industrial &{" "}
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+                Logistics Assets
+              </span>
             </motion.h2>
           </div>
 

@@ -3,37 +3,29 @@
 import { motion, type Variants } from "framer-motion";
 
 const globeImg = "/globeImg.webp";
-const iconLand =
-  "https://www.figma.com/api/mcp/asset/0292cb79-1827-43e9-b91c-c61ef0d67a89";
-const iconConstruction =
-  "https://www.figma.com/api/mcp/asset/97b50932-2439-4830-bf5e-29da0568d264";
-const iconGreen =
-  "https://www.figma.com/api/mcp/asset/1dc604f6-cdfd-437c-bc91-6aba1e6538a8";
-const iconStewardship =
-  "https://www.figma.com/api/mcp/asset/33c1bf9b-87c2-4326-a034-692f97b46434";
 
 const pillars = [
   {
     num: "01",
-    icon: iconLand,
+    icon: "/home/sustainability/sustainability.png",
     title: "Responsible Land Planning",
     desc: "Planning sites for long-term environmental and operational viability, with quarterly air and noise monitoring reported to authorities.",
   },
   {
     num: "02",
-    icon: iconConstruction,
+    icon: "/home/sustainability/sustanability2.svg",
     title: "Sustainable Construction",
     desc: "Prioritising environment-friendly materials and methods, in line with environmental compliance at every stage.",
   },
   {
     num: "03",
-    icon: iconGreen,
+    icon: "/home/sustainability/sustanability3.svg",
     title: "Certified Green Development",
     desc: "Pursuing IGBC and EDGE Platinum certification, with assets designed to meet recognised green building benchmarks from the ground up.",
   },
   {
     num: "04",
-    icon: iconStewardship,
+    icon: "/home/sustainability/sustanability4.svg",
     title: "Long-Term Stewardship",
     desc: "Maximising asset performance and environmental value beyond development, alongside community plantation drives.",
   },
@@ -81,7 +73,11 @@ function PillarCard({
       <div>
         {/* Card Header Top Row */}
         <div className="flex items-center justify-between mb-3">
-          <img src={pillar.icon} alt="" className="w-7 h-7 object-contain" />
+          <img
+            src={pillar.icon}
+            alt="icons1"
+            className="w-7 h-7 object-contain"
+          />
           <div className="flex flex-col items-end">
             <span className="text-[#00b050] text-[21px] font-thin leading-none tracking-wide">
               {pillar.num}
@@ -149,7 +145,7 @@ export default function Sustainability() {
           <div className="h-[1px] w-4 bg-[#003b9d] opacity-60" />
         </div>
 
-        <h2 className="font-bold text-[#e27244] leading-[1.15] tracking-[-1px] text-[26px] sm:text-[34px] lg:text-[40px] mb-4">
+        <h2 className="font-bold text-[#F56E6A] leading-[1.15] tracking-[-1px] text-[26px] sm:text-[34px] lg:text-[40px] mb-4">
           Sustainability is built into <br /> every decision we make.
         </h2>
 

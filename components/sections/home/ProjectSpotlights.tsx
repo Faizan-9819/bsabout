@@ -17,21 +17,24 @@ const initialProjectsData = [
     tag: "INFINITE VALUE",
     title: "Strategic Industrial Hub - Phase II",
     desc: "Positioned near major transportation grids for extreme efficiency, localized supply lanes, and fast scalability pathways.",
-    image1: "/log1.webp",
+    image1:
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80&auto=format&fit=crop",
   },
   {
     id: 3,
     tag: "BUILDWEALTH PARKS",
     title: "Logistics Gateway Matrix",
     desc: "Through custom state-of-the-art clear heights and engineering frameworks, serving global business networks flawlessly.",
-    image1: "/log1.webp",
+    image1:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80&auto=format&fit=crop",
   },
   {
     id: 4,
     tag: "PRIME STRATEGY",
     title: "Mega Infrastructure Zone",
     desc: "Comprehensive turn-key processing structures containing advanced clearances, automated operations, and regulatory approvals.",
-    image1: "/log1.webp",
+    image1:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&auto=format&fit=crop",
   },
 ];
 
@@ -65,13 +68,13 @@ export default function ProjectSpotlights() {
         {/* Eyebrow */}
         <div className="mb-6 flex items-center gap-2">
           <div className="h-px w-6 bg-[#e27244]" />
-          <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#003b9d]">
+          <span className="text-[12px] font-semibold uppercase tracking-[3px] text-[#003b9d]">
             Project Spotlights
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="mb-12 text-[26px] font-bold tracking-[-0.8px] text-[#e27244] sm:text-[36px] lg:text-[44px] leading-[1.15]">
+        <h2 className="mb-12 text-[26px] font-bold tracking-[-0.8px] bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent sm:text-[36px] lg:text-[44px] leading-[1.15]">
           Selected projects across industrial & logistics development
         </h2>
 
@@ -152,28 +155,29 @@ export default function ProjectSpotlights() {
                   </div>
 
                   {/* Right Side Text Content Box */}
-                  <div className="flex flex-col justify-between py-6 pr-6 lg:py-[32px] lg:pr-10 bg-white">
+                  <div className="flex flex-col justify-center lg:gap-y-13 py-6 pr-6 lg:py-[35px] lg:w-[105%] lg:pr-10 bg-white">
+                    <div className="mb-4 flex items-center gap-4 text-[18px] font-bold tracking-[1.5px] text-black/40 uppercase">
+                      <img src="/home/Spotlight/spotlight1.svg" alt="" />
+                      {project.tag}
+                    </div>
                     <div>
-                      <div className="mb-4 flex items-center gap-2 text-[10px] font-bold tracking-[1.5px] text-black/40 uppercase">
-                        <img src="/Spotlight/spotlight1.svg" alt="" />
-                        {project.tag}
-                      </div>
-
-                      <h3 className="mb-3 text-[18px] font-bold leading-[1.3] text-[#003b9d] lg:text-[22px] tracking-[-0.3px]">
+                      <h3
+                        className="mb-[14px] text-[18px] font-bold leading-[1.2] text-[#003b9d] lg:text-[19px] 
+                      tracking-[-0.3px]"
+                      >
                         {project.title}
                       </h3>
-
-                      <p className="text-[13px] leading-[1.5] text-[#54514c] lg:text-[14.5px] font-normal line-clamp-4">
+                      <p className="text-[15px] lg:w-[80%] leading-[140%] mt-5.5 text-[#54514c] lg:text-[20px] font-normal line-clamp-4">
                         {project.desc}
                       </p>
                     </div>
 
-                    <div className="mt-6 flex gap-[9px] pt-2 ">
+                    <div className="lg:mt-9 flex items-center gap-[9px] pt-2 ">
                       {/* <a
                         href="#"
                         className="inline-flex items-center gap-2.5 text-[12px] font-bold text-[#003b9d] group"
                       /> */}
-                      <span className="group-hover:underline decoration-2 underline-offset-4 transition-all">
+                      <span className="group-hover:underline text-[#003B9D] font-semibold decoration-2 underline-offset-4 transition-all">
                         View Case Study
                       </span>
                       <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#003b9d] text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

@@ -469,8 +469,8 @@ export default function WhyUsAccordion() {
           <div className="flex flex-col space-y-4">
             <div className="flex items-center gap-3">
               <span className="w-6 h-[2px] bg-[#1E40AF]"></span>
-              <span className="text-xs md:text-sm tracking-[0.25em] text-[#1E40AF] font-bold uppercase">
-                Why Us
+              <span className="text-xs md:text-sm tracking-[0.25em] text-[#1E40AF] font-semibold uppercase">
+                WHY BUILDINFRA{" "}
               </span>
             </div>
 

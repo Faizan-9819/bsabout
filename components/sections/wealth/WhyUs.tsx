@@ -71,16 +71,7 @@ export default function WhyUsAccordion() {
               </span>
             </div>
 
-            <h2
-              className="text-[34px] md:text-[56px] font-bold tracking-[-1.56px] pb-2 leading-[110%]"
-              style={{
-                backgroundImage:
-                  "linear-gradient(to right, rgba(191, 88, 79, 1), rgba(246, 115, 106, 1))",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <h2 className="text-[34px] md:text-[56px] bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent font-bold tracking-[-1.56px] pb-2 leading-[110%]">
               Ways to <br className="hidden lg:inline-block" /> participate.
             </h2>
 

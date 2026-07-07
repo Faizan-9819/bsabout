@@ -268,7 +268,7 @@ export default function StagesTimeline() {
             {/* Header Accent Line Indicator */}
             <div className="flex items-center gap-3">
               <span className="w-6 h-[2px] bg-[#1E40AF]"></span>
-              <span className="text-[11px] tracking-[3px] text-[#1E40AF] font-bold uppercase">
+              <span className="text-[12px] tracking-[3px] text-[#1E40AF] font-bold uppercase">
                 LEASING & MARKETING
               </span>
             </div>

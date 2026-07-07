@@ -25,7 +25,7 @@ const stages = [
     title: "Master Planning & Design",
     desc: "Highest-use planning, parcelisation, utility envelope, and circulation design built around operational reality and future expansion",
     strategicValue: "Plans the asset around performance, not just footprint.",
-    image: "/home/lifecycle/lifecycle1.webp",
+    image: "/home/lifecycle/lifecycle2.webp",
   },
   {
     num: "03",
@@ -33,7 +33,7 @@ const stages = [
     desc: "Zoning, environmental, and statutory clearances managed proactively through a live compliance matrix, run parallel to engineering.",
     strategicValue:
       " Stops approvals from becoming the critical-path bottleneck.",
-    image: "/home/lifecycle/lifecycle1.webp",
+    image: "/home/lifecycle/lifecycle3.webp",
   },
   {
     num: "04",
@@ -41,7 +41,7 @@ const stages = [
     desc: "Civil, structural, MEP, and external infrastructure packages coordinated under a single development framework",
     strategicValue:
       " Builds constructibility and scalability in from the start.",
-    image: "/home/lifecycle/lifecycle1.webp",
+    image: "/home/lifecycle/lifecycle4.webp",
   },
   {
     num: "05",
@@ -49,21 +49,21 @@ const stages = [
     desc: "Multi-contractor execution coordinated under integrated development management, built to spec, time, and budget.",
     strategicValue:
       "One partner owns the outcome, not just a construction scope.",
-    image: "/home/lifecycle/lifecycle1.webp",
+    image: "/home/lifecycle/lifecycle5.webp",
   },
   {
     num: "06",
     title: "Marketing & leasing",
     desc: "Positioning the developed asset within its corridor and attracting credible, long-term occupiers aligned to its performance.",
     strategicValue: "Converts a built asset into a performing one.",
-    image: "/home/lifecycle/lifecycle1.webp",
+    image: "/home/lifecycle/lifecycle6.webp",
   },
   {
     num: "07",
     title: "Asset Management & Value Creation",
     desc: "Supporting long-term asset performance through optimisation, lifecycle planning, and strategic asset stewardship.",
     strategicValue: "Sustains and compounds returns over time.",
-    image: "/home/lifecycle/lifecycle1.webp",
+    image: "/home/lifecycle/lifecycle7.webp",
   },
 ];
 
@@ -241,11 +241,19 @@ export default function FullLifecycleApproach() {
             <br className="hidden lg:inline-block" />
             engineered in from the start.
           </p> */}
-          <Btn
+          {/* <Btn
             className="bg-[#F56E6A]! hidden lg:block"
             label="Explore Our Approach"
             icon="arrow-right"
-          />
+          /> */}
+          <div id="lifecycle-btn-override" className="hidden lg:block">
+            <style>{`
+    #lifecycle-btn-override .btn-bs {
+      background: rgba(255, 255, 255, 0.20) !important;
+    }
+  `}</style>
+            <Btn label="Explore Our Approach" icon="arrow-right" />
+          </div>
         </div>
 
         {/* ── ======================================================== ── */}

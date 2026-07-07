@@ -22,7 +22,7 @@ export default function Home() {
       <Hero />
       <About />
       <TrustMetrics />
-      {/* <Map /> */}
+      <Map />
       <BuildspaceModel />
       {/*  <PortfolioSection /> */}
       <ProjectSpotlights />

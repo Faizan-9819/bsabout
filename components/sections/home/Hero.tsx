@@ -92,7 +92,7 @@ export default function Hero() {
   }, [emblaApi]);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#001433]">
+    <section className="relative w-full h-screen overflow-hidden ">
       {/* Embla — full bleed background slides */}
       <div className="absolute inset-0" ref={emblaRef}>
         <div className="flex h-full">
@@ -104,7 +104,7 @@ export default function Hero() {
                 className="absolute inset-0 w-full h-full object-cover object-center"
                 draggable={false}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#001433]/80 via-[#001433]/30 to-transparent" />
+              {/* <div className="absolute inset-0 bg-gradient-to-r from-[#001433]/80 via-[#001433]/30 to-transparent" /> */}
             </div>
           ))}
         </div>

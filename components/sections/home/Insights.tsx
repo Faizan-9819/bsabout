@@ -459,7 +459,7 @@ export default function Insights() {
               Industry Insights
             </div>
             <h2
-              className="font-bold text-[#e27244] leading-[1.1] tracking-[-0.5px] md:tracking-[-1.568px]"
+              className="font-bold  bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent leading-[1.1] tracking-[-0.5px] md:tracking-[-1.568px]"
               style={{ fontSize: "clamp(24px, 3vw, 40px)" }}
             >
               Blogs and News

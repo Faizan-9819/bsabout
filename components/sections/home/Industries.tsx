@@ -394,18 +394,24 @@ export default function Industries() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           // 💡 Kept desktop text alignment & gaps, but adjusted margin-bottom for a cleaner look on mobile (`mb-8 md:mb-12 lg:mb-14`)
-          className="flex flex-col gap-4 mb-8 md:mb-12 lg:mb-14"
+          className="flex flex-col items-center gap-[24px]  mb-8 md:mb-12 lg:mb-14"
         >
           <div className="eyebrow text-[#003B9D]">Industries We Serve</div>
           <h2
             // 💡 Modified `tracking-[-0.5px] md:tracking-[-1.5px]`
             // This removes the severe letter-spacing squeeze on mobile screens but retains your exact desktop look.
-            className="font-bold text-[#E27244] leading-[110%] tracking-[-0.5px] md:tracking-[-1.5px] max-w-[760px] md:px-0"
+            className="font-bold text-[#E27244] text-center  leading-[110%] tracking-[-0.5px] md:tracking-[-1.5px] md:px-0"
             style={{ fontSize: "clamp(24px, 3vw, 43px)" }}
           >
-            Industrial and logistics infrastructure designed around operational
-            needs.
+            Industrial and logistics infrastructure <br /> designed around
+            operational needs.
           </h2>
+          <p className="text-center text-[#54514C] ">
+            Every industry requires a different infrastructure strategy. From
+            logistics and <br /> manufacturing to freight, industrial parks, and
+            strategic land development, BuildSpace <br /> creates environments
+            aligned with operational realities and long-term growth.
+          </p>
         </motion.div>
 
         {/* ── MOBILE / TABLET: single column stack ── */}
