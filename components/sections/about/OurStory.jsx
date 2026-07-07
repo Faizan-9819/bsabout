@@ -80,7 +80,7 @@ export default function OurStory() {
                 possibility into performance.
               </p>
               <p className="text-[#54514C]">
-                BuildSpace was created to bridge the gap that fragments most
+                BuildSpace is created to bridge the gap that fragments most
                 industrial development — between land opportunity,
                 infrastructure execution, and long-term value creation. We bring
                 these together as a single, integrated platform, led by a team

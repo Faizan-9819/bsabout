@@ -75,7 +75,7 @@ export default function ProjectSpotlights() {
 
         {/* Title */}
         <h2 className="mb-12 text-[26px] font-bold tracking-[-0.8px] bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent sm:text-[36px] lg:text-[44px] leading-[1.15]">
-          Selected projects across industrial & logistics development
+          Projects across industrial & logistics development{" "}
         </h2>
 
         {/* Height Balanced Container Frame */}

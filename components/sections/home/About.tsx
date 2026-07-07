@@ -83,22 +83,33 @@ export default function About() {
             className="flex flex-col gap-[10px] pt-2 w-full lg:w-1/2"
           >
             <p className="text-[#222] text-[20px] font-normal leading-[1.4]">
+<<<<<<< Updated upstream
               The success of industrial and logistics infrastructure is
+=======
+              The success of industrial and logistics infrastructure is{" "}
+              <br className="hidden lg:inline-block" />
+>>>>>>> Stashed changes
               determined long before construction begins.
             </p>
             <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
               With over 50 years of combined experience, BuildSpace develops
+              <br className="hidden lg:inline-block" />
               industrial and logistics assets through a fully integrated
-              approach that brings together land strategy, master planning,
-              engineering, approvals, compliance, development, and operational
-              readiness.
+              approach that
+              <br className="hidden lg:inline-block" /> brings together land
+              strategy, master planning, engineering, approvals,
+              <br className="hidden lg:inline-block" /> compliance, development,
+              and operational readiness.
             </p>
             <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
               As a 100% compliant industrial & logistics infrastructure
-              developer, we manage every stage of the development lifecycle—from
-              identifying the right opportunity and securing approvals to
-              delivering institutional-grade assets built for long-term
-              performance.
+              developer, we
+              <br className="hidden lg:inline-block" /> manage every stage of
+              the development lifecycle—from identifying the
+              <br className="hidden lg:inline-block" /> right opportunity and
+              securing approvals to delivering institutional-
+              <br className="hidden lg:inline-block" />
+              grade assets built for long-term performance.
             </p>
             <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4] max-w-[554px]">
               By integrating development expertise, execution capability, and

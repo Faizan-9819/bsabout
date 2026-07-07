@@ -466,7 +466,7 @@ const stages = [
   {
     num: "01",
     title: "Land Identification & Feasibility",
-    desc: "Corridor and catchment analysis, parcel due diligence, and infrastructure proximity scoring to establish what a site can become.",
+    desc: "Corridor and catchment analysis, site and title assessment, and infrastructure proximity scoring to establish what a site can become.",
     strategicValue:
       "De-risks the location decision before capital is committed.",
   },

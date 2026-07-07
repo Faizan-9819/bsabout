@@ -253,8 +253,8 @@ const rows = [
     brand: "Build",
     sub: "INFRA",
     color: "#e27244",
-    title: "For occupiers & manufacturers",
-    desc: "Industrial and logistics facilities developed for the businesses that run them, engineered for performance and delivered ready to operate.",
+    title: "For occupiers across industry",
+    desc: "Industrial and logistics facilities for 3PL, retail, FMCG, FMCD, pharma, cold storage, and manufacturing operations, engineered for performance and delivered ready to operate.",
     image1: imgInfra,
     image2: imgInfra2,
   },
@@ -264,7 +264,7 @@ const rows = [
     sub: "VALUE",
     color: "#e27244",
     title: "For landowners & asset holders",
-    desc: "Underutilised land transformed into institutional-grade assets, with ownership retained and long-term value unlocked through development.",
+    desc: "Underutilised land transformed into institutional-grade assets, with ownership retained and long-term value unlocked through development",
     image1: imgInfra,
     image2: imgInfra2,
   },
@@ -274,7 +274,7 @@ const rows = [
     sub: "WEALTH",
     color: "#e27244",
     title: "For investors & capital partners",
-    desc: "Development-led participation in Grade-A industrial and logistics assets, created and stewarded for durable, long-term performance.",
+    desc: "Development-led participation in Grade A industrial and logistics assets, created and stewarded for durable, long-term performance.",
     image1: imgInfra,
     image2: imgInfra2,
   },
@@ -341,13 +341,22 @@ export default function BuildspaceModel() {
             whileInView="show"
             viewport={{ once: true, margin: "-60px" }}
           >
-            Industrial growth brings together different stakeholders, each with
-            a different objective. Some are building the infrastructure their
-            operations depend on. Others are unlocking the value held in land.
-            Many are seeking long-term participation in industrial growth
-            itself. BuildSpace meets all three through a single integrated
-            platform, spanning the entire infrastructure value chain from land
-            and development to capital and long-term performance.
+            That end-to-end promise is delivered through three connected{" "}
+            <br className="hidden lg:inline-block" />
+            verticals, each built for a different stakeholder, all powered by
+            one
+            <br className="hidden lg:inline-block" /> development engine.
+            Occupiers building the infrastructure their
+            <br className="hidden lg:inline-block" /> operations depend on.
+            Landowners unlocking the value held in land.
+            <br className="hidden lg:inline-block" /> Investors seeking
+            long-term participation in industrial growth itself.
+            <br className="hidden lg:inline-block" /> Rather than three separate
+            services, BuildSpace brings them together
+            <br className="hidden lg:inline-block" /> as a single integrated
+            platform, spanning the entire value chain from{" "}
+            <br className="hidden lg:inline-block" />
+            land and development to capital and long-term performance.
           </motion.p>
         </div>
 
@@ -449,10 +458,10 @@ export default function BuildspaceModel() {
 
                       {/* Descriptive Row Text Content */}
                       <div className="flex flex-col gap-1.5 relative pr-14 md:pr-0">
-                        <h4 className="font-bold text-[#003b9d] text-base">
+                        <h4 className="font-bold text-[#003b9d] text-[16px]">
                           {row.title}
                         </h4>
-                        <p className="text-[#54514c] text-sm leading-[1.4]">
+                        <p className="text-[#54514c] text-[16px] leading-[1.4]">
                           {row.desc}
                         </p>
 
