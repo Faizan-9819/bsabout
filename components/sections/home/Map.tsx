@@ -1049,8 +1049,8 @@ const STATES: StateData[] = [
     markerX: 248,
     markerY: 215,
     // Placed far right, high up near north/central India latitude
-    x: 750,
-    y: 80,
+    x: 850,
+    y: 50,
     connector: "right",
     filter: ["all", "industrial"],
     assets: [
@@ -2316,6 +2316,20 @@ interface StateData {
 //   );
 // }
 
+interface Asset {
+  title: string;
+  image: string;
+  type: string;
+  city: string;
+  area: string;
+}
+
+interface StateData {
+  count: number;
+  name: string;
+  assets: Asset[];
+}
+
 export function StateItem({
   state,
   active,
@@ -2325,8 +2339,17 @@ export function StateItem({
   active: boolean;
   onClick: () => void;
 }) {
+  if (!state) {
+    return null; // Or return a loading skeleton UI
+  }
   const [assetIdx, setAssetIdx] = useState(0);
-  const asset = state.assets?.[assetIdx] ?? state.assets?.[0];
+  const [isMounted, setIsMounted] = useState(false);
+  // const asset = state.assets?.[assetIdx] ?? state.assets?.[0];
+  const asset = state?.assets?.[assetIdx] ?? state?.assets?.[0];
+  // Prevent high zIndex flashing over headers during initial page refresh hydration
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <motion.div
@@ -2335,16 +2358,14 @@ export function StateItem({
         type: "spring",
         stiffness: 300,
         damping: 30,
-        // Keeps the zIndex calculation prioritized during layout shifts
         zIndex: { duration: 0 },
       }}
       style={{
         width: "322px",
         position: "relative",
-        // Keep the active card above sibling cards without overtaking the navbar.
-        zIndex: active ? 40 : 1,
+        // Forces the currently active card above all other cards
+        zIndex: isMounted && active ? 9999 : 1,
       }}
-      // 'isolation-auto' ensures it respects the absolute priority z-index layer
       className={`bg-white rounded-[24px] overflow-hidden border transition-all duration-200 isolation-auto ${
         active
           ? "border-[#FF6F69] shadow-xl shadow-[#FF6F69]/10"
@@ -2416,7 +2437,7 @@ export function StateItem({
         />
       </button>
 
-      {/* Expandable Body */}
+      {/* Expandable Body Wrapper */}
       <AnimatePresence initial={false}>
         {active && asset && (
           <motion.div
@@ -2424,7 +2445,8 @@ export function StateItem({
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="border-t border-gray-50"
+            // relative and z-10 ensures browser applies z-indexing over static layers
+            className="border-t border-gray-50 relative z-10"
           >
             <div className="pt-2 pb-5">
               {/* Image Section */}
@@ -3247,7 +3269,7 @@ export default function PortfolioSection() {
           </svg>
 
           {/* Map */}
-          <div className="absolute inset-x-0 top-0 z-0 flex justify-center">
+          <div className="w-full flex justify-center relative z-0">
             <IndiaMap
               activeId={activeId}
               visibleIds={visibleIds}
@@ -3259,12 +3281,11 @@ export default function PortfolioSection() {
           {leftStates.map((s) => (
             <div
               key={s.id}
-              className="absolute"
+              className="absolute z-20"
               style={{
                 left: s.x,
                 top: s.y,
                 transform: "translate(-50%, -50%)",
-                zIndex: activeId === s.id ? 40 : 20,
               }}
             >
               <StateItem
@@ -3279,12 +3300,11 @@ export default function PortfolioSection() {
           {rightStates.map((s) => (
             <div
               key={s.id}
-              className="absolute"
+              className="absolute z-20"
               style={{
                 left: s.x,
                 top: s.y,
                 transform: "translate(-50%, -50%)",
-                zIndex: activeId === s.id ? 40 : 20,
               }}
             >
               <StateItem

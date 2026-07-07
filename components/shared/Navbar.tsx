@@ -196,8 +196,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 
-const logo =
-  "https://www.figma.com/api/mcp/asset/35b17058-cb11-451c-81a0-c92a5474e56d";
+const logo = "/bsd.svg";
 
 const H_CLOSED = 104;
 const H_OPEN = 205;
@@ -212,7 +211,7 @@ const projectStates = [
   { name: "Tamil Nadu", cities: ["Sri City"] },
 ];
 
-const projectImg = "/navimg.jpg";
+const projectImg = "/bsw.svg";
 
 const ease = [0.76, 0, 0.24, 1] as const;
 
