@@ -4,8 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 
-const logo =
-  "https://www.figma.com/api/mcp/asset/c74f063f-3a8d-4d01-a7c3-17b0b252d0b6";
+const logo = "/buildspace1.svg";
 const ellipse1 =
   "https://www.figma.com/api/mcp/asset/f4bef774-4308-429b-86c9-4f0a10299b51";
 const ellipse2 =

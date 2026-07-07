@@ -1,5 +1,6 @@
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import MobNav from "@/components/shared/MobNav";
 import HeroValue from "@/components/sections/wealth/HeroValue";
 import React from "react";
 import Second from "@/components/sections/wealth/Second";
@@ -14,6 +15,7 @@ const page = () => {
   return (
     <>
       <Navbar />
+      <MobNav />
       <HeroValue />
       <Second />
       <Overview />

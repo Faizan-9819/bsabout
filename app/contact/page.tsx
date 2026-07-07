@@ -3,12 +3,14 @@ import ContactHero from "@/components/sections/contact/ContactHero";
 import MapSection from "@/components/sections/contact/MapSection";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import MobNav from "@/components/shared/MobNav";
 import React from "react";
 
 const page = () => {
   return (
     <>
       <Navbar />
+      <MobNav />
       <ContactHero />
       <ContactFormSection />
       <MapSection />

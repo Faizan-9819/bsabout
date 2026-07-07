@@ -1,4 +1,5 @@
 import Navbar from "@/components/shared/Navbar";
+import MobNav from "@/components/shared/MobNav";
 import Hero from "../../components/sections/infra/Hero";
 import React from "react";
 import OverviewSection from "@/components/sections/infra/OverviewSection";
@@ -15,6 +16,7 @@ const page = () => {
   return (
     <>
       <Navbar />
+      <MobNav />
       <Hero />
       <Second />
       <OverviewSection />

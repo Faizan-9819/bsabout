@@ -212,8 +212,7 @@ const projectStates = [
   { name: "Tamil Nadu", cities: ["Sri City"] },
 ];
 
-// const projectImg = "/navimg.jpg";
-const projectImg = "/bsw.svg";
+const projectImg = "/navimg.jpg";
 
 const ease = [0.76, 0, 0.24, 1] as const;
 
