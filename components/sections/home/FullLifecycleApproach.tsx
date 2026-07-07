@@ -593,7 +593,7 @@ export default function FullLifecycleApproach() {
     >
       <div className="fix">
         {/* ── Header Block ── */}
-        <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-12 lg:mb-16">
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-9 lg:mb-16">
           <motion.div
             variants={fadeUp}
             custom={0}

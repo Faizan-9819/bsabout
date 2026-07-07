@@ -265,8 +265,8 @@ const rows = [
     color: "#e27244",
     title: "For landowners & asset holders",
     desc: "Underutilised land transformed into institutional-grade assets, with ownership retained and long-term value unlocked through development",
-    image1: imgInfra,
-    image2: imgInfra2,
+    image1: "/home/bsmodel/model2.webp",
+    image2: "/home/bsmodel/model2.webp",
   },
   {
     num: "03",
@@ -275,8 +275,8 @@ const rows = [
     color: "#e27244",
     title: "For investors & capital partners",
     desc: "Development-led participation in Grade A industrial and logistics assets, created and stewarded for durable, long-term performance.",
-    image1: imgInfra,
-    image2: imgInfra2,
+    image1: "/home/bsmodel/model3.webp",
+    image2: "/home/bsmodel/model3.webp",
   },
 ];
 
@@ -303,7 +303,7 @@ export default function BuildspaceModel() {
     >
       <div className="fix mx-auto">
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[200px] mb-[56px] lg:mb-[64px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-[200px] mb-[56px] lg:mb-[64px]">
           <motion.div
             className="flex flex-col gap-7"
             variants={fadeUp}

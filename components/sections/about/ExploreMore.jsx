@@ -5,11 +5,12 @@ import { ArrowRight } from "lucide-react";
 
 const CARDS = [
   {
-    tag: "Sustainability",
-    image: "/about/exploremore/exp1.webp", // Update paths to match your public directory assets
+    tag: "Industries We Enable",
+    image: "/about/exploremore/next1.webp", // Update paths to match your public directory assets
     description:
-      "Building infrastructure with long-term environmental <br/> responsibility and lifecycle performance in mind.",
-    linkText: "Explore Sustainability",
+      "Every industry requires a different infrastructure strategy. BuildSpace creates environments aligned with operational realities and long-term growth.",
+    linkText: "Learn More",
+
     linkUrl: "#",
   },
   {
@@ -17,7 +18,7 @@ const CARDS = [
     image: "/about/exploremore/exp2.webp",
     description:
       "Join a team focused on development, execution, and <br/> creating lasting impact.",
-    linkText: "Explore Careers",
+    linkText: "Learn More",
     linkUrl: "#",
   },
 ];
@@ -34,7 +35,7 @@ export default function ExploreMore() {
             Next Steps
           </div>
 
-          <h2 className="md:text-[56px] text-[26px] bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent  font-medium tracking-[-1.568px] leading-[1.1] font-bold ">
+          <h2 className="md:text-[56px] text-[26px] bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent  font-bold tracking-[-1.568px] leading-[1.1]">
             Explore more of BuildSpace
           </h2>
         </div>
@@ -63,7 +64,7 @@ export default function ExploreMore() {
                 </h3>
 
                 <p
-                  className="text-body font-body text-charcoal/70 leading-[var(--lh-body)] md:mb-8 mb-4 max-sm:mb-6"
+                  className="text-body font-body text-[#54514C] leading-[var(--lh-body)] md:mb-8 mb-4 max-sm:mb-6"
                   dangerouslySetInnerHTML={{ __html: card.description }}
                 >
                   {/* {card.description}  */}

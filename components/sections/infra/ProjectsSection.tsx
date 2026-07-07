@@ -56,7 +56,7 @@ export default function ProjectsSection() {
           {/* Card Left: Project Thumbnail Image */}
           <div className="lg:col-span-5 w-full aspect-[16/10] sm:aspect-[16/9] lg:h-[340px] rounded-xl overflow-hidden relative">
             <img
-              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800"
+              src="/log1.webp"
               alt="Sahakar Logistics Park Construction Site Supervisor"
               className="w-full h-full object-cover"
             />

@@ -403,14 +403,17 @@ export default function Industries() {
             className="font-bold bg-gradient-to-r from-[rgba(191,88,79,1)] to-[rgba(246,115,106,1)] bg-clip-text text-transparent text-center  leading-[110%] tracking-[-0.5px] md:tracking-[-1.5px] md:px-0"
             style={{ fontSize: "clamp(24px, 3vw, 40px)" }}
           >
-            Industrial and logistics infrastructure <br /> designed around
+            Industrial and logistics infrastructure{" "}
+            <br className="hidden lg:inline-block" /> designed around
             operational needs.
           </h2>
           <p className="text-center text-[18px] text-[#54514C] ">
             Every industry requires a different infrastructure strategy. From
-            logistics and <br /> manufacturing to freight, industrial parks, and
-            strategic land development, BuildSpace <br /> creates environments
-            aligned with operational realities and long-term growth.
+            logistics and <br className="hidden lg:inline-block" />{" "}
+            manufacturing to freight, industrial parks, and strategic land
+            development, BuildSpace <br className="hidden lg:inline-block" />
+            creates environments aligned with operational realities and
+            long-term growth.
           </p>
         </motion.div>
 

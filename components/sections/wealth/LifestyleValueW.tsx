@@ -17,7 +17,7 @@ const stages = [
     desc: "Development opportunities sourced in high-demand industrial and logistics corridors.",
     strategicValue:
       "Your exposure originates in genuine, demand-backed locations, not competitively bid stock.",
-    image: "/wealth/w1.jpg",
+    image: "/wealth/weal1.webp",
   },
   {
     num: "02",
@@ -25,7 +25,7 @@ const stages = [
     desc: "Technical, commercial, and risk evaluation to confirm the asset thesis before any capital is committed.",
     strategicValue:
       "Conviction earned through diligence, so capital commits to a tested thesis.",
-    image: "/wealth/OpportunityIdentification.jpg",
+    image: "/wealth/weal2.webp",
   },
   {
     num: "03",
@@ -33,7 +33,7 @@ const stages = [
     desc: "Defining the optimal asset type, scale, and structure for the corridor and the capital behind it.",
     strategicValue:
       "A clear path from opportunity to a defined, investable asset.",
-    image: "/wealth/feas.jpg",
+    image: "/wealth/weal3.webp",
   },
   {
     num: "04",
@@ -41,7 +41,7 @@ const stages = [
     desc: "Developing the asset to Grade-A standard through BuildSpace's integrated development management.",
     strategicValue:
       "Quality and basis controlled at source, built rather than bought at a premium.",
-    image: "/wealth/DevelopmentStrategy.jpg",
+    image: "/wealth/weal4.webp",
   },
   {
     num: "05",
@@ -49,7 +49,7 @@ const stages = [
     desc: "Securing credible, long-term tenants whose covenants underwrite the asset's income.",
     strategicValue:
       "Income durability through quality tenancy, as the asset begins to perform.",
-    image: "/wealth/wl.jpg",
+    image: "/wealth/weal5.webp",
   },
   {
     num: "06",
@@ -57,7 +57,7 @@ const stages = [
     desc: "Bringing the asset to stabilised, income-producing performance.",
     strategicValue:
       "A de-risked, cash-generating asset with an established operating record.",
-    image: "/wealth/f2.jpg",
+    image: "/wealth/weal6.webp",
   },
   {
     num: "07",
@@ -65,7 +65,7 @@ const stages = [
     desc: "Lifecycle stewardship: optimisation, capital-cycle planning, and sustained value creation.",
     strategicValue:
       "Returns compound, with ownership and alignment held throughout the hold.",
-    image: "/wealth/AssetStabilisation.jpg",
+    image: "/wealth/w1.jpg",
   },
 ];
 

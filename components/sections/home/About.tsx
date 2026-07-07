@@ -37,7 +37,7 @@ export default function About() {
 
       {/* Content */}
       <div className="relative z-10 fix py-[50px] md:py-0 ">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 items-start">
           {/* Left col — headline */}
           <div className="flex flex-col gap-7 w-full lg:w-1/2">
             <motion.div
