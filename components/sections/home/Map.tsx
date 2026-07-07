@@ -1354,7 +1354,7 @@ function FilterTabs({
     { key: "land", label: "Land Parcels" },
   ];
   return (
-    <div className="flex items-center gap-[10px] flex-wrap justify-center">
+    <div className="flex md:items-center gap-[10px] flex-wrap md:justify-center">
       {tabs.map((t) => (
         <button
           key={t.key}
@@ -3944,11 +3944,11 @@ export default function PortfolioSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col items-center text-center gap-4 mb-[18.9px]"
+          className="flex flex-col items-center md:text-center gap-4 mb-[18.9px]"
         >
           <div className="flex items-center gap-2">
             <span className="w-[28px] h-[2px] bg-[#003b9d]" />
-            <span className="text-[8px] md:text-[12px] font-semibold tracking-[3.13px] leading-normal text-[#003b9d] uppercase">
+            <span className="text-[10px] md:text-[12px] font-semibold tracking-[3.13px] leading-normal text-[#003b9d] uppercase">
               Developments &amp; Strategic Assets
             </span>
           </div>
