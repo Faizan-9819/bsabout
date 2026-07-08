@@ -6,6 +6,7 @@ import ProofAndScale from "@/components/sections/career/ProofAndScale";
 import WhyUsCareer from "@/components/sections/career/WhyUsCareer";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import MobNav from "@/components/shared/MobNav";
 import React from "react";
 
 const spotlightData = [
@@ -59,6 +60,7 @@ const page = () => {
   return (
     <>
       <Navbar />
+      <MobNav />
       <CareerHome />
       <ProofAndScale />
       <WhyUsCareer />

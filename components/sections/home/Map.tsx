@@ -962,6 +962,7 @@ import {
   ArrowRight,
   RotateCcw,
 } from "lucide-react";
+import { useId } from "react";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -1335,6 +1336,8 @@ const STATES: StateData[] = [
 // ];
 const LEFT_STATES = STATES.filter((s) => s.connector === "left");
 const RIGHT_STATES = STATES.filter((s) => s.connector === "right");
+const DESKTOP_LAYOUT_WIDTH = 1200;
+const DESKTOP_LAYOUT_HEIGHT = 650;
 
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
@@ -1351,7 +1354,7 @@ function FilterTabs({
     { key: "land", label: "Land Parcels" },
   ];
   return (
-    <div className="flex items-center gap-[10px] flex-wrap justify-center">
+    <div className="flex md:items-center gap-[10px] flex-wrap md:justify-center">
       {tabs.map((t) => (
         <button
           key={t.key}
@@ -2330,6 +2333,204 @@ interface StateData {
 //   );
 // }
 
+// interface Asset {
+//   title: string;
+//   image: string;
+//   type: string;
+//   city: string;
+//   area: string;
+// }
+
+// interface StateData {
+//   count: number;
+//   name: string;
+//   assets: Asset[];
+// }
+
+// export function StateItem({
+//   state,
+//   active,
+//   onClick,
+// }: {
+//   state: StateData;
+//   active: boolean;
+//   onClick: () => void;
+// }) {
+//   if (!state) {
+//     return null; // Or return a loading skeleton UI
+//   }
+//   const [assetIdx, setAssetIdx] = useState(0);
+//   const [isMounted, setIsMounted] = useState(false);
+//   // const asset = state.assets?.[assetIdx] ?? state.assets?.[0];
+//   const asset = state?.assets?.[assetIdx] ?? state?.assets?.[0];
+//   // Prevent high zIndex flashing over headers during initial page refresh hydration
+//   useEffect(() => {
+//     setIsMounted(true);
+//   }, []);
+
+//   return (
+//     <motion.div
+//       layout
+//       transition={{
+//         type: "spring",
+//         stiffness: 300,
+//         damping: 30,
+//         zIndex: { duration: 0 },
+//       }}
+//       style={{
+//         width: "322px",
+//         position: "relative",
+//         // Keep active cards above sibling cards, but below the z-50 navbar.
+//         zIndex: isMounted && active ? 40 : 1,
+//       }}
+//       className={`bg-white rounded-[24px] overflow-hidden border transition-all duration-200 isolation-auto ${
+//         active
+//           ? "border-[#FF6F69] shadow-xl shadow-[#FF6F69]/10"
+//           : "border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-md"
+//       }`}
+//     >
+//       {/* Header Row: Locked at exactly 67px height */}
+//       <button
+//         type="button"
+//         onClick={onClick}
+//         style={{ height: "67px" }}
+//         className="w-full flex items-center gap-3.5 px-5 text-left relative focus:outline-none"
+//         aria-pressed={active}
+//       >
+//         {/* Number Circle */}
+//         <span
+//           className={`w-9 h-9 rounded-full border flex items-center justify-center flex-shrink-0 text-[12px] font-medium transition-colors duration-200 ${
+//             active
+//               ? "border-[#FF6F69] text-[#FF6F69]"
+//               : "border-gray-200 text-gray-400"
+//           }`}
+//         >
+//           {String(state.count).padStart(2, "0")}
+//         </span>
+
+//         {/* State Name */}
+//         <span className="flex-1 text-[16px] font-medium text-gray-800 tracking-wide">
+//           {state.name}
+//         </span>
+
+//         {/* Pagination Controls inside the header if active */}
+//         <AnimatePresence>
+//           {active && state.assets?.length > 1 && (
+//             <motion.div
+//               initial={{ opacity: 0, x: 5 }}
+//               animate={{ opacity: 1, x: 0 }}
+//               exit={{ opacity: 0, x: 5 }}
+//               className="flex items-center gap-1 mr-1"
+//               onClick={(e) => e.stopPropagation()}
+//             >
+//               <button
+//                 type="button"
+//                 onClick={() => setAssetIdx((i) => Math.max(0, i - 1))}
+//                 disabled={assetIdx === 0}
+//                 className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
+//               >
+//                 <ArrowLeft size={12} />
+//               </button>
+//               <button
+//                 type="button"
+//                 onClick={() =>
+//                   setAssetIdx((i) => Math.min(state.assets.length - 1, i + 1))
+//                 }
+//                 disabled={assetIdx === state.assets.length - 1}
+//                 className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 disabled:opacity-20 hover:border-gray-400 transition-colors"
+//               >
+//                 <ArrowRight size={12} />
+//               </button>
+//             </motion.div>
+//           )}
+//         </AnimatePresence>
+
+//         {/* Chevron Arrow */}
+//         <ChevronDown
+//           size={18}
+//           className={`text-gray-400 transition-transform duration-200 flex-shrink-0 ${
+//             active ? "-rotate-180" : ""
+//           }`}
+//         />
+//       </button>
+
+//       {/* Expandable Body Wrapper */}
+//       <AnimatePresence initial={false}>
+//         {active && asset && (
+//           <motion.div
+//             initial={{ height: 0, opacity: 0 }}
+//             animate={{ height: "auto", opacity: 1 }}
+//             exit={{ height: 0, opacity: 0 }}
+//             transition={{ duration: 0.25, ease: "easeInOut" }}
+//             // relative and z-10 ensures browser applies z-indexing over static layers
+//             className="border-t border-gray-50 relative z-10"
+//           >
+//             <div className="pt-2 pb-5">
+//               {/* Image Section */}
+//               <div className="mx-5 mb-4 rounded-2xl overflow-hidden bg-gray-100 h-[140px]">
+//                 <img
+//                   src={asset.image}
+//                   alt={asset.title}
+//                   className="w-full h-full object-cover"
+//                   onError={(e) => {
+//                     (e.target as HTMLImageElement).src =
+//                       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=80";
+//                   }}
+//                 />
+//               </div>
+
+//               {/* Asset Details Inside */}
+//               <div className="px-5">
+//                 <div className="text-[11px] text-gray-400 mb-0.5 font-medium tracking-wide">
+//                   ASSET {String(assetIdx + 1).padStart(2, "0")}
+//                 </div>
+//                 <div className="text-[16px] font-semibold text-gray-900 mb-3.5 leading-tight">
+//                   {asset.title}
+//                 </div>
+
+//                 {/* Info Rows */}
+//                 <div className="space-y-2.5 mb-4.5 border-b border-gray-100 pb-4">
+//                   {[
+//                     { label: "Type", value: asset.type },
+//                     { label: "City", value: asset.city },
+//                     { label: "Total Area", value: asset.area },
+//                   ].map((row) => (
+//                     <div
+//                       key={row.label}
+//                       className="flex items-center justify-between"
+//                     >
+//                       <span className="text-[13px] text-gray-400">
+//                         {row.label}
+//                       </span>
+//                       <span className="text-[13px] text-gray-800 font-medium">
+//                         {row.value}
+//                       </span>
+//                     </div>
+//                   ))}
+//                 </div>
+
+//                 {/* View Details Call To Action */}
+//                 <button
+//                   type="button"
+//                   className="flex items-center gap-2 group focus:outline-none mt-4"
+//                   onClick={(e) => e.stopPropagation()}
+//                 >
+//                   <span className="text-[13px] font-semibold text-[#003b9d] group-hover:underline">
+//                     View Details
+//                   </span>
+//                   <span className="w-6 h-6 rounded-full bg-[#003b9d] flex items-center justify-center group-hover:bg-[#0046c0] transition-colors">
+//                     <ArrowUpRight size={12} className="text-white" />
+//                   </span>
+//                 </button>
+//               </div>
+//             </div>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//     </motion.div>
+//   );
+// }
+
 interface Asset {
   title: string;
   image: string;
@@ -2354,19 +2555,27 @@ export function StateItem({
   onClick: () => void;
 }) {
   if (!state) {
-    return null; // Or return a loading skeleton UI
+    return null;
   }
   const [assetIdx, setAssetIdx] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
-  // const asset = state.assets?.[assetIdx] ?? state.assets?.[0];
   const asset = state?.assets?.[assetIdx] ?? state?.assets?.[0];
-  // Prevent high zIndex flashing over headers during initial page refresh hydration
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
+  // Reset pagination index to 0 when card toggles active/inactive
+  useEffect(() => {
+    if (!active) {
+      setAssetIdx(0);
+    }
+  }, [active]);
+
   return (
     <motion.div
+      // 1. Unique ID used for scrolling from the map trigger
+      id={`state-card-${state.name.toLowerCase().replace(/\s+/g, "-")}`}
       layout
       transition={{
         type: "spring",
@@ -2377,7 +2586,6 @@ export function StateItem({
       style={{
         width: "322px",
         position: "relative",
-        // Keep active cards above sibling cards, but below the z-50 navbar.
         zIndex: isMounted && active ? 40 : 1,
       }}
       className={`bg-white rounded-[24px] overflow-hidden border transition-all duration-200 isolation-auto ${
@@ -2386,7 +2594,7 @@ export function StateItem({
           : "border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-md"
       }`}
     >
-      {/* Header Row: Locked at exactly 67px height */}
+      {/* Header Row */}
       <button
         type="button"
         onClick={onClick}
@@ -2410,7 +2618,7 @@ export function StateItem({
           {state.name}
         </span>
 
-        {/* Pagination Controls inside the header if active */}
+        {/* Pagination Controls */}
         <AnimatePresence>
           {active && state.assets?.length > 1 && (
             <motion.div
@@ -2459,7 +2667,6 @@ export function StateItem({
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            // relative and z-10 ensures browser applies z-indexing over static layers
             className="border-t border-gray-50 relative z-10"
           >
             <div className="pt-2 pb-5">
@@ -2476,7 +2683,7 @@ export function StateItem({
                 />
               </div>
 
-              {/* Asset Details Inside */}
+              {/* Asset Details */}
               <div className="px-5">
                 <div className="text-[11px] text-gray-400 mb-0.5 font-medium tracking-wide">
                   ASSET {String(assetIdx + 1).padStart(2, "0")}
@@ -2506,7 +2713,7 @@ export function StateItem({
                   ))}
                 </div>
 
-                {/* View Details Call To Action */}
+                {/* View Details Button */}
                 <button
                   type="button"
                   className="flex items-center gap-2 group focus:outline-none mt-4"
@@ -2527,11 +2734,47 @@ export function StateItem({
     </motion.div>
   );
 }
+// function ConnectorLine({
+//   x1, // Map Marker X
+//   y1, // Map Marker Y
+//   x2, // Edge Connection X
+//   y2, // Edge Connection Y
+//   active,
+// }: {
+//   x1: number;
+//   y1: number;
+//   x2: number;
+//   y2: number;
+//   active: boolean;
+// }) {
+//   // Balanced fold breakpoint for a natural angled look
+//   const foldX = x1 + (x2 - x1) * 0.4;
+//   const pathDefinition = `M ${x1} ${y1} L ${foldX} ${y1} L ${x2} ${y2}`;
+
+//   return (
+//     <motion.path
+//       d={pathDefinition}
+//       fill="none"
+//       stroke="#CBD5E1"
+//       strokeWidth={1}
+//       initial={{ pathLength: 0, opacity: 0.5 }}
+//       animate={
+//         active
+//           ? { pathLength: 1, opacity: 1, stroke: "#FF6F69", strokeWidth: 2 }
+//           : { pathLength: 1, opacity: 0.4, stroke: "#CBD5E1", strokeWidth: 1 }
+//       }
+//       transition={{ duration: 0.6, ease: "easeInOut" }}
+//     />
+//   );
+// }
+
+// ─── Main SVG Map ─────────────────────────────────────────────────────────────
+
 function ConnectorLine({
-  x1, // Map Marker X
-  y1, // Map Marker Y
-  x2, // Edge Connection X
-  y2, // Edge Connection Y
+  x1,
+  y1,
+  x2,
+  y2,
   active,
 }: {
   x1: number;
@@ -2540,7 +2783,6 @@ function ConnectorLine({
   y2: number;
   active: boolean;
 }) {
-  // Balanced fold breakpoint for a natural angled look
   const foldX = x1 + (x2 - x1) * 0.4;
   const pathDefinition = `M ${x1} ${y1} L ${foldX} ${y1} L ${x2} ${y2}`;
 
@@ -2557,11 +2799,198 @@ function ConnectorLine({
           : { pathLength: 1, opacity: 0.4, stroke: "#CBD5E1", strokeWidth: 1 }
       }
       transition={{ duration: 0.6, ease: "easeInOut" }}
+      // Tailwind hides it on mobile screens (< 768px)
+      className="hidden md:block"
     />
   );
 }
+// function IndiaMap({
+//   activeId,
+//   visibleIds,
+//   onStateClick,
+// }: {
+//   activeId: string | null;
+//   visibleIds: string[];
+//   onStateClick: (id: string) => void;
+// }) {
+//   const SVG_W = 553;
+//   const SVG_H = 608;
 
-// ─── Main SVG Map ─────────────────────────────────────────────────────────────
+//   // Exact target positions inside the 553x608 SVG box pointing out towards your labels
+//   const localConnectors: Record<string, { x2: number; y2: number }> = {
+//     gujarat: { x2: -350, y2: 150 },
+//     maharashtra: { x2: -250, y2: 400 },
+//     uttarpradesh: { x2: 540, y2: 70 },
+//     ap: { x2: 600, y2: 270 },
+//     tn: { x2: 540, y2: 400 },
+//   };
+
+//   return (
+//     <svg
+//       width="100%"
+//       viewBox={`-80 0 ${SVG_W} ${SVG_H}`}
+//       xmlns="http://www.w3.org/2000/svg"
+//       className="max-w-[520px] mx-auto overflow-visible"
+//     >
+//       <defs>
+//         <filter id="markerShadow" x="-50%" y="-50%" width="200%" height="200%">
+//           <feDropShadow dx="0" dy="2" stdDeviation="2" floodOpacity="0.15" />
+//         </filter>
+//         <filter id="mapShadow">
+//           <feDropShadow dx="0" dy="4" stdDeviation="8" floodOpacity="0.08" />
+//         </filter>
+//       </defs>
+
+//       {/* Single Connector Line loop mapped precisely to local coordinates */}
+//       {STATES.filter((s) => visibleIds.includes(s.id)).map((s) => {
+//         const target = localConnectors[s.id];
+//         if (!target) return null;
+
+//         return (
+//           <ConnectorLine
+//             key={`line-${s.id}`}
+//             x1={s.markerX}
+//             y1={s.markerY}
+//             x2={target.x2}
+//             y2={target.y2}
+//             active={activeId === s.id}
+//           />
+//         );
+//       })}
+
+//       {/* ── THE ORIGINAL SVG PATHS (unchanged) ── */}
+//       <g id="Map" filter="url(#mapShadow)">
+//         <g clipPath="url(#clip0_238_7)">
+//           <IndiaMapPaths
+//             activeId={activeId}
+//             visibleIds={visibleIds}
+//             onStateClick={onStateClick}
+//           />
+//         </g>
+//         <defs>
+//           <clipPath id="clip0_238_7">
+//             <rect
+//               width="545.3"
+//               height="600.4"
+//               fill="white"
+//               transform="translate(3.80005)"
+//             />
+//           </clipPath>
+//         </defs>
+//       </g>
+
+//       {/* Markers on top */}
+//       {STATES.filter((s) => visibleIds.includes(s.id)).map((s) => (
+//         <StateMarker
+//           key={s.id}
+//           x={s.markerX}
+//           y={s.markerY}
+//           active={activeId === s.id}
+//           onClick={() => onStateClick(s.id)}
+//         />
+//       ))}
+//     </svg>
+//   );
+// }
+
+// ─── All SVG paths (original, fill toggled) ──────────────────────────────────
+
+// function IndiaMap({
+//   activeId,
+//   visibleIds,
+//   onStateClick,
+// }: {
+//   activeId: string | null;
+//   visibleIds: string[];
+//   onStateClick: (id: string) => void;
+// }) {
+//   const SVG_W = 553;
+//   const SVG_H = 608;
+
+//   // Exact target positions inside the 553x608 SVG box pointing out towards your labels
+//   const localConnectors: Record<string, { x2: number; y2: number }> = {
+//     gujarat: { x2: -350, y2: 150 },
+//     maharashtra: { x2: -250, y2: 400 },
+//     uttarpradesh: { x2: 540, y2: 70 },
+//     ap: { x2: 600, y2: 270 },
+//     tn: { x2: 540, y2: 400 },
+//   };
+
+//   return (
+//     <svg
+//       width="100%"
+//       height="100%"
+//       viewBox={`-80 0 ${SVG_W} ${SVG_H}`}
+//       xmlns="http://www.w3.org/2000/svg"
+//       // Added w-full (100% width on mobile) and kept max-w-[520px] only for desktop screens (md:)
+//       className="w-full md:max-w-[520px] mx-auto overflow-visible block"
+//     >
+//       <defs>
+//         <filter id="markerShadow" x="-50%" y="-50%" width="200%" height="200%">
+//           <feDropShadow dx="0" dy="2" stdDeviation="2" floodOpacity="0.15" />
+//         </filter>
+//         <filter id="mapShadow">
+//           <feDropShadow dx="0" dy="4" stdDeviation="8" floodOpacity="0.08" />
+//         </filter>
+//       </defs>
+
+//       {/* Single Connector Line loop mapped precisely to local coordinates */}
+//       {STATES.filter((s) => visibleIds.includes(s.id)).map((s) => {
+//         const target = localConnectors[s.id];
+//         if (!target) return null;
+
+//         return (
+//           <ConnectorLine
+//             key={`line-${s.id}`}
+//             x1={s.markerX}
+//             y1={s.markerY}
+//             x2={target.x2}
+//             y2={target.y2}
+//             active={activeId === s.id}
+//           />
+//         );
+//       })}
+
+//       {/* ── THE ORIGINAL SVG PATHS (unchanged) ── */}
+//       <g id="Map" filter="url(#mapShadow)">
+//         {/* <g clipPath="url(#clip0_238_7)">
+//           <IndiaMapPaths
+//             activeId={activeId}
+//             visibleIds={visibleIds}
+//             onStateClick={onStateClick}
+//           />
+//         </g> */}
+//         <IndiaMapPaths
+//           activeId={activeId}
+//           visibleIds={visibleIds}
+//           onStateClick={onStateClick}
+//         />
+//         <defs>
+//           <clipPath id="clip0_238_7">
+//             <rect
+//               width="545.3"
+//               height="600.4"
+//               fill="white"
+//               transform="translate(3.80005)"
+//             />
+//           </clipPath>
+//         </defs>
+//       </g>
+
+//       {/* Markers on top */}
+//       {STATES.filter((s) => visibleIds.includes(s.id)).map((s) => (
+//         <StateMarker
+//           key={s.id}
+//           x={s.markerX}
+//           y={s.markerY}
+//           active={activeId === s.id}
+//           onClick={() => onStateClick(s.id)}
+//         />
+//       ))}
+//     </svg>
+//   );
+// }
+
 function IndiaMap({
   activeId,
   visibleIds,
@@ -2573,8 +3002,22 @@ function IndiaMap({
 }) {
   const SVG_W = 553;
   const SVG_H = 608;
+  const [isMobile, setIsMobile] = useState(false);
+  // React useId generate unique strings (safely escapes colons for SVG compatibility)
+  const mapInstanceId = useId().replace(/:/g, "");
+  useEffect(() => {
+    const checkScreenSize = () => {
+      // Tailwind lg layout scale benchmark configuration (1024px)
+      setIsMobile(window.innerWidth < 1024);
+    };
 
-  // Exact target positions inside the 553x608 SVG box pointing out towards your labels
+    checkScreenSize(); // Initial validation check
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+  const viewBoxX = isMobile ? 0 : -80;
+
   const localConnectors: Record<string, { x2: number; y2: number }> = {
     gujarat: { x2: -350, y2: 150 },
     maharashtra: { x2: -250, y2: 400 },
@@ -2586,20 +3029,28 @@ function IndiaMap({
   return (
     <svg
       width="100%"
-      viewBox={`-80 0 ${SVG_W} ${SVG_H}`}
+      height="100%"
+      viewBox={`${viewBoxX} 0 ${SVG_W} ${SVG_H}`}
       xmlns="http://www.w3.org/2000/svg"
-      className="max-w-[520px] mx-auto overflow-visible"
+      className="w-full md:max-w-[520px] mx-auto overflow-visible block"
     >
       <defs>
-        <filter id="markerShadow" x="-50%" y="-50%" width="200%" height="200%">
+        {/* Unique filters created dynamically per instance */}
+        <filter
+          id={`markerShadow-${mapInstanceId}`}
+          x="-50%"
+          y="-50%"
+          width="200%"
+          height="200%"
+        >
           <feDropShadow dx="0" dy="2" stdDeviation="2" floodOpacity="0.15" />
         </filter>
-        <filter id="mapShadow">
+        <filter id={`mapShadow-${mapInstanceId}`}>
           <feDropShadow dx="0" dy="4" stdDeviation="8" floodOpacity="0.08" />
         </filter>
       </defs>
 
-      {/* Single Connector Line loop mapped precisely to local coordinates */}
+      {/* Connectors Layer */}
       {STATES.filter((s) => visibleIds.includes(s.id)).map((s) => {
         const target = localConnectors[s.id];
         if (!target) return null;
@@ -2616,28 +3067,17 @@ function IndiaMap({
         );
       })}
 
-      {/* ── THE ORIGINAL SVG PATHS (unchanged) ── */}
-      <g id="Map" filter="url(#mapShadow)">
-        <g clipPath="url(#clip0_238_7)">
-          <IndiaMapPaths
-            activeId={activeId}
-            visibleIds={visibleIds}
-            onStateClick={onStateClick}
-          />
-        </g>
-        <defs>
-          <clipPath id="clip0_238_7">
-            <rect
-              width="545.3"
-              height="600.4"
-              fill="white"
-              transform="translate(3.80005)"
-            />
-          </clipPath>
-        </defs>
+      {/* ── THE ORIGINAL SVG PATHS (Clean & Completely De-isolated) ── */}
+      {/* Linked via dynamic dynamic filter instances safely */}
+      <g id="Map" filter={`url(#mapShadow-${mapInstanceId})`}>
+        <IndiaMapPaths
+          activeId={activeId}
+          visibleIds={visibleIds}
+          onStateClick={onStateClick}
+        />
       </g>
 
-      {/* Markers on top */}
+      {/* Markers Layer */}
       {STATES.filter((s) => visibleIds.includes(s.id)).map((s) => (
         <StateMarker
           key={s.id}
@@ -2650,9 +3090,6 @@ function IndiaMap({
     </svg>
   );
 }
-
-// ─── All SVG paths (original, fill toggled) ──────────────────────────────────
-
 function pathFill(id: string, activeId: string | null, visibleIds: string[]) {
   const namedIds = ["gujarat", "maharashtra", "uttarpradesh", "ap", "tn"];
   if (namedIds.includes(id)) {
@@ -3197,9 +3634,246 @@ function IndiaMapPaths({
 //   );
 // }
 
+// export default function PortfolioSection() {
+//   const [activeId, setActiveId] = useState<string | null>(null);
+//   const [filter, setFilter] = useState<Filter>("all");
+//   const desktopLayoutRef = useRef<HTMLDivElement>(null);
+//   const mobileCardsRef = useRef<HTMLDivElement>(null);
+//   const [desktopScale, setDesktopScale] = useState(1);
+
+//   const visibleIds = STATES.filter((s) => s.filter.includes(filter)).map(
+//     (s) => s.id,
+//   );
+
+//   const handleStateClick = useCallback(
+//     (id: string) => {
+//       if (!visibleIds.includes(id)) return;
+//       setActiveId((prev) => {
+//         const next = prev === id ? null : id;
+//         if (next && window.innerWidth < 1024) {
+//           requestAnimationFrame(() => {
+//             mobileCardsRef.current?.scrollIntoView({
+//               behavior: "smooth",
+//               block: "start",
+//             });
+//           });
+//         }
+//         return next;
+//       });
+//     },
+//     [visibleIds],
+//   );
+
+//   useEffect(() => {
+//     const node = desktopLayoutRef.current;
+//     if (!node) return;
+
+//     const updateScale = () => {
+//       setDesktopScale(
+//         Math.min(1, node.getBoundingClientRect().width / DESKTOP_LAYOUT_WIDTH),
+//       );
+//     };
+
+//     updateScale();
+//     const observer = new ResizeObserver(updateScale);
+//     observer.observe(node);
+
+//     return () => observer.disconnect();
+//   }, []);
+
+//   // Clear active if it's no longer visible
+//   useEffect(() => {
+//     if (activeId && !visibleIds.includes(activeId)) {
+//       setActiveId(null);
+//     }
+//   }, [visibleIds, activeId]);
+
+//   const activeState = activeId
+//     ? (STATES.find((s) => s.id === activeId) ?? null)
+//     : null;
+
+//   const leftStates = LEFT_STATES.filter((s) => visibleIds.includes(s.id));
+//   const rightStates = RIGHT_STATES.filter((s) => visibleIds.includes(s.id));
+
+//   return (
+//     <section className="bg-white py-20 lg:py-28 overflow-hidden">
+//       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+//         {/* Header */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6, ease: "easeOut" }}
+//           className="flex flex-col items-center text-center gap-4 mb-[18.9px]"
+//         >
+//           <div className="flex items-center gap-2">
+//             <span className="w-[28px] h-[2px] bg-[#003b9d]" />
+//             <span className="text-[12px] font-semibold tracking-[3.13px] leading-normal text-[#003b9d] uppercase">
+//               Developments &amp; Strategic Assets
+//             </span>
+//             {/* <span className="w-8 h-px bg-[#003b9d]" /> */}
+//           </div>
+//           <h2
+//             className="font-bold  leading-[1.15] text-[24px] md:text-[43.2px] tracking-[-0.5px]"
+//             // style={{ fontSize: "clamp(28px, 4vw, 50px)" }}
+//           >
+//             <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+//               A Diverse Development Portfolio
+//             </span>
+//             <br />
+//             <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+//               Across Region
+//             </span>
+//           </h2>
+//         </motion.div>
+
+//         {/* Filter */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 12 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.5, delay: 0.1 }}
+//           className="flex justify-center mb-10"
+//         >
+//           <FilterTabs active={filter} onChange={setFilter} />
+//         </motion.div>
+
+//         {/* Desktop layout */}
+//         <div
+//           ref={desktopLayoutRef}
+//           className="hidden lg:block relative w-full"
+//           style={{ height: DESKTOP_LAYOUT_HEIGHT * desktopScale }}
+//         >
+//           <div
+//             className="relative mx-auto"
+//             style={{
+//               width: DESKTOP_LAYOUT_WIDTH,
+//               height: DESKTOP_LAYOUT_HEIGHT,
+//               transform: `scale(${desktopScale})`,
+//               transformOrigin: "top center",
+//             }}
+//           >
+//             {/* SVG Connecting Lines Layer */}
+//             <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
+//               {/* {[...leftStates, ...rightStates].map((s) => (
+//                 <ConnectorLine
+//                   key={`line-${s.id}`}
+//                   x1={s.markerX} // Map point start
+//                   y1={s.markerY}
+//                   x2={s.x} // Card position end
+//                   y2={s.y}
+//                   active={activeId === s.id}
+//                 />
+//               ))} */}
+//             </svg>
+
+//             {/* Map */}
+//             <div className="w-full flex justify-center relative z-0">
+//               <IndiaMap
+//                 activeId={activeId}
+//                 visibleIds={visibleIds}
+//                 onStateClick={handleStateClick}
+//               />
+//             </div>
+
+//             {/* Left States */}
+//             {leftStates.map((s) => (
+//               <div
+//                 key={s.id}
+//                 className="absolute"
+//                 style={{
+//                   left: s.x,
+//                   top: s.y,
+//                   transform: "translate(-50%, -50%)",
+//                   zIndex: activeId === s.id ? 40 : 20,
+//                 }}
+//               >
+//                 <StateItem
+//                   state={s}
+//                   active={activeId === s.id}
+//                   onClick={() => handleStateClick(s.id)}
+//                 />
+//               </div>
+//             ))}
+
+//             {/* Right States */}
+//             {rightStates.map((s) => (
+//               <div
+//                 key={s.id}
+//                 className="absolute"
+//                 style={{
+//                   left: s.x,
+//                   top: s.y,
+//                   transform: "translate(-50%, -50%)",
+//                   zIndex: activeId === s.id ? 40 : 20,
+//                 }}
+//               >
+//                 <StateItem
+//                   state={s}
+//                   active={activeId === s.id}
+//                   onClick={() => handleStateClick(s.id)}
+//                 />
+//               </div>
+//             ))}
+
+//             {/* Asset card */}
+//             {/* <div className="absolute bottom-4 left-4 z-30">
+//               <AnimatePresence mode="wait">
+//                 {activeState && (
+//                   <AssetCard
+//                     key={activeState.id}
+//                     state={activeState}
+//                     onClose={() => setActiveId(null)}
+//                   />
+//                 )}
+//               </AnimatePresence>
+//             </div> */}
+
+//             {/* Place this right at the bottom of your desktop layout div container */}
+//             <AnimatePresence mode="wait">
+//               {/* {activeState && (
+//                 <AssetCard
+//                   key={activeState.id} // Changing the key ensures layout triggers clean exit/entry states
+//                   state={activeState}
+//                   onClose={() => setActiveId(null)}
+//                 />
+//               )} */}
+//             </AnimatePresence>
+//           </div>
+//         </div>
+
+//         {/* Mobile layout */}
+//         <div className="lg:hidden flex flex-col gap-6">
+//           <div className="w-full">
+//             <IndiaMap
+//               activeId={activeId}
+//               visibleIds={visibleIds}
+//               onStateClick={handleStateClick}
+//             />
+//           </div>
+
+//           <div ref={mobileCardsRef} className="flex justify-center">
+//             {activeState && (
+//               <StateItem
+//                 key={activeState.id}
+//                 state={activeState}
+//                 active
+//                 onClick={() => handleStateClick(activeState.id)}
+//               />
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
 export default function PortfolioSection() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>("all");
+  const desktopLayoutRef = useRef<HTMLDivElement>(null);
+  const mobileCardsRef = useRef<HTMLDivElement>(null);
+  const [desktopScale, setDesktopScale] = useState(1);
 
   const visibleIds = STATES.filter((s) => s.filter.includes(filter)).map(
     (s) => s.id,
@@ -3208,10 +3882,44 @@ export default function PortfolioSection() {
   const handleStateClick = useCallback(
     (id: string) => {
       if (!visibleIds.includes(id)) return;
-      setActiveId((prev) => (prev === id ? null : id));
+      setActiveId((prev) => {
+        const next = prev === id ? null : id;
+
+        // Changed window screen check to match Tailwind's lg (1024px) breakpoint perfectly
+        if (next && window.innerWidth < 1024) {
+          requestAnimationFrame(() => {
+            mobileCardsRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          });
+        }
+        return next;
+      });
     },
     [visibleIds],
   );
+
+  useEffect(() => {
+    // Only execute structural tracking scales if we're actually rendering the desktop layout (md = 768px+)
+    if (window.innerWidth < 768) return;
+
+    const node = desktopLayoutRef.current;
+    if (!node) return;
+
+    const updateScale = () => {
+      const currentWidth = node.getBoundingClientRect().width;
+      if (currentWidth > 0) {
+        setDesktopScale(Math.min(1, currentWidth / DESKTOP_LAYOUT_WIDTH));
+      }
+    };
+
+    updateScale();
+    const observer = new ResizeObserver(updateScale);
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, []);
 
   // Clear active if it's no longer visible
   useEffect(() => {
@@ -3228,7 +3936,7 @@ export default function PortfolioSection() {
   const rightStates = RIGHT_STATES.filter((s) => visibleIds.includes(s.id));
 
   return (
-    <section className="bg-white py-20 lg:py-28 overflow-hidden">
+    <section className="bg-white py-20 lg:py-28 overflow-x-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -3236,19 +3944,15 @@ export default function PortfolioSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col items-center text-center gap-4 mb-[18.9px]"
+          className="flex flex-col items-center md:text-center gap-4 mb-[18.9px]"
         >
           <div className="flex items-center gap-2">
             <span className="w-[28px] h-[2px] bg-[#003b9d]" />
-            <span className="text-[12px] font-semibold tracking-[3.13px] leading-normal text-[#003b9d] uppercase">
+            <span className="text-[10px] md:text-[12px] font-semibold tracking-[3.13px] leading-normal text-[#003b9d] uppercase">
               Developments &amp; Strategic Assets
             </span>
-            {/* <span className="w-8 h-px bg-[#003b9d]" /> */}
           </div>
-          <h2
-            className="font-bold  leading-[1.15] text-[24px] md:text-[43.2px] tracking-[-0.5px]"
-            // style={{ fontSize: "clamp(28px, 4vw, 50px)" }}
-          >
+          <h2 className="font-bold leading-[1.15] text-[24px] md:text-[43.2px] tracking-[-0.5px]">
             <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
               A Diverse Development Portfolio
             </span>
@@ -3270,24 +3974,114 @@ export default function PortfolioSection() {
           <FilterTabs active={filter} onChange={setFilter} />
         </motion.div>
 
-        {/* Desktop layout */}
-        <div className="hidden lg:block relative min-h-[650px] w-full">
-          {/* SVG Connecting Lines Layer */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
-            {/* {[...leftStates, ...rightStates].map((s) => (
-              <ConnectorLine
-                key={`line-${s.id}`}
-                x1={s.markerX} // Map point start
-                y1={s.markerY}
-                x2={s.x} // Card position end
-                y2={s.y}
-                active={activeId === s.id}
-              />
-            ))} */}
-          </svg>
+        {/* Desktop layout (Unchanged layout structural rules) */}
+        <div
+          ref={desktopLayoutRef}
+          className="hidden md:block relative w-full"
+          style={{
+            height: DESKTOP_LAYOUT_HEIGHT * desktopScale,
+          }}
+        >
+          <div
+            className="relative mx-auto"
+            style={{
+              width:
+                desktopScale >= 1
+                  ? DESKTOP_LAYOUT_WIDTH
+                  : DESKTOP_LAYOUT_WIDTH * desktopScale,
+              height: DESKTOP_LAYOUT_HEIGHT * desktopScale,
+            }}
+          >
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" />
 
-          {/* Map */}
-          <div className="w-full flex justify-center relative z-0">
+            {/* Map */}
+            <div className=" hidden md:block w-full flex justify-center relative z-0">
+              <IndiaMap
+                activeId={activeId}
+                visibleIds={visibleIds}
+                onStateClick={handleStateClick}
+              />
+            </div>
+
+            {/* Left States */}
+            {leftStates.map((s) => {
+              // At scale=1 (>=1500px) use exact design coords.
+              // Below scale=1, scale the x/y proportionally and clamp left
+              // so the card never overflows the container's left edge.
+              // Card is 322px wide, centered on x (translate -50%), so left edge = x - 161.
+              const CARD_HALF = 161;
+              const containerW =
+                desktopScale >= 1
+                  ? DESKTOP_LAYOUT_WIDTH
+                  : DESKTOP_LAYOUT_WIDTH * desktopScale;
+              const rawX = desktopScale >= 1 ? s.x : s.x * desktopScale;
+              const scaledX = Math.max(
+                CARD_HALF,
+                Math.min(containerW - CARD_HALF, rawX),
+              );
+              const scaledY = desktopScale >= 1 ? s.y : s.y * desktopScale;
+              return (
+                <div
+                  key={s.id}
+                  className="absolute hidden md:block"
+                  style={{
+                    left: scaledX,
+                    top: scaledY,
+                    transform: "translate(-50%, -50%)",
+                    zIndex: activeId === s.id ? 40 : 20,
+                  }}
+                >
+                  <StateItem
+                    state={s}
+                    active={activeId === s.id}
+                    onClick={() => handleStateClick(s.id)}
+                  />
+                </div>
+              );
+            })}
+
+            {/* Right States */}
+            {rightStates.map((s) => {
+              // Mirror clamp for right side.
+              const CARD_HALF = 161;
+              const containerW =
+                desktopScale >= 1
+                  ? DESKTOP_LAYOUT_WIDTH
+                  : DESKTOP_LAYOUT_WIDTH * desktopScale;
+              const rawX = desktopScale >= 1 ? s.x : s.x * desktopScale;
+              const scaledX = Math.max(
+                CARD_HALF,
+                Math.min(containerW - CARD_HALF, rawX),
+              );
+              const scaledY = desktopScale >= 1 ? s.y : s.y * desktopScale;
+              return (
+                <div
+                  key={s.id}
+                  className="absolute hidden md:block"
+                  style={{
+                    left: scaledX,
+                    top: scaledY,
+                    transform: "translate(-50%, -50%)",
+                    zIndex: activeId === s.id ? 40 : 20,
+                  }}
+                >
+                  <StateItem
+                    state={s}
+                    active={activeId === s.id}
+                    onClick={() => handleStateClick(s.id)}
+                  />
+                </div>
+              );
+            })}
+
+            <AnimatePresence mode="wait" />
+          </div>
+        </div>
+
+        {/* ── Updated Mobile layout container ── */}
+        <div className="lg:hidden flex flex-col gap-6 w-full items-center">
+          {/* Explicit sizing wrapper wrapper prevents collapsing */}
+          <div className="w-full max-w-[500px] px-2 flex justify-center items-center">
             <IndiaMap
               activeId={activeId}
               visibleIds={visibleIds}
@@ -3295,101 +4089,52 @@ export default function PortfolioSection() {
             />
           </div>
 
-          {/* Left States */}
-          {leftStates.map((s) => (
-            <div
-              key={s.id}
-              className="absolute"
-              style={{
-                left: s.x,
-                top: s.y,
-                transform: "translate(-50%, -50%)",
-                zIndex: activeId === s.id ? 40 : 20,
-              }}
-            >
-              <StateItem
-                state={s}
-                active={activeId === s.id}
-                onClick={() => handleStateClick(s.id)}
-              />
-            </div>
-          ))}
-
-          {/* Right States */}
-          {rightStates.map((s) => (
-            <div
-              key={s.id}
-              className="absolute"
-              style={{
-                left: s.x,
-                top: s.y,
-                transform: "translate(-50%, -50%)",
-                zIndex: activeId === s.id ? 40 : 20,
-              }}
-            >
-              <StateItem
-                state={s}
-                active={activeId === s.id}
-                onClick={() => handleStateClick(s.id)}
-              />
-            </div>
-          ))}
-
-          {/* Asset card */}
-          {/* <div className="absolute bottom-4 left-4 z-30">
+          {/* Cards dynamic scroll targets */}
+          {/* <div
+            ref={mobileCardsRef}
+            className="w-full flex justify-center pt-4 min-h-[100px]"
+          >
             <AnimatePresence mode="wait">
               {activeState && (
-                <AssetCard
+                <motion.div
                   key={activeState.id}
-                  state={activeState}
-                  onClose={() => setActiveId(null)}
-                />
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <StateItem
+                    state={activeState}
+                    active={true}
+                    onClick={() => handleStateClick(activeState.id)}
+                  />
+                </motion.div>
               )}
             </AnimatePresence>
           </div> */}
 
-          {/* Place this right at the bottom of your desktop layout div container */}
-          <AnimatePresence mode="wait">
-            {/* {activeState && (
-              <AssetCard
-                key={activeState.id} // Changing the key ensures layout triggers clean exit/entry states
-                state={activeState}
-                onClose={() => setActiveId(null)}
-              />
-            )} */}
-          </AnimatePresence>
-        </div>
-
-        {/* Mobile layout */}
-        <div className="lg:hidden flex flex-col gap-6">
-          <IndiaMap
-            activeId={activeId}
-            visibleIds={visibleIds}
-            onStateClick={handleStateClick}
-          />
-
-          <div className="flex flex-col gap-3">
-            {STATES.filter((s) => visibleIds.includes(s.id)).map((s) => (
-              <StateItem
-                key={s.id}
-                state={s}
-                active={activeId === s.id}
-                onClick={() => handleStateClick(s.id)}
-              />
-            ))}
-          </div>
-
-          <AnimatePresence mode="wait">
-            {activeState && (
-              <div className="flex justify-center">
-                {/* <AssetCard
+          {activeState && ( // <-- Yeh conditional layout check yahan wrap kar diya hai
+            <div
+              ref={mobileCardsRef}
+              className="w-full flex justify-center pt-4 min-h-[100px]"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
                   key={activeState.id}
-                  state={activeState}
-                  onClose={() => setActiveId(null)}
-                /> */}
-              </div>
-            )}
-          </AnimatePresence>
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <StateItem
+                    state={activeState}
+                    active={true}
+                    onClick={() => handleStateClick(activeState.id)}
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          )}
         </div>
       </div>
     </section>

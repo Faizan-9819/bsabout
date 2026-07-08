@@ -126,7 +126,7 @@ export default function MobNav() {
         {open && (
           <motion.div
             key="drawer-root"
-            className="fixed inset-0 z-[200] md:hidden overflow-hidden"
+            className="fixed inset-0 z-[200] lg:hidden overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

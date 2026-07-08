@@ -1,4 +1,5 @@
 import Navbar from "@/components/shared/Navbar";
+import MobNav from "@/components/shared/MobNav";
 import Hero from "@/components/sections/home/Hero";
 import About from "@/components/sections/home/About";
 import TrustMetrics from "@/components/sections/home/TrustMetrics";
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <Navbar />
+      <MobNav />
       <Hero />
       <About />
       <TrustMetrics />
