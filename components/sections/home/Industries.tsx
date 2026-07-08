@@ -335,7 +335,7 @@ function IndustryCard({
           <span className="text-white/40 font-medium text-[12px] leading-none">
             {industry.num}
           </span>
-          <span className="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <ArrowUpRight size={14} strokeWidth={2} className="text-white" />
           </span>
         </div>
@@ -348,7 +348,7 @@ function IndustryCard({
           >
             {industry.title}
           </h3>
-          <p className="text-white/60 text-[13px] leading-[1.55] max-w-[380px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p className="text-white/60 text-[13px] leading-[1.55] max-w-[380px] md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {industry.desc}
           </p>
         </div>
