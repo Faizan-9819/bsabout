@@ -281,7 +281,7 @@ function PillarCard({
   const cardStyle = {
     background:
       "linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.20) 100%)",
-    boxShadow: "0px 20px 50px 0px rgba(0, 30, 60, 0.03)",
+    // boxShadow: "0px 20px 50px 0px rgba(0, 30, 60, 0.03)",
     border: "1px solid rgba(255, 255, 255, 0.25)",
   };
 
