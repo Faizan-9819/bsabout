@@ -421,8 +421,12 @@ export default function Sustainability() {
   return (
     <section
       id="sustainability"
-      className="relative overflow-hidden sustainability-bg bg-cover bg-center bg-no-repeat w-full flex flex-col justify-between py-[50px] md:py-[80px] lg:py-16"
-      style={{ backgroundImage: `url(${backgroundImg})` }}
+      className="relative overflow-hidden sustainability-bg bg-center w-full flex flex-col justify-between py-[50px] md:py-[80px] lg:py-16"
+      style={{
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
     >
       {/* Curved Background Wave Lines Placeholder effect */}
       {/* <div className="absolute inset-0 pointer-events-none opacity-40 z-0">
