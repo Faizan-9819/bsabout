@@ -1062,7 +1062,6 @@ export default function BuildspaceModel() {
                       </div>
 
                       {/* Descriptive Row Text Content */}
-                      {/* Desktop पर grid-rows-[1fr] हमेशा रहेगा, और mobile पर conditional toggle होगा */}
                       <div
                         className={`grid transition-[grid-template-rows] duration-300 ease-in-out md:grid-rows-[1fr] ${
                           isActive ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
@@ -1082,11 +1081,12 @@ export default function BuildspaceModel() {
                     </div>
 
                     {/* Desktop Arrow Column */}
+                    {/* Active होने पर center alignment के लिए md:top-1/2 md:-translate-y-1/2 लगाया गया है */}
                     <div
-                      className={`hidden md:flex absolute right-0 top-6 lg:top-8 w-[56px] h-[56px] items-center justify-center rounded-full border transition-all duration-300 ${
+                      className={`hidden md:flex absolute right-0 w-[56px] h-[56px] items-center justify-center rounded-full border transition-all duration-300 ${
                         isActive
-                          ? "bg-[#003b9d] border-[#003b9d] text-white"
-                          : "bg-transparent border-[#003b9d]"
+                          ? "bg-[#003b9d] border-[#003b9d] text-white top-1/2 -translate-y-1/2"
+                          : "bg-transparent border-[#003b9d] top-6 lg:top-8"
                       }`}
                     >
                       <motion.div
@@ -1113,5 +1113,3 @@ export default function BuildspaceModel() {
     </section>
   );
 }
-
-//nothhgn
