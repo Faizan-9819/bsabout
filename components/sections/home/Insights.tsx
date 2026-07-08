@@ -1294,7 +1294,7 @@ export default function Insights() {
             <button
               onClick={prev}
               disabled={start === 0}
-              className="w-[46px] h-[46px] rounded-full border border-[#ddd8cf] bg-white flex items-center justify-center hover:border-[#e27244] hover:text-[#e27244] transition-colors disabled:opacity-30"
+              className="w-[46px] h-[46px] rounded-full border border-[#ddd8cf] bg-white flex items-center justify-center hover:border-[#e27244] text-[#003B9D] hover:text-[#e27244] transition-colors disabled:opacity-30"
               aria-label="Previous"
             >
               <FaArrowLeft size={15} strokeWidth={0.8} />
@@ -1302,7 +1302,7 @@ export default function Insights() {
             <button
               onClick={next}
               disabled={start >= maxStart}
-              className="w-[46px] h-[46px] rounded-full border border-[#ddd8cf] bg-white flex items-center justify-center hover:border-[#e27244] hover:text-[#e27244] transition-colors disabled:opacity-30"
+              className="w-[46px] h-[46px] rounded-full border border-[#ddd8cf] bg-white flex items-center justify-center hover:border-[#e27244] text-[#003B9D] hover:text-[#e27244] transition-colors disabled:opacity-30"
               aria-label="Next"
             >
               <FaArrowRight size={15} strokeWidth={0.8} />

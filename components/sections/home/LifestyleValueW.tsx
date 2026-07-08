@@ -470,7 +470,7 @@ export default function FullLifecycleApproach() {
                             </p>
 
                             {/* Strategic Value Metric Node */}
-                            {stage.strategicValue && (
+                            {/* {stage.strategicValue && (
                               <div className="text-xs p-4 rounded-xl bg-white/5 border border-white/5 flex gap-2 items-start mt-2">
                                 <span className="font-semibold tracking-wider text-[11px] text-[#fff] uppercase shrink-0 pt-[2px]">
                                   Value:
@@ -479,7 +479,7 @@ export default function FullLifecycleApproach() {
                                   {stage.strategicValue}
                                 </span>
                               </div>
-                            )}
+                            )} */}
                           </motion.div>
                         </div>
                       </motion.div>

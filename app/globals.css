@@ -611,6 +611,13 @@ body {
   border: none;
   outline: none;
 }
+@media (max-width: 768px) {
+  .btn-bs {
+    gap: 8px;
+    padding: 11px 12px 11px 20px;
+    font-size: 13.5px;
+  }
+}
 .btn-bs:hover {
   background: var(--color-orange-hover);
 }

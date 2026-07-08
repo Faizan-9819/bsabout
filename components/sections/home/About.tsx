@@ -18,7 +18,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen lg:h-screen bg-white overflow-hidden flex flex-col justify-center"
+      className="relative min-h-screen  bg-white overflow-hidden flex flex-col justify-center"
     >
       {/* Background building photo — lower half */}
       <div className="absolute bottom-0 hidden lg:block left-0 right-0 h-[50%] lg:h-[80%] pointer-events-none">
@@ -36,7 +36,7 @@ export default function About() {
       <div className="absolute inset-y-0 left-1/2 w-px bg-[rgba(0,59,157,0.05)] -translate-x-1/2 hidden lg:block" />
 
       {/* Content */}
-      <div className="relative z-10 fix py-[50px] md:py-0 ">
+      <div className="relative z-10 fix py-[50px] lg:py-[80px] xl:py-[0px] ">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 items-start">
           {/* Left col — headline */}
           <div className="flex flex-col gap-7 w-full lg:w-1/2">

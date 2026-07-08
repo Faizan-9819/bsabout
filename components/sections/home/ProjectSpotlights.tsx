@@ -219,7 +219,7 @@ export default function ProjectSpotlights() {
                     <div>
                       <div className="text-[10px] font-bold text-black/40 tracking-wider mb-2 flex items-center gap-2 uppercase">
                         <img
-                          src="/Spotlight/spotlight1.svg"
+                          src="home/Spotlight/spotlight1.svg"
                           alt="spotlight"
                           className="w-3.5 h-3.5"
                         />
@@ -276,14 +276,14 @@ export default function ProjectSpotlights() {
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrev}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 bg-white text-[#54514c] hover:bg-black hover:text-white transition-all shadow-sm"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 bg-white text-[#003B9D] hover:bg-black hover:text-white transition-all shadow-sm"
               aria-label="Previous card"
             >
               <ArrowLeft size={16} strokeWidth={2} />
             </button>
             <button
               onClick={handleNext}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 bg-white text-[#54514c] hover:bg-black hover:text-white transition-all shadow-sm"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 bg-white text-[#003B9D] hover:bg-black hover:text-white transition-all shadow-sm"
               aria-label="Next card"
             >
               <ArrowRight size={16} strokeWidth={2} />
