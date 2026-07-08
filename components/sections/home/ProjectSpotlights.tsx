@@ -592,12 +592,12 @@ export default function ProjectSpotlights() {
                 <div
                   key={index}
                   className="relative h-1.5 rounded-full bg-black/[0.08] overflow-hidden transition-all duration-300"
-                  style={{ width: isSelected ? "36px" : "6px" }}
+                  style={{ width: isSelected ? "22px" : "6px" }}
                 >
                   {isSelected && (
                     <motion.div
                       layoutId="activeIndicator"
-                      className="absolute inset-0 bg-[#e27244] rounded-full"
+                      className="absolute inset-0 bg-[#F56E6A] rounded-full"
                     />
                   )}
                 </div>

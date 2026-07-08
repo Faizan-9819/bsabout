@@ -1269,13 +1269,13 @@ export default function Insights() {
                     key={`dot-${index}`}
                     onClick={() => setStart(index)}
                     className="relative h-1.5 rounded-full bg-[#ddd8cf] overflow-hidden transition-all duration-300 focus:outline-none cursor-pointer"
-                    style={{ width: isSelected ? "36px" : "6px" }}
+                    style={{ width: isSelected ? "22px" : "6px" }}
                     aria-label={`Go to item ${index + 1}`}
                   >
                     {isSelected && (
                       <motion.div
                         layoutId="activeIndicator"
-                        className="absolute inset-0 bg-[#e27244] rounded-full"
+                        className="absolute inset-0 bg-[#F56E6A] rounded-full"
                         transition={{
                           type: "spring",
                           stiffness: 300,
