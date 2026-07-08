@@ -59,7 +59,7 @@ export default function OverviewSection() {
           </p>
 
           {/* Testimonial / Quote Box */}
-          <div className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-[#F56E6A] bg-[linear-gradient(90deg,rgba(191,88,79,0.05)_0%,rgba(246,115,106,0.05)_100%)] px-8 py-6 lg:py-4 backdrop-blur-[20px] md:px-0 flex flex-col items-center justify-center text-center">
+          <div className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-[#F56E6A]/30 bg-[linear-gradient(90deg,rgba(191,88,79,0.05)_0%,rgba(246,115,106,0.05)_100%)] px-8 py-6 lg:py-4 backdrop-blur-[20px] md:px-0 flex flex-col items-center justify-center text-center">
             {/* Content */}
             {/* Opening Quote Icon Background */}
             <div className="flex justify-start w-full items-start">

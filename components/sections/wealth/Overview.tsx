@@ -63,13 +63,13 @@ export default function OverviewSection() {
           </p>
 
           {/* Testimonial / Quote Box */}
-          <div className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-[#F56E6A] bg-[linear-gradient(90deg,rgba(191,88,79,0.05)_0%,rgba(246,115,106,0.05)_100%)] px-2 py-1 backdrop-blur-[20px] md:px-0 flex flex-col items-center justify-center text-center">
+          <div className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-[#F56E6A]/30 bg-[linear-gradient(90deg,rgba(191,88,79,0.05)_0%,rgba(246,115,106,0.05)_100%)] px-2 py-1 backdrop-blur-[20px] md:px-0 flex flex-col items-center justify-center text-center">
             {/* Content */}
             {/* Opening Quote Icon Background */}
             {/* <span className="absolute left-6 top-4 text-6xl md:text-[88px] font-serif text-[#D26158]/10 select-none pointer-events-none leading-none">
               “
             </span> */}
-            <div className="flex justify-start w-full items-start">
+            <div className="flex justify-start lg:py-1 w-full items-start">
               <img className="lg:ps-4 lg:w-auto w-10" src="/over.png" alt="" />
             </div>{" "}
             {/* Quote Statement */}

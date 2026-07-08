@@ -88,7 +88,7 @@ export default function CapabilitiesSection() {
             {capabilities.map((item) => (
               <div
                 key={item.id}
-                className="group rounded-2xl p-6 md:p-8 flex flex-col justify-start  border lg:min-h-[180px] bg-[#F2EDEE] border-[#F56E6A]  hover:bg-[linear-gradient(to_right,rgba(246,115,106,1),rgba(191,88,79,1))] hover:border-transparent text-[#2D3142] hover:text-white hover:shadow-md hover:shadow-[#D26158]/20 transition-all duration-800"
+                className="group rounded-2xl p-6 md:p-8 flex flex-col justify-start  border lg:min-h-[180px] bg-[#F2EDEE] border-[#F56E6A] hover:bg-[linear-gradient(to_right,rgba(191,88,79,1),rgba(246,115,106,1))] hover:border-transparent text-[#2D3142] hover:text-white hover:shadow-md hover:shadow-[#D26158]/20 transition-all duration-800"
               >
                 {/* ID Index */}
                 <span className="text-xs md:text-[20px] font-semibold tracking-wider mb-2 block text-[#F56E6A] group-hover:text-white transition-colors duration-200">
