@@ -369,11 +369,11 @@ const ProjectSpotlights: FC<ProjectSpotlightsProps> = ({ spotlights = [] }) => {
                       {active.description}
                     </p>
                   )}
-                  <p className="font-sora font-bold text-[12px] xl:text-[14px] text-[#1a1a1a] tracking-wide">
+                  <p className="text-[12px] xl:text-[20px] text-[#222] leading-[130%] tracking-wide">
                     - {active.author}
                   </p>
                   {active.designation && (
-                    <p className="font-inter text-[11px] xl:text-[12px] text-[#8a8a8a] tracking-[0.15em] uppercase mt-1">
+                    <p className="text-[11px] xl:text-[16px] text-[#54514C] uppercase mt-1">
                       {active.designation}
                     </p>
                   )}
