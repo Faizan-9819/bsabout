@@ -281,7 +281,7 @@ function PillarCard({
   const cardStyle = {
     background:
       "linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.20) 100%)",
-    // boxShadow: "0px 20px 50px 0px rgba(0, 30, 60, 0.03)",
+    boxShadow: "0px 20px 50px 0px rgba(0, 30, 60, 0.03)",
     border: "1px solid rgba(255, 255, 255, 0.25)",
   };
 
@@ -425,7 +425,7 @@ export default function Sustainability() {
       style={{ backgroundImage: `url(${backgroundImg})` }}
     >
       {/* Curved Background Wave Lines Placeholder effect */}
-      <div className="absolute inset-0 pointer-events-none opacity-40 z-0">
+      {/* <div className="absolute inset-0 pointer-events-none opacity-40 z-0">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M-100,200 Q300,150 800,250 T1900,200"
@@ -442,7 +442,7 @@ export default function Sustainability() {
             opacity="0.1"
           />
         </svg>
-      </div>
+      </div> */}
 
       {/* Top Header Grid Content */}
       <div className="fix relative z-10 text-center flex flex-col items-center">
