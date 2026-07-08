@@ -42,8 +42,8 @@ export default function CTASection() {
         {/* Right Column: CTA Action Button Layout container */}
         <div className="md:col-span-3 lg:col-span-3 flex md:justify-end">
           <div className="bg-white p-1 inline-block shadow-lg">
-            <button className="bg-white hover:bg-neutral-50 text-[#D26158] font-semibold text-sm py-3 px-5 transition-colors duration-200 flex items-center gap-4 group">
-              <span className="text-[15.5px] font-semibold tracking-[-0.15px]">
+            <button className="bg-white hover:bg-neutral-50 text-[#D26158] font-semibold text-sm p-1 lg:py-3 lg:px-5 transition-colors duration-200 flex items-center gap-4 group">
+              <span className="lg:text-[15.5px] text-[14px] font-semibold tracking-[-0.15px]">
                 Schedule a Discussion
               </span>
               <span className="w-7 h-7 rounded bg-[#D26158]/10 text-[#D26158] flex items-center justify-center transform group-hover:translate-x-1 transition-transform duration-200">

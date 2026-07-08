@@ -3,7 +3,7 @@ import React from "react";
 export default function OverviewSection() {
   return (
     <section className="w-full bg-[#F8F9FA] text-[#2D3142] py-16 md:py-24 lg:py-32 font-sans overflow-hidden">
-      <div className="fix grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-18 items-start">
+      <div className="fix flex lg:flex-row flex-col gap-4 lg:gap-10 justify-between">
         {/* Left Column */}
         <div className="flex flex-col space-y-6">
           {/* Section Subtitle Tag */}
@@ -22,7 +22,7 @@ export default function OverviewSection() {
           </h2>
 
           {/* Core Body Paragraph */}
-          <p className="text-sm md:text-base text-[#222] leading-relaxed font-normal max-w-xl">
+          <p className="text-sm md:text-[18px] text-[#222] leading-relaxed font-normal max-w-xl">
             You own the land and you know the facility your business needs. What{" "}
             <br className="hidden lg:inline-block" />
             stands between the two is the hardest part: turning a site you hold
@@ -31,19 +31,18 @@ export default function OverviewSection() {
             <br className="hidden lg:inline-block" /> and managing multiple
             consultants, contractors, and approval agencies
             <br className="hidden lg:inline-block" /> yourself, across a
-            sequence of handovers where accountability dissolves
-            <br className="hidden lg:inline-block" /> at every seam. The real
-            cost of that fragmentation is rarely the construction
-            <br className="hidden lg:inline-block" /> bill. It is the months of
-            delayed operations while the project you are trying to
-            <br className="hidden lg:inline-block" /> run gets built around you.
+            sequence of handovers where accountability dissolves at every seam.
+            The real cost of that fragmentation is rarely the construction bill.
+            It is the months of delayed operations while the project you are
+            trying to run gets built around you.
           </p>
         </div>
+        <div className="hidden lg:block w-px self-stretch bg-[rgba(0,59,157,0.05)]" />
 
         {/* Right Column */}
-        <div className="flex flex-col space-y-10 lg:pt-14">
+        <div className="flex flex-col h-full justify-between space-y-10 lg:pt-4">
           {/* Secondary Informational Paragraph */}
-          <p className="text-sm md:text-base text-[#54514C] leading-relaxed font-normal max-w-xl">
+          <p className="text-sm md:text-[18px] lg:mb-20 text-[#54514C] leading-relaxed font-normal max-w-xl">
             BuildINFRA closes that gap as your solution partner, taking your
             land and <br className="hidden lg:inline-block" />
             developing it into a facility built for your own operations under a
@@ -51,13 +50,10 @@ export default function OverviewSection() {
             <br className="hidden lg:inline-block" /> of accountability. We act
             on your side, coordinating planning, approvals,
             <br className="hidden lg:inline-block" /> engineering, and execution
-            as one mandate, with critical workstreams run
-            <br className="hidden lg:inline-block" /> in parallel rather than in
-            sequence. The result is faster mobilisation, fewer
-            <br className="hidden lg:inline-block" /> surprises, and a facility
-            engineered around how your operation will actually
-            <br className="hidden lg:inline-block" /> run, and how it will
-            scale.
+            as one mandate, with critical workstreams run in parallel rather
+            than in sequence. The result is faster mobilisation, fewer
+            surprises, and a facility engineered around how your operation will
+            actually run, and how it will scale.
           </p>
 
           {/* Testimonial / Quote Box */}

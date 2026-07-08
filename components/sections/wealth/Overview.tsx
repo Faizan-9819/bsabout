@@ -3,7 +3,7 @@ import React from "react";
 export default function OverviewSection() {
   return (
     <section className="w-full bg-[#F8F9FA] text-[#2D3142] py-16 md:py-24 lg:py-32 font-sans overflow-hidden">
-      <div className="fix grid grid-cols-1 lg:grid-cols-2 gap-7.5 lg:gap-24 justify-between items-start">
+      <div className="fix flex lg:flex-row flex-col gap-5 lg:gap-18 justify-between">
         {/* Left Column */}
         <div className="flex flex-col space-y-6">
           {/* Section Subtitle Tag */}
@@ -39,11 +39,12 @@ export default function OverviewSection() {
             themselves.
           </p>
         </div>
+        <div className="hidden lg:block w-px self-stretch bg-[rgba(0,59,157,0.05)]" />
 
         {/* Right Column */}
-        <div className="flex flex-col space-y-10 lg:pt-14">
+        <div className="flex flex-col h-full justify-between space-y-10 lg:pt-3">
           {/* Secondary Informational Paragraph */}
-          <p className="text-sm lg:text-[18px] text-[#54514C] leading-[140%]">
+          <p className="text-sm lg:text-[18px] lg:mb-20 text-[#54514C] leading-[140%]">
             What distinguishes BuildWEALTH is where it sits in the capital
             stack. Most <br className="hidden lg:inline-block" /> capital enters
             industrial real estate after the asset is built and priced, paying{" "}

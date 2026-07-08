@@ -47,7 +47,7 @@ const Second = () => {
             return (
               <div
                 key={box.id}
-                className={`flex-1 pt-6 pb-6 xl:py-8 px-4 xl:px-8 flex flex-col justify-between h-full ${
+                className={`flex-1 pt-6 pb-6 xl:py-8 first:border-l first:border-white/20  px-4 xl:px-8 flex flex-col justify-between h-full ${
                   !isLast
                     ? "border-b border-white/20 md:border-b-0 xl:border-r border-white/20"
                     : ""

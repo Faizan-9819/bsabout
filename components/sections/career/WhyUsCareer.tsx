@@ -162,7 +162,7 @@ export default function WhyUsCareer() {
                         }`}
                       >
                         <p
-                          className="leading-relaxed text-[15px] lg:text-[18px] lg:h-[88px] font-normal"
+                          className="leading-relaxed lg:w-[78%] text-[15px] lg:text-[18px] lg:h-[88px] font-normal"
                           style={{
                             color: "#54514C",
                           }}

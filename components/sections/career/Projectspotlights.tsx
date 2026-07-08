@@ -293,7 +293,7 @@ const ProjectSpotlights: FC<ProjectSpotlightsProps> = ({ spotlights = [] }) => {
         {/* Heading */}
         <div className="flex flex-col gap-3 mb-8 xl:mb-12">
           <div className="flex items-center gap-3">
-            <span className="w-8 h-[2px] bg-[#003b9d]" />
+            <span className="w-8 h-[1px] bg-[#003b9d]" />
             <span className="text-[12px] xl:text-[12px] font-semibold tracking-[3.3px] text-[#003b9d] uppercase bw-sb">
               Project Spotlights
             </span>
