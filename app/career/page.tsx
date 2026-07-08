@@ -12,7 +12,7 @@ const spotlightData = [
   {
     id: "spotlight-1",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop&auto=format",
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     title: "Building Amazing Products",
     description:
@@ -23,7 +23,7 @@ const spotlightData = [
   {
     id: "spotlight-2",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop&auto=format",
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     title: "Team Collaboration",
     description:
@@ -34,13 +34,24 @@ const spotlightData = [
   {
     id: "spotlight-3",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&auto=format",
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     title: "Innovation Hub",
     description:
       "We foster creativity and push boundaries to deliver cutting-edge solutions.",
     author: "Emily Rodriguez",
     designation: "Creative Director",
+  },
+  {
+    id: "spotlight-4",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&auto=format",
+    video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Building",
+    description:
+      "Our team's commitment to excellence and innovation shapes every project we undertake.",
+    author: "Sarah Johnson",
+    designation: "Senior Product Lead",
   },
 ];
 
