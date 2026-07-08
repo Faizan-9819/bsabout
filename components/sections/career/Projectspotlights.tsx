@@ -44,23 +44,23 @@ const SidebarCard: FC<{
   <button
     type="button"
     onClick={onClick}
-    className="group relative w-full text-left bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 rounded-2xl flex flex-col border border-gray-100/50 cursor-pointer"
+    className="group relative w-full text-left bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 rounded-[12px] flex flex-col border border-gray-100 cursor-pointer"
   >
     {/* Card Image */}
-    <div className="relative w-full h-[140px] sm:h-[150px] lg:h-[110px] xl:h-[125px] overflow-hidden flex-shrink-0">
+    <div className="relative w-full h-[170px] sm:h-[150px] lg:h-[110px] xl:h-[125px] overflow-hidden shrink-0">
       <img
         src={item.image}
         alt={item.title}
         loading="lazy"
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
       />
-      {item.video_url && (
+      {/* {item.video_url && (
         <img
           src="/culture/CTA.svg"
           alt="play"
           className="absolute bottom-2 right-2 w-7 h-7"
         />
-      )}
+      )} */}
     </div>
 
     {/* Card Info */}
@@ -70,17 +70,17 @@ const SidebarCard: FC<{
           {item.title}
         </p>
         {item.description && (
-          <p className="font-inter text-[11px] xl:text-[12px] text-[#8a8a8a] leading-relaxed line-clamp-2 mt-1">
+          <p className="text-[11px] xl:text-[12px] text-[#222] leading-relaxed line-clamp-2 mt-1">
             {item.description}
           </p>
         )}
       </div>
       <div className="mt-1 sm:mt-2">
-        <p className="font-inter font-semibold text-[11px] xl:text-[12px] text-[#1a1a1a] uppercase tracking-wide truncate">
+        <p className="text-[11px] xl:text-[13px] text-[#222] uppercase tracking-wide truncate">
           {item.author}
         </p>
         {item.designation && (
-          <p className="font-inter text-[10px] xl:text-[10px] text-[#8a8a8a] uppercase tracking-[0.1em] mt-0.5 truncate">
+          <p className="text-[10px] xl:text-[10px] text-[#54514C] uppercase tracking-[0.1em] mt-0.5 truncate">
             {item.designation}
           </p>
         )}
@@ -131,7 +131,7 @@ const MobileCarousel: FC<{
 
   return (
     <div className="relative w-full">
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden w-[100%]" ref={emblaRef}>
         <div className="flex">
           {items.map((item, itemIndex) => {
             return (
@@ -139,7 +139,12 @@ const MobileCarousel: FC<{
                 key={`mobile-${item.id ?? item.title}-${itemIndex}`}
                 className="flex-[0_0_100%] min-w-0"
               >
-                <SidebarCard item={item} onClick={() => onSelect(itemIndex)} />
+                <div className="px-2">
+                  <SidebarCard
+                    item={item}
+                    onClick={() => onSelect(itemIndex)}
+                  />
+                </div>
               </div>
             );
           })}
@@ -153,7 +158,7 @@ const MobileCarousel: FC<{
           onClick={scrollPrev}
           disabled={!canScrollPrev}
           aria-label="Previous card"
-          className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center transition-colors disabled:opacity-30 hover:bg-gray-50"
+          className="w-9 h-9 rounded-full border border-gray-700 flex items-center justify-center transition-colors disabled:opacity-30 hover:bg-gray-50"
         >
           <ChevronLeft className="w-4 h-4 text-[#1a1a1a]" />
         </button>
@@ -162,7 +167,7 @@ const MobileCarousel: FC<{
           onClick={scrollNext}
           disabled={!canScrollNext}
           aria-label="Next card"
-          className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center transition-colors disabled:opacity-30 hover:bg-gray-50"
+          className="w-9 h-9 rounded-full border border-gray-700 flex items-center justify-center transition-colors disabled:opacity-30 hover:bg-gray-50"
         >
           <ChevronRight className="w-4 h-4 text-[#1a1a1a]" />
         </button>
@@ -303,7 +308,7 @@ const ProjectSpotlights: FC<ProjectSpotlightsProps> = ({ spotlights = [] }) => {
           {/* Active card (Left Column) */}
           <div className="hidden lg:flex flex-[1.6] w-full flex-col min-w-0">
             {/* Image/Video Container */}
-            <div className="relative w-full h-[240px] sm:h-[320px] xl:h-[420px] overflow-hidden rounded-2xl bg-black/5 shadow-sm">
+            <div className="relative w-full h-[240px] sm:h-[320px] xl:h-[420px] overflow-hidden bg-black/5 shadow-sm">
               <AnimatePresence mode="wait">
                 {isPlaying && active.video_url ? (
                   <motion.iframe
