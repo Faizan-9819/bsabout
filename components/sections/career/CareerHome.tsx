@@ -3,7 +3,7 @@ import React, { FC } from "react";
 const CareerHome: FC = () => {
   return (
     <section
-      style={{ backgroundImage: "url('/career/careerhome.jpg')" }}
+      style={{ backgroundImage: "url('/career/career_bg1.jpg')" }}
       className="relative w-full inset-0 bg-cover bg-center bg-no-repeat min-h-screen md:h-[100vh] flex items-center overflow-hidden"
     >
       {/* Background Image Layer */}
@@ -22,7 +22,7 @@ const CareerHome: FC = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl lg:text-[52px] font-bold text-white tracking-tight">
-            Our Careers
+            Build what comes next.{" "}
           </h1>
         </div>
         <button className="bg-[#D26158] hover:bg-[#bd534b] mt-10 text-white font-medium text-sm px-6 py-4 flex items-center gap-4 tracking-wide transition-colors group">

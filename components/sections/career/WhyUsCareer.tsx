@@ -15,31 +15,31 @@ export default function WhyUsCareer() {
       id: 1,
       title: "Ownership Mindset",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "We work like principals, not passengers. Everyone here takes responsibility for outcomes, not just tasks, treating each project as if the asset, the timeline, and the client relationship were their own.",
     },
     {
       id: 2,
       title: "Execution Excellence",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "Ambition means nothing without delivery. We hold ourselves to disciplined standards across planning, engineering, and execution, because in infrastructure, the difference between good and great is measured in months, budgets, and performance.",
     },
     {
       id: 3,
       title: "Integrity & Transparency",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "We do what we say, and we say what is real. Honest counsel, clear reporting, and straight answers build the trust that long-term infrastructure partnerships depend on.",
     },
     {
       id: 4,
       title: "Growth Through Collaboration",
       description:
-        "OLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "Great infrastructure is built by great teams, not lone experts. We bring planning, engineering, compliance, leasing, and capital together as one, and we grow by learning across every discipline.",
     },
     {
       id: 5,
       title: "Future-Ready Thinking",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "We build for what comes next, not just what works today. Every decision is made with the long term in view, designing assets, and a company, built to scale and endure.",
     },
   ];
 
@@ -65,9 +65,9 @@ export default function WhyUsCareer() {
         <div className="lg:col-span-6 flex flex-col justify-between h-full">
           <div className="flex flex-col space-y-4 mb-4 lg:mb-0">
             <div className="flex items-center gap-3">
-              <span className="w-6 h-[2px] bg-[#1E40AF]"></span>
-              <span className="text-xs md:text-sm tracking-[0.25em] text-[#1E40AF] font-bold uppercase">
-                Why Us
+              <span className="w-6 h-[2px] bg-[#003B9D]"></span>
+              <span className="text-xs md:text-[12px] tracking-[3px] text-[#003B9D] font-bold uppercase">
+                The BuildSpace Model{" "}
               </span>
             </div>
 
