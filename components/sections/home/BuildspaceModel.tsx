@@ -1285,16 +1285,13 @@ export default function BuildspaceModel() {
                                 ? 12
                                 : 0,
                           }}
-                          style={{
-                            // Keeps the mobile layout padding strategy intact without overriding the desktop centering mechanics
-                            paddingTop: isActive ? "0px" : "16px",
-                          }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className={`font-normal text-[#222] shrink-0 transition-[font-size] duration-300 md:pt-0 ${isActive ? "md:text-[48px] text-[28px]" : "md:text-[40px] text-[24px]"}`}
                           style={{
                             letterSpacing: "-0.92px",
                             minWidth: "clamp(120px, 20vw, 288px)",
                             lineHeight: 1.1,
+                            paddingTop: isActive ? "0px" : "16px",
                           }}
                         >
                           {row.brand}
