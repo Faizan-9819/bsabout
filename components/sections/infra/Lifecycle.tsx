@@ -263,7 +263,6 @@ export default function FullLifecycleApproach() {
             >
               {/* Image Container */}
               <div className="relative rounded-2xl overflow-hidden bg-black/20">
-                {/* Image now fades between stages instead of hard-cutting */}
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={`image-desktop-${activeStage}`}
@@ -281,8 +280,11 @@ export default function FullLifecycleApproach() {
                   />
                 </AnimatePresence>
 
-                {/* Stage badge — updates instantly, no animation */}
-                <div className="absolute bottom-4 left-4 text-[11px] tracking-[2px] text-white uppercase">
+                {/* Bottom dark overlay */}
+                <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/85 via-black/45 to-transparent pointer-events-none z-10" />
+
+                {/* Stage badge */}
+                <div className="absolute bottom-4 left-4 z-20 text-[11px] tracking-[2px] text-white uppercase">
                   <span className="text-[#DA655B] pr-3">
                     {stages[activeStage].num}
                   </span>{" "}

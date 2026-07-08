@@ -164,7 +164,7 @@ export default function WhyUsAccordion() {
                         }`}
                       >
                         <p
-                          className="leading-relaxed text-[15px] lg:text-[18px] lg:h-[88px] font-normal"
+                          className="leading-relaxed text-[15px] lg:text-[18px] lg:w-[78%] lg:h-[88px] font-normal"
                           style={{
                             color: "#54514C",
                           }}

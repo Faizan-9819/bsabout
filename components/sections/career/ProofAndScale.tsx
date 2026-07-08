@@ -24,14 +24,14 @@ const ProofAndScale: FC = () => {
 
           {/* Body Paragraphs */}
           <div className="space-y-6 text-sm md:text-base text-white leading-relaxed max-w-3xl">
-            <p className="font-sans!">
+            <p>
               At BuildSpace, we are building more than industrial and logistics{" "}
               <br className="hidden lg:inline-block" />
               infrastructure. We are building a platform driven by long-term
               thinking, <br className="hidden lg:inline-block" />
               disciplined execution, and ambitious growth.
             </p>
-            <p className="font-sans!">
+            <p>
               As we expand across India's key industrial corridors, we are
               always looking <br className="hidden lg:inline-block" />
               for talented people who bring strong expertise, a sense of
@@ -42,7 +42,7 @@ const ProofAndScale: FC = () => {
               is built by <br className="hidden lg:inline-block" />
               great teams.
             </p>
-            <p className="font-sans!">
+            <p>
               If you want to do work that lasts, on assets that shape how the
               country <br className="hidden lg:inline-block" /> manufactures,
               stores, and moves goods, there is a place for you here.

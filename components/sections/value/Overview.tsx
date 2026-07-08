@@ -3,9 +3,9 @@ import React from "react";
 export default function OverviewSection() {
   return (
     <section className="w-full bg-[#F8F9FA] text-[#2D3142] py-16 md:py-24 lg:py-32 font-sans overflow-hidden">
-      <div className="fix grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 justify-between items-start">
+      <div className="fix flex lg:flex-row flex-col gap-4 lg:gap-18 justify-between">
         {/* Left Column */}
-        <div className="flex flex-col space-y-6">
+        <div className="flex-1 max-w-[48%] flex flex-col space-y-6">
           {/* Section Subtitle Tag */}
           <div className="flex items-center gap-3">
             <span className="w-8 h-[2px] bg-[#1E40AF]"></span>
@@ -37,11 +37,12 @@ export default function OverviewSection() {
             producing asset.
           </p>
         </div>
+        <div className="hidden lg:block w-px self-stretch bg-[rgba(0,59,157,0.05)]" />
 
         {/* Right Column */}
-        <div className="flex flex-col space-y-10 lg:pt-14">
+        <div className="flex flex-col h-full justify-between space-y-10 lg:pt-4">
           {/* Secondary Informational Paragraph */}
-          <p className="text-sm lg:text-[18px] text-[#54514C] leading-[140%]">
+          <p className="text-sm lg:text-[18px] lg:mb-22 text-[#54514C] leading-[140%]">
             BuildVALUE is your solution partner across that entire path, taking
             your <br className="hidden lg:inline-block" />
             land from evaluation and feasibility through development and into
@@ -58,7 +59,7 @@ export default function OverviewSection() {
           </p>
 
           {/* Testimonial / Quote Box */}
-          <div className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-[#F56E6A] bg-[linear-gradient(90deg,rgba(191,88,79,0.05)_0%,rgba(246,115,106,0.05)_100%)] px-8 py-6 lg:py-4 backdrop-blur-[20px] md:px-0 flex flex-col items-center justify-center text-center">
+          <div className="relative w-full max-w-xl overflow-hidden rounded-2xl border border-[#F56E6A]/30 bg-[linear-gradient(90deg,rgba(191,88,79,0.05)_0%,rgba(246,115,106,0.05)_100%)] px-8 py-6 lg:py-4 backdrop-blur-[20px] md:px-0 flex flex-col items-center justify-center text-center">
             {/* Content */}
             {/* Opening Quote Icon Background */}
             <div className="flex justify-start w-full items-start">
