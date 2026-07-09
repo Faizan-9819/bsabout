@@ -4,7 +4,7 @@ const ContactHero: FC = () => {
   return (
     <section
       style={{ backgroundImage: "url('/contact/HContact.jpg')" }}
-      className="relative w-full inset-0 bg-cover bg-center bg-no-repeat min-h-screen md:h-[100vh] flex items-center overflow-hidden"
+      className="relative w-full inset-0 bg-cover bg-center bg-no-repeat min-h-screen md:h-[100vh] pb-30 lg:pb-0 flex lg:items-center items-end overflow-hidden"
     >
       {/* Background Image Layer */}
       <div className="absolute " />

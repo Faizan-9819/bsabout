@@ -15,11 +15,11 @@ const spotlightData = [
     image:
       "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop&auto=format",
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    title: "Building Amazing Products",
+    title: "Building Industrial Infrastructure Through Great People",
     description:
-      "Our team's commitment to excellence and innovation shapes every project we undertake.",
-    author: "Sarah Johnson",
-    designation: "Senior Product Lead",
+      "At Build Space Industrial Parks, we are building more than industrial and logistics infrastructure — we are building a platform driven by long-term thinking, disciplined execution, and ambitious growth.",
+    author: "Maria CHougale",
+    designation: "Sales Executive",
   },
   {
     id: "spotlight-2",
@@ -28,7 +28,7 @@ const spotlightData = [
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     title: "Team Collaboration",
     description:
-      "Working together across disciplines to create exceptional results.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     author: "Michael Chen",
     designation: "Engineering Manager",
   },
@@ -39,7 +39,7 @@ const spotlightData = [
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     title: "Innovation Hub",
     description:
-      "We foster creativity and push boundaries to deliver cutting-edge solutions.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     author: "Emily Rodriguez",
     designation: "Creative Director",
   },
@@ -50,7 +50,7 @@ const spotlightData = [
     video_url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     title: "Building",
     description:
-      "Our team's commitment to excellence and innovation shapes every project we undertake.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     author: "Sarah Johnson",
     designation: "Senior Product Lead",
   },

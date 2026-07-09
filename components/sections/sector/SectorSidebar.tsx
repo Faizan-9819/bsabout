@@ -23,7 +23,7 @@ export const SectorSidebar: React.FC<SectorSidebarProps> = ({
         padding: "114px 40px 40px 80px",
       }}
     >
-      <div className="flex flex-col gap-y-4 w-full">
+      <div className="flex flex-col lg:gap-y-2 xl:gap-y-4 w-full">
         {sectors.map((sector) => {
           const isActive = activeId === sector.id;
           return (

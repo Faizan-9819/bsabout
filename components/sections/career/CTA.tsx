@@ -20,7 +20,7 @@ export default function CTA() {
         {/* Left Column: Heading */}
 
         <h2 className="text-[30px] lg:text-[44px] tracking-[-1.12px] leading-[109%] text-white">
-          Feel like this aligns? Drop us a line!
+          Feel like this aligns? <br className="lg:hidden" /> Drop us a line!
         </h2>
 
         {/* Middle Column: Explanatory Subtext */}
@@ -36,7 +36,7 @@ export default function CTA() {
 
         {/* Right Column: CTA Action Button Layout container */}
 
-        <button className="bg-white cursor-pointer hover:bg-neutral-50 text-[#D26158] font-semibold text-sm py-3 px-5 transition-colors duration-200 flex items-center gap-4 group">
+        <button className="bg-white cursor-pointer hover:bg-neutral-50 text-[#D26158] font-semibold text-sm px-3 py-2 lg:py-3 lg:px-5 transition-colors duration-200 flex items-center gap-4 group">
           <span className="text-[15.5px] font-semibold tracking-[-0.15px]">
             Learn More About Us
           </span>

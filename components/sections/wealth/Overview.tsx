@@ -3,7 +3,7 @@ import React from "react";
 export default function OverviewSection() {
   return (
     <section className="w-full bg-[#F8F9FA] text-[#2D3142] py-16 md:py-24 lg:py-32 font-sans overflow-hidden">
-      <div className="fix flex lg:flex-row flex-col gap-5 lg:gap-18 justify-between">
+      <div className="fix flex relative lg:flex-row flex-col gap-5 lg:gap-18 justify-between">
         {/* Left Column */}
         <div className="flex flex-col space-y-6">
           {/* Section Subtitle Tag */}
@@ -39,7 +39,7 @@ export default function OverviewSection() {
             themselves.
           </p>
         </div>
-        <div className="hidden lg:block w-px self-stretch bg-[rgba(0,59,157,0.05)]" />
+        <div className="hidden lg:block absolute -top-40 -bottom-50 left-1/2 -translate-x-1/2 w-px bg-[rgba(0,59,157,0.05)]" />
 
         {/* Right Column */}
         <div className="flex flex-col h-full justify-between space-y-10 lg:pt-3">

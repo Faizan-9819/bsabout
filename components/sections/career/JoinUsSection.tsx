@@ -352,7 +352,7 @@ const JoinUsSection: FC = () => {
 
                 <button
                   type="submit"
-                  className="flex items-center gap-3 bg-[linear-gradient(90deg,#BF584F_0%,#F6736A_100%)] text-white font-medium text-sm px-6 py-3 rounded shadow-md transition-all duration-200 hover:brightness-105 group"
+                  className="flex items-center gap-3 bg-[linear-gradient(90deg,#BF584F_0%,#F6736A_100%)] text-white font-medium text-sm p-3 lg:px-6 py-2 rounded shadow-md transition-all duration-200 hover:brightness-105 group"
                 >
                   <span>Submit</span>
                   <FiArrowRight className="text-base group-hover:translate-x-1 transition-transform" />

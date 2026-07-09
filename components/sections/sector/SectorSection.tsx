@@ -38,7 +38,7 @@ export const SectorSection: React.FC<SectorSectionProps> = ({
         </div>
 
         {/* Content */}
-        <div className="flex-1 flex flex-col justify-center py-2 ">
+        <div className="flex-1 flex flex-col justify-start py-2 ">
           <h2 className="text-2xl md:text-[32px] font-bold tracking-[-1.568px] leading-[1.1] mb-3 bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
             {title}
           </h2>

@@ -4,13 +4,13 @@ const CareerHome: FC = () => {
   return (
     <section
       style={{ backgroundImage: "url('/career/career_bg1.jpg')" }}
-      className="relative w-full inset-0 bg-cover bg-center bg-no-repeat min-h-screen md:h-[100vh] flex items-center overflow-hidden"
+      className="relative w-full inset-0 bg-cover bg-center bg-no-repeat min-h-screen md:h-[100vh] flex lg:items-center items-end overflow-hidden"
     >
       {/* Background Image Layer */}
       <div className="absolute " />
 
       {/* Content Container */}
-      <div className="relative w-full fix z-10">
+      <div className="relative w-full lg:pb-0 pb-20 fix z-10">
         <div className="flex flex-col items-start max-w-xl">
           {/* Subheading / Label */}
           <div className="flex items-center gap-3 mb-2 md:mb-4">
@@ -25,7 +25,7 @@ const CareerHome: FC = () => {
             Build what comes next.{" "}
           </h1>
         </div>
-        <button className="bg-[#D26158] hover:bg-[#bd534b] mt-10 text-white font-medium text-sm px-6 py-4 flex items-center gap-4 tracking-wide transition-colors group">
+        <button className="bg-[#D26158] hover:bg-[#bd534b] mt-10 text-white font-medium text-sm lg:px-6 p-3 lg:py-4 flex items-center gap-4 tracking-wide transition-colors group">
           Explore More
           <svg
             xmlns="http://www.w3.org/2000/svg"
