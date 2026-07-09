@@ -165,7 +165,7 @@ export default function Hero() {
         </div>
 
         {/* Right column — fixed nav cards, page-load animation only, xl+ */}
-        <div className="hidden xl:flex flex-col justify-center gap-[17px] pt-12">
+        <div className="hidden lg:flex flex-col justify-center lg:gap-[5px] xl:gap-[14px] pt-12 lg:pt-0 xl:pt-12">
           {navCards.map((card, i) => (
             <motion.div
               key={card.bold}
@@ -176,7 +176,7 @@ export default function Hero() {
             >
               <Link
                 href={card.href}
-                className="relative block w-[241px] overflow-hidden rounded-xl border border-white/20 backdrop-blur-[9px]"
+                className="relative block md:w-[200px]  xl:w-[241px] w-[241px] overflow-hidden rounded-xl border border-white/20 backdrop-blur-[9px]"
                 style={{
                   background:
                     "linear-gradient(155deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)",

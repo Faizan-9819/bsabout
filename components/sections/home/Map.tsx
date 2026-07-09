@@ -1002,7 +1002,7 @@ const STATES: StateData[] = [
     markerY: 285,
     // Placed far left, slightly adjusted vertically relative to its marker
     x: 40,
-    y: 160,
+    y: 100,
     connector: "left",
     filter: ["all", "industrial"],
     assets: [
@@ -3019,7 +3019,7 @@ function IndiaMap({
   const viewBoxX = isMobile ? 0 : -80;
 
   const localConnectors: Record<string, { x2: number; y2: number }> = {
-    gujarat: { x2: -350, y2: 150 },
+    gujarat: { x2: -250, y2: 100 },
     maharashtra: { x2: -250, y2: 400 },
     uttarpradesh: { x2: 540, y2: 70 },
     ap: { x2: 600, y2: 270 },
@@ -3090,14 +3090,20 @@ function IndiaMap({
     </svg>
   );
 }
-function pathFill(id: string, activeId: string | null, visibleIds: string[]) {
+function pathFill(
+  id: string,
+  activeId: string | null,
+  hoveredId: string | null,
+  visibleIds: string[],
+) {
   const namedIds = ["gujarat", "maharashtra", "uttarpradesh", "ap", "tn"];
   if (namedIds.includes(id)) {
-    if (!visibleIds.includes(id)) return "#D9D9D9";
+    if (!visibleIds.includes(id)) return "rgba(214,214,214,0.90)";
     if (id === activeId) return "#FF6F69";
-    return "#C8C8C8";
+    if (id === hoveredId) return "#F56E6A";
+    return "#EFEFEF";
   }
-  return "#D9D9D9";
+  return "rgba(214,214,214,0.90)";
 }
 
 function IndiaMapPaths({
@@ -3110,18 +3116,21 @@ function IndiaMapPaths({
   onStateClick: (id: string) => void;
 }) {
   const namedIds = ["gujarat", "maharashtra", "uttarpradesh", "ap", "tn"];
+  const [hoveredId, setHoveredId] = React.useState<string | null>(null);
 
   function pathProps(id: string) {
     const isClickable = namedIds.includes(id) && visibleIds.includes(id);
     return {
       id,
-      fill: pathFill(id, activeId, visibleIds),
+      fill: pathFill(id, activeId, hoveredId, visibleIds),
       fillOpacity: 0.9,
       style: {
         cursor: isClickable ? "pointer" : "default",
-        transition: "fill 300ms",
+        transition: "fill 200ms ease",
       },
       onClick: isClickable ? () => onStateClick(id) : undefined,
+      onMouseEnter: isClickable ? () => setHoveredId(id) : undefined,
+      onMouseLeave: isClickable ? () => setHoveredId(null) : undefined,
       role: isClickable ? ("button" as const) : undefined,
       "aria-label": isClickable ? `Select ${id}` : undefined,
     };
@@ -3869,7 +3878,7 @@ function IndiaMapPaths({
 // }
 
 export default function PortfolioSection() {
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>("maharashtra");
   const [filter, setFilter] = useState<Filter>("all");
   const desktopLayoutRef = useRef<HTMLDivElement>(null);
   const mobileCardsRef = useRef<HTMLDivElement>(null);
@@ -3936,7 +3945,7 @@ export default function PortfolioSection() {
   const rightStates = RIGHT_STATES.filter((s) => visibleIds.includes(s.id));
 
   return (
-    <section className="bg-white py-20 lg:py-28 overflow-x-hidden">
+    <section className="bg-white py-20 lg:py-20 overflow-x-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -3985,10 +3994,7 @@ export default function PortfolioSection() {
           <div
             className="relative mx-auto"
             style={{
-              width:
-                desktopScale >= 1
-                  ? DESKTOP_LAYOUT_WIDTH
-                  : DESKTOP_LAYOUT_WIDTH * desktopScale,
+              width: DESKTOP_LAYOUT_WIDTH * desktopScale,
               height: DESKTOP_LAYOUT_HEIGHT * desktopScale,
             }}
           >
@@ -4005,21 +4011,16 @@ export default function PortfolioSection() {
 
             {/* Left States */}
             {leftStates.map((s) => {
-              // At scale=1 (>=1500px) use exact design coords.
-              // Below scale=1, scale the x/y proportionally and clamp left
-              // so the card never overflows the container's left edge.
-              // Card is 322px wide, centered on x (translate -50%), so left edge = x - 161.
+              // Always clamp based on actual container width — even at scale=1
+              // the labels at x:40 have a left edge of 40-161 = -121px which clips.
               const CARD_HALF = 161;
-              const containerW =
-                desktopScale >= 1
-                  ? DESKTOP_LAYOUT_WIDTH
-                  : DESKTOP_LAYOUT_WIDTH * desktopScale;
-              const rawX = desktopScale >= 1 ? s.x : s.x * desktopScale;
+              const containerW = DESKTOP_LAYOUT_WIDTH * desktopScale;
+              const rawX = s.x * desktopScale;
               const scaledX = Math.max(
                 CARD_HALF,
                 Math.min(containerW - CARD_HALF, rawX),
               );
-              const scaledY = desktopScale >= 1 ? s.y : s.y * desktopScale;
+              const scaledY = s.y * desktopScale;
               return (
                 <div
                   key={s.id}
@@ -4044,16 +4045,13 @@ export default function PortfolioSection() {
             {rightStates.map((s) => {
               // Mirror clamp for right side.
               const CARD_HALF = 161;
-              const containerW =
-                desktopScale >= 1
-                  ? DESKTOP_LAYOUT_WIDTH
-                  : DESKTOP_LAYOUT_WIDTH * desktopScale;
-              const rawX = desktopScale >= 1 ? s.x : s.x * desktopScale;
+              const containerW = DESKTOP_LAYOUT_WIDTH * desktopScale;
+              const rawX = s.x * desktopScale;
               const scaledX = Math.max(
                 CARD_HALF,
                 Math.min(containerW - CARD_HALF, rawX),
               );
-              const scaledY = desktopScale >= 1 ? s.y : s.y * desktopScale;
+              const scaledY = s.y * desktopScale;
               return (
                 <div
                   key={s.id}
