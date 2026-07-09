@@ -252,7 +252,7 @@ export default function FullLifecycleApproach() {
       background: rgba(255, 255, 255, 0.20) !important;
     }
   `}</style>
-            <Btn label="Explore Our Approach" icon="arrow-right" />
+            <Btn label="Explore Our Approach" className="" icon="arrow-right" />
           </div>
         </div>
 

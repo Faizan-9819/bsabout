@@ -21,7 +21,10 @@ export const SectorSection: React.FC<SectorSectionProps> = ({
   } = sector;
 
   return (
-    <section id={id} className="w-full py-10 last:border-0 scroll-mt-[100px]">
+    <section
+      id={id}
+      className="w-full py-5 lg:py-10 last:border-0 scroll-mt-[100px]"
+    >
       <div
         className={`flex flex-col gap-6 md:gap-[29px] justify-between items-stretch w-full ${
           reverse ? "md:flex-row-reverse" : "md:flex-row"

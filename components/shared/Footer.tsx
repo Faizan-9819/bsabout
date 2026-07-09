@@ -123,7 +123,7 @@ export default function Footer() {
             <p className="text-white/40 font-semibold text-[11px] tracking-[2.2px] uppercase">
               Explore
             </p>
-            <div className="flex gap-40 text-white/74">
+            <div className="flex gap-20 lg:gap-40 text-white/74">
               <ul className="flex flex-col gap-[13px]">
                 {exploreLeft.map((l) => (
                   <li key={l.label}>

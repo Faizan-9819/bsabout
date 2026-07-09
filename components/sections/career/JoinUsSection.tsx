@@ -254,7 +254,7 @@ const JoinUsSection: FC = () => {
             <div className="mb-6 md:mb-8">
               <h2 className="text-3xl lg:text-[56px] font-semibold bg-[linear-gradient(90deg,#BF584F_0%,#F6736A_100%)] bg-clip-text text-transparent tracking-tight relative inline-block pb-2">
                 Join Us
-                <span className="absolute bottom-0 left-0 w-50 h-[2px] bg-[#cc5a53]/30" />
+                <span className="absolute bottom-0 left-0 w-50 h-[2px] bg-[#949494]/30" />
               </h2>
             </div>
 
@@ -342,7 +342,7 @@ const JoinUsSection: FC = () => {
                   onClick={triggerFileInput}
                   className="text-xs sm:text-[15.5px] font-semibold text-[#F56E6A] hover:opacity-80 transition-opacity flex items-center gap-1.5"
                 >
-                  <FiUpload className="text-sm" />
+                  {/* <FiUpload className="text-sm" /> */}
                   <span>
                     {selectedFile
                       ? `✓ ${selectedFile.name.substring(0, 12)}...`
@@ -352,7 +352,7 @@ const JoinUsSection: FC = () => {
 
                 <button
                   type="submit"
-                  className="flex items-center gap-3 bg-[linear-gradient(90deg,#BF584F_0%,#F6736A_100%)] text-white font-medium text-sm p-3 lg:px-6 py-2 rounded shadow-md transition-all duration-200 hover:brightness-105 group"
+                  className="flex items-center gap-3 bg-[linear-gradient(90deg,#BF584F_0%,#F6736A_100%)] text-white font-medium text-sm p-3 lg:px-6 lg:py-4 py-2 rounded shadow-md transition-all duration-200 hover:brightness-105 group"
                 >
                   <span>Submit</span>
                   <FiArrowRight className="text-base group-hover:translate-x-1 transition-transform" />

@@ -357,7 +357,7 @@ const ProjectSpotlights: FC<ProjectSpotlightsProps> = ({ spotlights = [] }) => {
             </div>
 
             {/* Text details */}
-            <div className="pt-5 xl:pt-6 lg:min-h-[160px] xl:min-h-[180px] flex flex-col justify-start">
+            <div className="pt-5 xl:pt-6 lg:min-h-[160px] xl:min-h-[190px] flex flex-col justify-start">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`text-${activeIndex}`}
@@ -366,11 +366,12 @@ const ProjectSpotlights: FC<ProjectSpotlightsProps> = ({ spotlights = [] }) => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.22 }}
                 >
-                  <h3 className=" font-medium text-[#222] text-[20px] xl:text-[28px] mb-3">
+                  <h3 className=" font-medium text-[#222] text-[20px] mb-2 xl:text-[28px] mb-3">
                     {active.title}
                   </h3>
+                  <div className="w-full bg-[#CEC0C0] h-px" />
                   {active.description && (
-                    <p className="font-inter text-[15px] xl:text-[18px] text-[#5a5a5a] leading-relaxed mb-4">
+                    <p className="font-inter mt-3 text-[15px] xl:text-[18px] text-[#5a5a5a] leading-relaxed mb-4">
                       {active.description}
                     </p>
                   )}

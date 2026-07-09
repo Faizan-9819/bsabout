@@ -41,7 +41,7 @@ const IndustryInfrastructureScannable: React.FC = () => {
           onSelect={handleSectionScroll}
         />
 
-        <div className="px-8  lg:pl-[29px] lg:pr-[80px] py-8">
+        <div className="px-[5%]  lg:pl-[29px] lg:pr-[80px] py-8">
           {sectors.map((sector: Sector, index: number) => (
             <SectorSection
               key={sector.id}

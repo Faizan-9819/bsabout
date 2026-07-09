@@ -53,9 +53,9 @@ export default function WhyUsCareer() {
     <section className="bg-white text-[#222222] py-16 lg:py-20">
       <div className="fix grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
         {/* Left Column */}
-        <div className="lg:col-span-6 w-full h-[350px] lg:min-h-[450px] lg:h-full rounded-2xl overflow-hidden relative">
+        <div className="lg:col-span-6 w-full h-[350px] lg:min-h-[450px] lg:h-full overflow-hidden relative">
           <img
-            src="/career/weValue.jpg"
+            src="/career/whyCareer.jpg"
             alt="Hand pointing choosing right option workflow"
             className="w-full h-full object-cover absolute inset-0"
           />

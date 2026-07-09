@@ -461,10 +461,10 @@ export default function ProjectSpotlights() {
                     </div>
 
                     <div className="lg:mt-4 flex items-center gap-[9px] pt-2 cursor-pointer">
-                      <span className="group-hover:underline text-[#003B9D] font-semibold decoration-2 underline-offset-4 transition-all">
+                      <span className="text-[#003B9D] font-semibold ">
                         View Case Study
                       </span>
-                      <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#003b9d] text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                      <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#003b9d] text-white ">
                         <ArrowUpRight size={17} strokeWidth={2.5} />
                       </div>
                     </div>
