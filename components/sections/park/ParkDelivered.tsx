@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { useState } from "react";
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   show: (i: number) => ({
@@ -42,6 +42,7 @@ const items = [
 ];
 
 export default function ParkDelivered() {
+  const [hoveredCard, setHoveredCard] = useState(null);
   return (
     <section className="bg-[#eeeeeb]">
       <div className="fix py-[60px] lg:py-[80px]">
@@ -90,7 +91,7 @@ export default function ParkDelivered() {
 
           {/* Cards grid */}
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
-            {items.map((item) => (
+            {/* {items.map((item) => (
               <div
                 key={item.num}
                 className={`flex flex-col gap-3 rounded-2xl px-6 py-5 tracking-[-0.145px] ${
@@ -131,7 +132,58 @@ export default function ParkDelivered() {
                   {item.desc}
                 </p>
               </div>
-            ))}
+            ))} */}
+            {items.map((item, index) => {
+              const isActive =
+                hoveredCard === index || (hoveredCard === null && item.active);
+
+              return (
+                <div
+                  key={item.num}
+                  onMouseEnter={() => setHoveredCard(index)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                  className={`flex flex-col gap-3 rounded-2xl px-6 py-5 tracking-[-0.145px] transition-all duration-300 ${
+                    item.wide ? "sm:col-span-2" : ""
+                  } ${
+                    isActive
+                      ? "text-white"
+                      : "border border-[#f56e6a] bg-gradient-to-r from-[rgba(191,88,79,0.05)] to-[rgba(246,115,106,0.05)] backdrop-blur-[20px]"
+                  }`}
+                  style={
+                    isActive
+                      ? {
+                          background:
+                            "linear-gradient(90deg, #bf584f 0%, #f6736a 100%)",
+                        }
+                      : undefined
+                  }
+                >
+                  <span
+                    className={`text-[20px] font-semibold ${
+                      isActive ? "text-white" : "text-[#f56e6a]"
+                    }`}
+                  >
+                    {item.num}
+                  </span>
+
+                  <p
+                    className={`text-[18px] font-semibold leading-[1.3] ${
+                      isActive ? "text-white" : "text-[#222]"
+                    }`}
+                  >
+                    {item.title}
+                  </p>
+
+                  <p
+                    className={`text-[14px] leading-[1.4] ${
+                      isActive ? "text-[#e0e0e0]" : "text-[#54514c]"
+                    }`}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
 
