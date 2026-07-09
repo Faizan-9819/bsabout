@@ -173,7 +173,30 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+@layer components {
+  .fix {
+    width: 100%;
+    max-w: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .fix {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .fix {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
 @media (max-width: 1440px) {
   .fix {
     max-width: 100%;
