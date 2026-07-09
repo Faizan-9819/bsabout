@@ -45,7 +45,7 @@ export default function CTASection() {
               <span className="lg:text-[15.5px] text-[14px] font-semibold tracking-[-0.15px]">
                 Download Brochure{" "}
               </span>
-              <span className="w-7 h-7 rounded bg-[#D26158]/10 text-[#D26158] flex items-center justify-center transform group-hover:translate-x-1 transition-transform duration-200">
+              <span className="w-7 h-7 rounded bg-[#D26158]/10 text-[#D26158] flex items-center justify-center rotate-90 transform group-hover:translate-x-1 transition-transform duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

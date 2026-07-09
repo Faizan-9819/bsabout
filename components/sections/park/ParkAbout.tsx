@@ -48,7 +48,7 @@ export default function ParkAbout() {
             className="flex flex-col gap-5 w-full lg:w-1/2 lg:max-w-[529px]"
           >
             <div className="eyebrow text-[#003b9d]">About BuildSpace</div>
-            <p className="font-bold leading-[1.25] tracking-[-1.568px] text-[26px] sm:text-[28px] lg:text-[32px] text-gradient-brand bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+            <p className="font-bold leading-[1.25] tracking-tight lg:tracking-[-1.568px] text-[20px] lg:text-[32px] text-gradient-brand bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
               A 42-acre Grade-A industrial and logistics park in Bhiwandi, on
               India&apos;s leading warehousing corridor. Master-planned across
               five buildings with built-to-suit flexibility from 30,000 to
@@ -93,7 +93,7 @@ export default function ParkAbout() {
               <div
                 key={stat.value}
                 className={`
-    flex flex-col gap-[20px] pt-5 px-5 pb-10
+    flex flex-col gap-[20px] pt-5 px-5 pb-5 sm:pb-10
 
     /* Mobile */
     border-b border-white/25 last:border-b-0
@@ -104,7 +104,7 @@ export default function ParkAbout() {
     ${i % 2 === 1 ? "sm:border-l sm:border-white/25" : ""}
   `}
               >
-                <p className="font-bold pt-5 text-white leading-[1.4] text-[24px] sm:text-[26px] lg:text-[30px]">
+                <p className="font-bold pt-0 sm:pt-5 text-white leading-[1.4] text-[24px] sm:text-[26px] lg:text-[30px]">
                   {stat.value}
                 </p>
 

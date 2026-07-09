@@ -46,10 +46,14 @@ export default function ExploreMore() {
             <div
               key={index}
               className="w-[calc(50%-16px)] max-sm:w-full bg-[#FFF] border border-[0.8px] border-[#ECE8E0] rounded-[24px] p-6 max-sm:p-5 flex flex-col justify-between transition-all duration-300  group"
+              style={{ boxShadow: "0 0 63px 0 rgba(0, 20, 51, 0.06)" }}
             >
               <div>
                 {/* Visual Thumbnail Frame */}
-                <div className="w-full aspect-[16/10] rounded-[16px] overflow-hidden mb-5 md:mb-12 bg-[#eae6df]">
+                <div
+                  style={{ boxShadow: "0 0 63px 0 rgba(0, 20, 51, 0.06)" }}
+                  className="w-full aspect-[16/10] rounded-[16px] overflow-hidden mb-5 md:mb-12 bg-[#eae6df]"
+                >
                   <img
                     src={card.image}
                     alt={card.tag}

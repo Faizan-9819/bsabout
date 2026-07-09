@@ -20,7 +20,7 @@ export default function CTA() {
         {/* Left Column: Heading */}
 
         <h2 className="text-[30px] lg:text-[44px] tracking-[-1.12px] leading-[109%] text-white">
-          Feel like this aligns? <br /> Drop us a line!
+          Feel like this aligns? <br className="lg:hidden" /> Drop us a line!
         </h2>
 
         {/* Middle Column: Explanatory Subtext */}

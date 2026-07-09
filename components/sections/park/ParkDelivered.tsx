@@ -63,11 +63,12 @@ export default function ParkDelivered() {
           <h2 className="font-bold leading-[1.1] tracking-[-1.568px] text-[28px] sm:text-[40px] lg:text-[56px] text-gradient-brand bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
             What BuildSpace Delivered
           </h2>
-          <p className="text-[#54514c] leading-[1.4] text-[16px] sm:text-[18px] max-w-[900px]">
+          <p className="text-[#54514c] leading-[1.4] text-[16px] lg:text-[18px]">
             BuildSpace led Sahakar Logistics Park end to end through integrated
             development management, taking the project from land and master
-            planning through engineering, statutory approvals, and execution
-            under a single line of accountability.
+            planning through <br className="hidden lg:flex" /> engineering,
+            statutory approvals, and execution under a single line of
+            accountability.
           </p>
         </motion.div>
 
@@ -134,45 +135,44 @@ export default function ParkDelivered() {
               </div>
             ))} */}
             {items.map((item, index) => {
-              const isActive =
-                hoveredCard === index || (hoveredCard === null && item.active);
+              const isActive = hoveredCard === index;
 
               return (
                 <div
                   key={item.num}
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
-                  className={`flex flex-col gap-3 rounded-2xl px-6 py-5 tracking-[-0.145px] transition-all duration-300 ${
-                    item.wide ? "sm:col-span-2" : ""
-                  } ${
-                    isActive
-                      ? "text-white"
-                      : "border border-[#f56e6a] bg-gradient-to-r from-[rgba(191,88,79,0.05)] to-[rgba(246,115,106,0.05)] backdrop-blur-[20px]"
-                  }`}
-                  style={
-                    isActive
-                      ? {
-                          background:
-                            "linear-gradient(90deg, #bf584f 0%, #f6736a 100%)",
-                        }
-                      : undefined
-                  }
+                  className={`flex flex-col justify-between gap-3 rounded-2xl px-6 py-5 tracking-[-0.145px box-border border backdrop-blur-[20px] transition-colors duration-300
+        ${item.wide ? "sm:col-span-2" : ""}
+        ${
+          isActive
+            ? "text-white border-transparent"
+            : "text-[#222] border-[#f56e6a]"
+        }
+      `}
+                  style={{
+                    background: isActive
+                      ? "linear-gradient(90deg, #bf584f 0%, #f6736a 100%)"
+                      : "linear-gradient(90deg, rgba(191,88,79,0.05) 0%, rgba(246,115,106,0.05) 100%)",
+                  }}
                 >
-                  <span
-                    className={`text-[20px] font-semibold ${
-                      isActive ? "text-white" : "text-[#f56e6a]"
-                    }`}
-                  >
-                    {item.num}
-                  </span>
+                  <div>
+                    <span
+                      className={`text-[20px] font-semibold leading-none ${
+                        isActive ? "text-white" : "text-[#f56e6a]"
+                      }`}
+                    >
+                      {item.num}
+                    </span>
 
-                  <p
-                    className={`text-[18px] font-semibold leading-[1.3] ${
-                      isActive ? "text-white" : "text-[#222]"
-                    }`}
-                  >
-                    {item.title}
-                  </p>
+                    <p
+                      className={`text-[18px] pt-3 font-semibold leading-[1.3] ${
+                        isActive ? "text-white" : "text-[#222]"
+                      }`}
+                    >
+                      {item.title}
+                    </p>
+                  </div>
 
                   <p
                     className={`text-[14px] leading-[1.4] ${

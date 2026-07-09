@@ -1110,6 +1110,10 @@ const locations: LocationTab[] = [
   { name: "JNPT Port", distance: "77 km", destination: [18.9494, 72.9525] },
 ];
 
+const AIRPORT_LABEL = "Chhatrapati Shivaji Maharaj International Airport";
+const AIRPORT_LABEL_MOBILE_HTML =
+  'Chhatrapati Shivaji Maharaj<br class="location-label-mobile-break" />International Airport';
+
 /* ─── Route cache: populated by prefetch before user ever clicks ─── */
 const routeCache = new Map<string, [number, number][]>();
 const routeInFlight = new Map<string, Promise<[number, number][]>>();
@@ -1156,8 +1160,12 @@ if (typeof window !== "undefined") {
   }
 }
 
+function labelHtml(text: string) {
+  return text === AIRPORT_LABEL ? AIRPORT_LABEL_MOBILE_HTML : text;
+}
+
 function chipHtml(text: string) {
-  return `<div class="bg-gradient-to-r from-[#bf584f] to-[#f6736a] text-white font-dm-sans text-[16px] uppercase whitespace-nowrap px-5 py-2.5 rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.35)] leading-[1.2] pointer-events-none">${text}</div>`;
+  return `<div class="location-map-chip bg-gradient-to-r from-[#bf584f] to-[#f6736a] text-white font-dm-sans text-[16px] uppercase whitespace-nowrap px-5 py-2.5 rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.35)] leading-[1.2] pointer-events-none">${labelHtml(text)}</div>`;
 }
 
 /* Small navy/coral dot with white ring — marks Sahakar Logistics (our park), the fixed anchor on every tab. */
@@ -1248,11 +1256,7 @@ function CtrlScrollZoom() {
       className={`absolute inset-0 z-[1000] flex items-center justify-center pointer-events-none transition-opacity duration-300 ease-out ${
         visible ? "opacity-100" : "opacity-0"
       }`}
-    >
-      <div className="bg-[#061b36]/85 text-white font-dm-sans text-[14px] font-medium px-5 py-2.5 rounded-[8px] backdrop-blur-[6px]">
-        Use ctrl + scroll to zoom the map
-      </div>
-    </div>
+    ></div>
   );
 }
 
@@ -1298,10 +1302,12 @@ function MapController({
       map.invalidateSize();
       setTimeout(() => {
         if (cancelled) return;
+        const isMobile = map.getContainer().clientWidth < 768;
         map.fitBounds(poly!.getBounds(), {
           animate: false,
-          paddingTopLeft: [40, 100],
-          paddingBottomRight: [40, 40],
+          maxZoom: isMobile ? 10 : undefined,
+          paddingTopLeft: isMobile ? [145, 130] : [40, 100],
+          paddingBottomRight: isMobile ? [80, 80] : [40, 40],
         });
         onReadyRef.current();
       }, 0);
@@ -1397,6 +1403,25 @@ function MapPanel({
 
       <style>{`
         @keyframes location-map-spin { to { transform: rotate(360deg); } }
+
+        .location-label-mobile-break {
+          display: none;
+        }
+
+        @media (max-width: 767px) {
+          .location-label-mobile-break {
+            display: block;
+          }
+
+          .location-map-chip {
+            max-width: 240px;
+            white-space: normal !important;
+            text-align: center;
+            font-size: 14px !important;
+            line-height: 1.16 !important;
+            padding: 9px 14px !important;
+          }
+        }
       `}</style>
     </div>
   );
@@ -1492,9 +1517,10 @@ export default function LocationMap() {
               }`}
             >
               <span className="flex flex-col items-start gap-[4px] min-w-0">
-                <span className="font-dm-sans text-white text-[14px] leading-[1.4] truncate max-w-full">
-                  {active.name}
-                </span>
+                <span
+                  className="font-dm-sans text-white text-start text-[14px] leading-[1.25] max-w-full"
+                  dangerouslySetInnerHTML={{ __html: labelHtml(active.name) }}
+                />
                 <span className="font-dm-sans text-white font-semibold text-[18px] leading-[1.4]">
                   {active.distance}
                 </span>
@@ -1541,9 +1567,12 @@ export default function LocationMap() {
                             : "bg-transparent hover:bg-[rgba(255,255,255,0.08)]"
                         }`}
                       >
-                        <span className=" w-full text-start! text-white text-[14px] leading-[1.4]">
-                          {loc.name}
-                        </span>
+                        <span
+                          className="w-full text-start! text-white text-[14px] leading-[1.25]"
+                          dangerouslySetInnerHTML={{
+                            __html: labelHtml(loc.name),
+                          }}
+                        />
                         <span className="text-white font-semibold text-start text-[15px]  leading-[1.4]">
                           {loc.distance}
                         </span>

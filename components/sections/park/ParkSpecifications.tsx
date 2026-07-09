@@ -285,7 +285,7 @@ export default function ParkSpecifications() {
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-[21px] py-[11px] text-[15px] sm:text-[16px] font-semibold tracking-[-0.14px] transition-colors border ${
+                    className={`px-[21px] py-[10px] text-[15px] sm:text-[16px] font-semibold tracking-[-0.14px] transition-colors border ${
                       isActive
                         ? "bg-[#f56e6a] border-[#f56e6a] text-white"
                         : "bg-white border-[#e2ddd3] text-[#3a3733] hover:border-[#f56e6a]"
@@ -320,13 +320,13 @@ export default function ParkSpecifications() {
             {/* Unequal column ratios: Specification takes 35%, Detail takes 65% */}
             <div className="grid grid-cols-[35%_65%] h-full grid-auto-rows-fr">
               {/* Header */}
-              <div className="bg-[#f56e6a] border-b border-r border-[#d2d2d2] flex items-center justify-center px-5 py-[10px]">
-                <p className="text-white font-light text-[18px] sm:text-[20px]">
+              <div className="bg-[#f56e6a] border-b border-r border-[#d2d2d2] flex items-center justify-center px-5 py-[15px]">
+                <p className="text-white font-light text-[15px] lg:text-[18px] sm:text-[20px]">
                   Specification
                 </p>
               </div>
               <div className="bg-[#f56e6a] border-b border-[#d2d2d2] flex items-center justify-center px-5 py-[10px]">
-                <p className="text-white font-light text-[18px] sm:text-[20px]">
+                <p className="text-white font-light text-[15px] lg:text-[18px] sm:text-[20px]">
                   Detail
                 </p>
               </div>
