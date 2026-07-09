@@ -4,6 +4,7 @@ import IndustryInfrastructure from "@/components/sections/sector/IndustryInfrast
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import MobNav from "@/components/shared/MobNav";
+import CtaS from "@/components/sections/sector/CtaS";
 import React from "react";
 
 const page = () => {
@@ -14,6 +15,7 @@ const page = () => {
       <Hero />
       <IndustryInfrastructure />
       <IndustryInfrastructureScannable />
+      <CtaS />
       <Footer />
     </>
   );
