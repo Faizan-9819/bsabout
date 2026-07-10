@@ -26,8 +26,10 @@ export default function OverviewSection() {
           <p className="text-sm lg:text-[18px] text-[#222] leading-[140%]">
             India's manufacturing and logistics expansion is creating sustained
             demand for
-            <br className="hidden lg:inline-block" /> Grade-A industrial
-            infrastructure and the assets that serve it offer something{" "}
+            {/* <br className="hidden lg:inline-block" /> Grade-A industrial
+            infrastructure and the assets that serve it offer something{" "} */}
+            <br className="hidden lg:inline-block" /> for Grade-A industrial
+            infrastructure — and the assets that serve it offer something{" "}
             <br className="hidden lg:inline-block" />
             rare: long-duration, demand-backed income tied to the real economy.
             <br className="hidden lg:inline-block" />
@@ -44,9 +46,10 @@ export default function OverviewSection() {
         {/* Right Column */}
         <div className="flex flex-col h-full justify-between space-y-10 lg:pt-3">
           {/* Secondary Informational Paragraph */}
-          <p className="text-sm lg:text-[18px] lg:mb-20 text-[#54514C] leading-[140%]">
-            What distinguishes BuildWEALTH is where it sits in the capital
-            stack. Most <br className="hidden lg:inline-block" /> capital enters
+
+          {/* <p className="text-sm lg:text-[18px] lg:mb-20 text-[#54514C] leading-[140%]">
+            What distinguishes BuildWEALTH is where it sits. Most capital enters
+            <br className="hidden lg:inline-block" />
             industrial real estate after the asset is built and priced, paying{" "}
             <br className="hidden lg:inline-block" />
             market for stabilised income. BuildWEALTH participates from{" "}
@@ -60,6 +63,25 @@ export default function OverviewSection() {
             premium, and incentives are aligned. BuildSpace stewards{" "}
             <br className="hidden lg:inline-block" /> the asset across its full
             lifecycle, not just to the point of sale.
+          </p> */}
+
+          <p className="text-sm lg:text-[18px] lg:mb-20 text-[#54514C] leading-[140%]">
+            What distinguishes BuildWEALTH is where it sits. Most capital enters
+            <br className="hidden lg:inline-block" />
+            industrial real estate after the asset is built and priced.
+            BuildWEALTH <br className="hidden lg:inline-block" />
+            participates from development — drawing on BuildSpace's own{" "}
+            <br className="hidden lg:inline-block" />
+            infrastructure and land-activation capability to create the very
+            assets <br className="hidden lg:inline-block" />
+            investors hold. That development-led origin means quality is
+            controlled,
+            <br className="hidden lg:inline-block" />
+            basis is earned rather than paid, and incentives are aligned:
+            BuildSpace
+            <br className="hidden lg:inline-block" /> stewards the asset across
+            its full lifecycle, not just to the point of sale.{" "}
+            {/* <br className="hidden lg:inline-block" /> */}
           </p>
 
           {/* Testimonial / Quote Box */}

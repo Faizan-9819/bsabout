@@ -16,17 +16,20 @@ const Second = () => {
     {
       id: 2,
       value: "Aligned",
-      label: "Shared incentives and institutional governance",
+      // label: "Shared incentives and institutional governance",
+      label: "Owner-side governance and shared incentives",
     },
     {
       id: 3,
       value: "Grade-A",
-      label: "Institutional-grade industrial & logistics assets",
+      // label: "Institutional-grade industrial & logistics assets",
+      label: "Institutional industrial & logistics assets",
     },
     {
       id: 4,
       value: "Long-Term",
-      label: "Underwritten for durable, risk-adjusted returns",
+      // label: "Underwritten for durable, risk-adjusted returns",
+      label: "Built for durable, infrastructure-led value",
     },
   ];
   return (

@@ -104,7 +104,7 @@ export default function ParkAbout() {
     ${i % 2 === 1 ? "sm:border-l sm:border-white/25" : ""}
   `}
               >
-                <p className="font-bold pt-0 sm:pt-5 text-white leading-[1.4] text-[24px] sm:text-[26px] lg:text-[28px] 2xl:text-[30px]">
+                <p className="font-bold pt-0 sm:pt-5 text-white leading-[1.4] text-[24px] sm:text-[26px] lg:text-[26px] 2xl:text-[30px]">
                   {stat.value}
                 </p>
 

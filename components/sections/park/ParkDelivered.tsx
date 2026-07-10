@@ -60,7 +60,7 @@ export default function ParkDelivered() {
               What BuildINFRA Did
             </span>
           </div>
-          <h2 className="font-bold leading-[1.1] tracking-[-1.568px] text-[28px] sm:text-[40px] lg:text-[56px] text-gradient-brand bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
+          <h2 className="font-bold leading-[1.1] tracking-[-1.568px] text-[28px] sm:text-[40px] lg:text-[56px] text-gradient-brand bg-gradient-to-r from-[#BF584F] to-[#F6736A]/90 bg-clip-text text-transparent">
             What BuildSpace Delivered
           </h2>
           <p className="text-[#54514c] leading-[1.4] text-[16px] lg:text-[18px]">

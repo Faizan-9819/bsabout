@@ -23,18 +23,15 @@ export default function OverviewSection() {
 
           {/* Core Body Paragraph */}
           <p className="text-sm md:text-[18px] text-[#222] leading-relaxed font-normal max-w-xl">
-            You own the land and you know the facility your business needs. What{" "}
-            <br className="hidden lg:inline-block" />
-            stands between the two is the hardest part: turning a site you hold
-            into a <br className="hidden lg:inline-block" /> facility you can
-            operate. Done the traditional way, that means assembling
-            <br className="hidden lg:inline-block" /> and managing multiple
-            consultants, contractors, and approval agencies
-            <br className="hidden lg:inline-block" /> yourself, across a
+            BuildINFRA develops industrial and logistics facilities for the
+            businesses that will run them — manufacturers, logistics operators,
+            and occupiers who need assets that are ready to perform, not just
+            ready to hand over. For an occupier, the cost of a delayed facility
+            is rarely the construction bill; it's the months of lost operations,
+            deferred revenue, and stalled supply chains. Yet traditional
+            development hands that risk straight to the occupier: multiple
+            consultants, multiple contractors, multiple approval agencies, and a
             sequence of handovers where accountability dissolves at every seam.
-            The real cost of that fragmentation is rarely the construction bill.
-            It is the months of delayed operations while the project you are
-            trying to run gets built around you.
           </p>
         </div>
         <div className="hidden lg:block absolute -top-40 -bottom-50 left-1/2 -translate-x-1/2 w-px bg-[rgba(0,59,157,0.05)]" />
@@ -43,17 +40,14 @@ export default function OverviewSection() {
         <div className="flex flex-col h-full justify-between space-y-10 lg:pt-4">
           {/* Secondary Informational Paragraph */}
           <p className="text-sm md:text-[18px] lg:mb-20 text-[#54514C] leading-relaxed font-normal max-w-xl">
-            BuildINFRA closes that gap as your solution partner, taking your
-            land and <br className="hidden lg:inline-block" />
-            developing it into a facility built for your own operations under a
-            single line
-            <br className="hidden lg:inline-block" /> of accountability. We act
-            on your side, coordinating planning, approvals,
-            <br className="hidden lg:inline-block" /> engineering, and execution
-            as one mandate, with critical workstreams run in parallel rather
-            than in sequence. The result is faster mobilisation, fewer
-            surprises, and a facility engineered around how your operation will
-            actually run, and how it will scale.
+            BuildINFRA replaces that fragmentation with integrated development
+            management — owning the entire lifecycle from land to day-one
+            operations under a single line of accountability. We act on the
+            owner's side, coordinating planning, approvals, engineering, and
+            execution as one mandate, with critical workstreams run in parallel
+            rather than in sequence. The result is faster mobilisation, fewer
+            surprises, and a facility engineered around how your operation
+            actually runs.
           </p>
 
           {/* Testimonial / Quote Box */}

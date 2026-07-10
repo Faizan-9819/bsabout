@@ -13,38 +13,38 @@ export default function CapabilitiesSection() {
       id: "01",
       title: "Development Management",
       description:
-        "We own the full mandate on your behalf: scope, cost, time, and outcome held under single accountability, so you stay focused on your business, not on managing a development.",
+        "Owner-side oversight of the full mandate — scope, cost, time, and outcome held under single accountability.",
       isActive: true,
     },
     {
       id: "02",
       title: "Land Evaluation & Feasibility",
       description:
-        "We assess the site you already hold for connectivity, catchment, and development potential, confirming what your land can support before a rupee is committed.",
+        "Corridor, catchment, and connectivity analysis with parcel due diligence to de-risk the location decision.",
     },
     {
       id: "03",
       title: "Master Planning & Engineering",
       description:
-        "We design your facility around how it will operate, engineering utilities, circulation, and structure for the way your business actually runs.",
+        "Process-led design — utilities, circulation, MEP envelope, and structural packages built around operational reality.",
     },
     {
       id: "04",
       title: "Approvals & Statutory Compliance",
       description:
-        "We secure zoning, environmental, and statutory clearances proactively, run in parallel with engineering, so approvals never hold your timeline hostage.",
+        "Zoning, environmental, and statutory clearances tracked through a live compliance matrix, run parallel to engineering.",
     },
     {
       id: "05",
       title: "Construction & Execution Management",
       description:
-        "We coordinate multi-contractor execution under integrated development management, delivering your facility to spec, on time, and on budget.",
+        "Multi-contractor execution coordinated under integrated development management — built to spec, time, and budget.",
     },
     {
       id: "06",
       title: "Operational Readiness",
       description:
-        "We prepare your facility for day-one operations through commissioning, certifications, and fit-out coordination, so you take over a facility that is ready to run, not just handed over.",
+        "Commissioning, certifications, and fit-out coordination engineered for day-one operations, not just handover.",
     },
   ];
 
@@ -52,7 +52,7 @@ export default function CapabilitiesSection() {
     <section className="relative w-full min-h-screen bg-[url('/home/Spotlight/bgspot.webp')] bg-cover bg-center bg-no-repeat text-[#2D3142] py-16 md:py-24 overflow-hidden">
       <div className="relative z-10 fix flex flex-col gap-8 lg:gap-16">
         {/* Header Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+        <div className="flex justify-between  gap-6 lg:gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col space-y-4">
             {/* Tag Badge */}
             <div className="flex items-center gap-3">
@@ -64,9 +64,14 @@ export default function CapabilitiesSection() {
 
             {/* Main Title */}
             <h2 className="text-[28px] lg:text-[56px] font-bold tracking-[-1.5px] bg-gradient-to-r from-[rgba(191,88,79,1)] to-[rgba(246,115,106,1)] bg-clip-text text-transparent leading-[110%]">
-              One partner, every discipline.
+              Integrated capability across <br className="hidden 2xl:flex" />{" "}
+              the development mandate.{" "}
             </h2>
           </div>
+          <p className="text-[18px] text-[#222]">
+            One partner, coordinating every discipline that determines <br />{" "}
+            whether a facility is delivered — and whether it performs.
+          </p>
 
           {/* Subtext description right aligned on large screens */}
         </div>

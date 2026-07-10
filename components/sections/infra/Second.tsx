@@ -16,7 +16,7 @@ const Second = () => {
     {
       id: 2,
       value: "100%",
-      label: "Compliance-led",
+      label: "Compliance-led development",
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const Second = () => {
     {
       id: 4,
       value: "End-to-End",
-      label: "Single development partner, from your land to operations",
+      label: "Single development partner, land to operations",
     },
   ];
   return (
