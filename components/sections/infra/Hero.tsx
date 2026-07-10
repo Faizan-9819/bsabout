@@ -9,28 +9,6 @@ interface StatItem {
 
 export default function BuildSpaceHero() {
   // Array holding the bottom box content
-  const statsData: StatItem[] = [
-    {
-      id: 1,
-      value: "Retain Ownership",
-      label: "Monetise land without relinquishing it",
-    },
-    {
-      id: 2,
-      value: "Grade-A",
-      label: "Institutional development standards",
-    },
-    {
-      id: 3,
-      value: "100%",
-      label: "Compliance-led development",
-    },
-    {
-      id: 4,
-      value: "50+ yrs",
-      label: "Combined leadership experience",
-    },
-  ];
 
   return (
     <section className="w-full min-h-screen bg-neutral-900 text-white font-sans overflow-x-hidden flex flex-col justify-between bg-cover bg-center bg-no-repeat plcont bg-[url(/infra/lifecycle/infraHome.webp)] bg-cover bg-no-repeat">
@@ -40,16 +18,23 @@ export default function BuildSpaceHero() {
         <main className="flex flex-col justify-between lg:justify-center items-start">
           <p className="text-xs md:text-[12px] tracking-[3.12px] font-semibold text-neutral-400 uppercase mb-4 lg:mb-2 flex items-center gap-2">
             <span className="w-6 h-[1px] bg-[#a1a1a1] inline-block"></span>
-            BuildINFRA · FOR BUSINESSES BUILDING ON THEIR OWN LAND{" "}
+            BuildINFRA · For Occupiers & Manufacturers{" "}
           </p>
 
           <h1 className="text-[30px] lg:text-[60px] font-bold tracking-tight leading-[1.1] mb-8">
             Industrial infrastructure, <br className="hidden md:inline" />
             <span className="font-thin text-[rgba(255,255,255,0.82)]">
               {" "}
-              engineered for performance <br /> at scale.{" "}
+              {/* engineered for performance <br /> at scale.{" "} */}
+              developed to be operational.
             </span>
           </h1>
+          <p className="pb-8 text-[15px] lg:text-[18px]">
+            Industrial and logistics facilities developed for the businesses
+            that will run them — owned end to end,{" "}
+            <br className="hidden 2xl:flex" /> from land to day-one operations,
+            under a single line of accountability.
+          </p>
 
           <button className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] cursor-pointer hover:bg-[#bd534b] text-white font-semibold text-[14px] lg:text-[16px] p-3 py-2 lg:px-6 lg:py-4 flex items-center gap-4 tracking-wide transition-colors group">
             Explore More

@@ -661,7 +661,7 @@ export default function ParkMediaGallery() {
       className="overflow-hidden"
       style={{ background: "linear-gradient(90deg, #bf584f 0%, #f6736a 100%)" }}
     >
-      <div className="fix py-[60px] lg:py-[80px]">
+      <div className="fix pb-20 py-[60px] lg:py-[80px]">
         <div className="flex flex-col gap-5 mb-8 lg:mb-[42px]">
           <div className="flex items-center gap-[13px]">
             <span className="h-px w-7 bg-white" />
@@ -748,9 +748,9 @@ export default function ParkMediaGallery() {
           </div>
         </div>
 
-        <div className="relative pb-[100px] md:pb-[80px]">
+        <div className="relative pb-[30px] md:pb-[0px]">
           <div
-            className="overflow-hidden min-h-[120px] sm:min-h-[400px] 2xl:min-h-[500px]"
+            className="overflow-hidden min-h-[200px] sm:min-h-[400px] 2xl:min-h-[500px]"
             ref={emblaRef}
           >
             <AnimatePresence mode="wait" onExitComplete={handleExitComplete}>
@@ -760,7 +760,7 @@ export default function ParkMediaGallery() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.35, ease: "easeInOut" }}
-                className="flex items-start md:justify-between"
+                className="flex items-start md:justify-between gap-0"
               >
                 {slides.map((src, i) => {
                   const isActive = i === activeIndex;
@@ -768,7 +768,7 @@ export default function ParkMediaGallery() {
                     <div
                       key={i}
                       // Mobile: full 100% block with centered padding. Desktop: original partial percentage flex column width
-                      className="shrink-0 basis-full md:basis-[62%] lg:basis-[55%] px-1.5 md:px-0 flex justify-center md:justify-end! items-start"
+                      className="shrink-0 basis-full md:basis-[62%] lg:basis-[55%] px-1.5 md:px-1.5 md:px-0 flex justify-center md:justify-end! items-start"
                     >
                       {/* Desktop Animation layer */}
                       <div className="hidden md:block w-full">
@@ -782,7 +782,7 @@ export default function ParkMediaGallery() {
                             scale: { duration: 0.8, ease: [0.25, 1, 0.5, 1] },
                             y: { duration: 0.8, ease: [0.25, 1, 0.5, 1] },
                           }}
-                          className={`min-w-full rounded-[22px] overflow-hidden ${isActive ? "mr-[-96px]" : ""}`}
+                          className={`min-w-full rounded-[22px] overflow-hidden ${isActive ? " lg:mr-[-130px] 2xl:mr-[-143px]" : ""}`}
                         >
                           <img
                             src={src}
@@ -808,7 +808,10 @@ export default function ParkMediaGallery() {
           </div>
 
           {/* Nav arrows: Positioned globally down on mobile layout center, absolute layout preserved on desktop layout right */}
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:bottom-20 md:right-0 flex items-center gap-[14px]">
+          <div
+            className="absolute -bottom-8 lg:bottom-5 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto 2xl:pr-8 lg:pr-6
+            md:bottom-22 md:right-0 flex items-center gap-[14px]"
+          >
             <button
               onClick={scrollPrev}
               aria-label="Previous slide"

@@ -13,15 +13,20 @@ import { ArrowLeft, Plus, Minus } from "lucide-react";
 const stages = [
   {
     num: "01",
-    title: "Opportunity Origination",
-    desc: "Development opportunities sourced in high-demand industrial and logistics corridors.",
+
+    title: "Opportunity Identification",
+    // desc: "Development opportunities sourced in high-demand industrial and logistics corridors.",
+    // strategicValue:
+    desc: "Sourcing development opportunities in high-demand industrial and logistics corridors.",
     strategicValue:
-      "Your exposure originates in genuine, demand-backed locations, not competitively bid stock.",
+      //   "Your exposure originates in genuine, demand-backed locations, not competitively bid stock.",
+      // image: "/wealth/weal1.webp",
+      "Exposure originates in genuine, demand-backed locations.",
     image: "/wealth/weal1.webp",
   },
   {
     num: "02",
-    title: "Feasibility & Underwriting",
+    title: "Feasibility & Evaluation",
     desc: "Technical, commercial, and risk evaluation to confirm the asset thesis before any capital is committed.",
     strategicValue:
       "Conviction earned through diligence, so capital commits to a tested thesis.",
@@ -45,7 +50,8 @@ const stages = [
   },
   {
     num: "05",
-    title: "Tenant Alignment",
+    // title: "Tenant Alignment",
+    title: "Occupier Alignment",
     desc: "Securing credible, long-term tenants whose covenants underwrite the asset's income.",
     strategicValue:
       "Income durability through quality tenancy, as the asset begins to perform.",
@@ -230,17 +236,17 @@ export default function FullLifecycleApproach() {
               investment-grade asset.
             </h2>
           </motion.div>
-
           <p className="lg:text-[18px] text-[14px] leading-[140%]">
-            Investment-grade assets are not found, they are developed.{" "}
+            {/* Investment-grade assets are not found, they are developed.{" "} */}
+            Investment-grade assets aren't found — they're developed.
             <br className="hidden lg:inline-block" />
             BuildWEALTH applies the full BuildSpace lifecycle to create assets{" "}
             <br className="hidden lg:inline-block" />
             built to perform, running development and stabilisation as one{" "}
             <br className="hidden lg:inline-block" />
-            accountable process, so your capital participates in quality that is{" "}
+            accountable process so capital participates in quality that is{" "}
             <br className="hidden lg:inline-block" />
-            engineered in from the start, at a basis earned rather than paid.
+            engineered in from the start.
           </p>
         </div>
 

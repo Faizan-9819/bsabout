@@ -15,27 +15,28 @@ export default function CTASection() {
 
       {/* Coral/Red tinted overlay layer */}
       {/* <div className="absolute inset-0 z-0 bg-[#D26158]/20 mix-blend-color pointer-events-none select-none" /> */}
-
+      <div className="flex items-center gap-3">
+        <span className="w-6 h-[2px] bg-[#1E40AF]"></span>
+        <span className="text-xs  md:text-sm tracking-[0.25em] text-[#1E40AF] font-semibold uppercase">
+          Capabilities
+        </span>
+      </div>
       {/* Main Structural Content Grid */}
       <div className="relative z-10 fix grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 lg:gap-12 items-center">
         {/* Left Column: Heading */}
         <div className="md:col-span-5 lg:col-span-4">
           <h2 className="text-[30px] lg:text-[37.5px] font-semibold tracking-[-1.12px] leading-[109%] text-white">
-            Let's build what your operations depend on.
+            Let's develop a facility built to operate.
           </h2>
         </div>
 
         {/* Middle Column: Explanatory Subtext */}
         <div className="md:col-span-4 lg:col-span-5">
-          <p className="text-[13px] text-start lg:text-[16.5px] lg:ps-8 font-[300] leading-[160%] ">
-            Whether you're establishing a manufacturing plant, a{" "}
-            <br className="hidden lg:inline-block" /> logistics hub, or a
-            distribution operation, BuildINFRA{" "}
-            <br className="hidden lg:inline-block" />
-            turns the land you own into an operational asset,
-            <br className="hidden lg:inline-block" /> developed faster,
-            compliant throughout, and
-            <br className="hidden lg:inline-block" /> accountable end to end.
+          <p className="text-[13px] lg:w-[80%] text-start lg:text-[16.5px] lg:ps-8 font-[300] leading-[160%] ">
+            Whether you're establishing a manufacturing plant, a logistics hub,
+            or a fulfilment facility, BuildINFRA turns the infrastructure
+            decision into an operational outcome — faster, compliant, and
+            accountable end to end.
           </p>
         </div>
 

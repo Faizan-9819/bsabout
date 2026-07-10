@@ -13,26 +13,25 @@ import { ArrowLeft, Plus, Minus } from "lucide-react";
 const stages = [
   {
     num: "01",
-    title: "Land Evaluation & Feasibility",
-    desc: "Assessing the connectivity, catchment, and development potential of the land you already own, and confirming what it can support.",
+    title: "Land Identification & Feasibility",
+    desc: "Corridor and catchment analysis, parcel due diligence, infrastructure proximity scoring.",
     strategicValue:
-      "You know exactly what your site can carry before any capital is committed.",
+      "The location decision de-risked before capital is committed.",
     image: "/infra/lifecycle/life1.jpg",
   },
   {
     num: "02",
     title: "Master Planning & Design",
-    desc: "Highest-use planning, layout, MEP envelope, circulation, and safety design, shaped around your operations.",
+    desc: "Highest-use planning, parcelisation, MEP envelope, circulation and safety design.",
     strategicValue:
-      "A facility planned around how you operate and how you will grow, not just the footprint.",
+      "A facility planned around operations and future expansion, not just the footprint.",
     image: "/infra/lifecycle/life2.jpg",
   },
   {
     num: "03",
     title: "Approvals & Compliance",
     desc: "Zoning, environmental, and statutory clearances secured in parallel with engineering.",
-    strategicValue:
-      "Approvals stop being the bottleneck standing between you and operations.",
+    strategicValue: "Approvals stop being the critical-path bottleneck.",
     image: "/infra/lifecycle/life3.jpg",
   },
   {
@@ -40,31 +39,30 @@ const stages = [
     title: "Engineering & Development",
     desc: "Civil, structural, MEP, and external infrastructure engineering packages.",
     strategicValue:
-      "Constructability and scalability designed in from the start, not retrofitted later.",
+      "Constructability and scalability designed in, not retrofitted later.",
     image: "/infra/lifecycle/infra5.jpg",
   },
   {
     num: "05",
     title: "Construction & Handover",
-    desc: "Multi-contractor execution coordinated under integrated development management.",
+    desc: "Multi-contractor execution under integrated development management.",
     strategicValue:
-      "One partner owns the build outcome, not just a defined construction scope.",
+      "One partner owns the build outcome — not just a defined construction scope.",
     image: "/infra/lifecycle/life5.jpg",
   },
   {
     num: "06",
     title: "Operational Readiness",
-    desc: "Commissioning, certifications, and fit-out coordination for day-one readiness.",
+    desc: "Commissioning, certifications, and occupier fit-out coordination for day-one readiness.",
     strategicValue:
-      "You take over a facility that is ready to run, not merely ready to occupy.",
+      "The facility is ready to operate, not merely ready to occupy.",
     image: "/infra/lifecycle/life6.jpg",
   },
   {
     num: "07",
     title: "Asset Management & Value Creation",
-    desc: "Lifecycle stewardship: optimisation, maintenance strategy, and capital-cycle planning.",
-    strategicValue:
-      "Your facility keeps performing and holding value long after handover.",
+    desc: "Lifecycle stewardship — optimisation, maintenance strategy, and capital-cycle planning.",
+    strategicValue: "Performance compounds beyond handover.",
     image: "/infra/lifecycle/lifeF.jpg",
   },
 ];
@@ -207,7 +205,7 @@ export default function FullLifecycleApproach() {
     >
       <div className="fix">
         {/* ── Header Block ── */}
-        <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-7 lg:mb-16">
+        <div className="flex flex-col w-full md:flex-row md:items-start justify-between mb-7 lg:mb-16">
           <motion.div
             variants={fadeUp}
             custom={0}
@@ -232,18 +230,18 @@ export default function FullLifecycleApproach() {
             </h2>
           </motion.div>
 
-          <p className="lg:text-[18px] text-[14px] leading-[140%]">
+          <p className="lg:text-[18px] pt-5 lg:pt-0 text-[14px] leading-[140%]">
             Traditional EPC delivery runs sequentially: each stage hands off to{" "}
-            <br className="hidden lg:inline-block" />
-            the next, and risk accumulates at every handover. BuildINFRA{" "}
-            <br className="hidden lg:inline-block" /> runs the lifecycle as a
-            single, parallelised mandate, with approvals,{" "}
-            <br className="hidden lg:inline-block" /> engineering, and
-            pre-mobilisation advancing concurrently. This is{" "}
-            <br className="hidden lg:inline-block" /> not a shortcut. It is the
-            removal of dead time between{" "}
-            <br className="hidden lg:inline-block" /> disconnected vendors, so
-            your facility reaches operations sooner.
+            <br className="hidden 2xl:flex" />
+            the next, and risk accumulates at every handover. BuildINFRA runs{" "}
+            <br className="hidden 2xl:flex" />
+            the lifecycle as a single, parallelised mandate — approvals,{" "}
+            <br className="hidden 2xl:flex" />
+            engineering, and pre-mobilisation advancing concurrently. The{" "}
+            <br className="hidden 2xl:flex" />
+            compression isn't a shortcut; it's the removal of the dead time{" "}
+            <br className="hidden 2xl:flex" />
+            between disconnected vendors.
           </p>
         </div>
 

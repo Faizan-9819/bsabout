@@ -21,18 +21,37 @@ export default function CTASection() {
         {/* Left Column: Heading */}
         <div className="md:col-span-5 lg:col-span-4">
           <h2 className="text-[30px] lg:text-[37.5px] font-semibold tracking-[-1.12px] leading-[109%] text-white">
+<<<<<<< HEAD
             Looking for <br /> infrastructure that <br /> Supports your <br />{" "}
             growth?
+=======
+            {/* Unlock the value <br /> held in your land.{" "} */}
+            Looking for <br className="hidden lg:flex" />
+            infrastructure that Supports your
+            <br className="hidden lg:flex" /> growth?
+>>>>>>> 698b07bedd3b85c4ed72f0c9bd0cb1989960995d
           </h2>
         </div>
 
         {/* Middle Column: Explanatory Subtext */}
         <div className="md:col-span-4 lg:col-span-5">
           <p className="text-[13px] lg:text-start lg:text-[16.5px] font-[300] leading-[160%] ">
+<<<<<<< HEAD
             Whether you're exploring leasing opportunities, built-to <br />
             -suit development, or long-term expansion plans, our <br /> team can
             help identify the right solution for your <br />
             operational <br /> requirements.
+=======
+            {/* Whether you hold a single strategic parcel or an <br />{" "}
+            institutional land bank, BuildVALUE charts a development <br /> path
+            that turns it into a Grade-A, income-producing asset, <br />{" "}
+            aligned, developed, and stewarded for the long term, with <br />{" "}
+            ownership remaining yours throughout. */}
+            Whether you're exploring leasing opportunities, built-to- <br />
+            suit development, or long-term expansion plans, our <br /> team can
+            help identify the right solution for your <br />
+            operational requirements.
+>>>>>>> 698b07bedd3b85c4ed72f0c9bd0cb1989960995d
           </p>
         </div>
 
@@ -40,7 +59,11 @@ export default function CTASection() {
         <div className="md:col-span-3 lg:col-span-3 flex md:justify-end">
           <div className="bg-white p-1 inline-block shadow-lg">
             <button className="bg-white cursor-pointer hover:bg-neutral-50 bg-gradient-to-r from-[rgba(191,88,79,1)] to-[rgba(246,115,106,1)] bg-clip-text text-transparent font-semibold text-sm  p-1 lg:py-3 lg:px-5  transition-colors duration-200 flex items-center gap-4 group">
+<<<<<<< HEAD
               <span className="lg:text-[15.5px] text-[14px] whitespace-nowrap font-semibold tracking-[-0.15px]">
+=======
+              <span className="lg:text-[15.5px] text-[14px] font-semibold tracking-[-0.15px]">
+>>>>>>> 698b07bedd3b85c4ed72f0c9bd0cb1989960995d
                 Discuss Your Requirement
               </span>
               <span className="w-7 h-7 rounded bg-[#D26158]/10 text-[#D26158] flex items-center justify-center transform group-hover:translate-x-1 transition-transform duration-200">

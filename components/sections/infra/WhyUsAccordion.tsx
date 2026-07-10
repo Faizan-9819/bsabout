@@ -401,6 +401,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 import React, { useState } from "react";
 
@@ -413,36 +414,68 @@ interface AccordionItem {
 export default function WhyUsAccordion() {
   const [openId, setOpenId] = useState<number>(4);
 
+  // const accordionData: AccordionItem[] = [
+  //   {
+  //     id: 1,
+  //     title: "You own the land. We deliver the facility.",
+  //     description:
+  //       "One partner owns the outcome from your land to live operations, removing the risk and delay of coordinating consultants, approvals, and contractors yourself.",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Compliance handled, not chased.",
+  //     description:
+  //       "We manage statutory and regulatory compliance proactively throughout development, so approvals never become the obstacle between you and operations. 100% compliance-led.",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Specialists in your kind of facility.",
+  //     description:
+  //       "Deep, single-vertical focus across manufacturing, warehousing, logistics, ICDs, fulfilment, EV, and data centres means your facility is developed by a team that understands how it will run.",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "50+ years behind your project.",
+  //     description:
+  //       "Founder-led experience across master planning, engineering, and development of large-scale industrial, warehousing, and SEZ infrastructure, applied directly to your development.",
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Institutional standards, for your own facility.",
+  //     description:
+  //       "Owner-side governance, transparent reporting, and institutional development discipline, so the facility you operate is built to a standard usually reserved for the largest developers.",
+  //   },
+  // ];
   const accordionData: AccordionItem[] = [
     {
       id: 1,
-      title: "You own the land. We deliver the facility.",
+      title: "End-to-End Development Management",
       description:
-        "One partner owns the outcome from your land to live operations, removing the risk and delay of coordinating consultants, approvals, and contractors yourself.",
+        "One partner owns the lifecycle outcome — from land to operations — eliminating the coordination risk of stitching together consultants and contractors.",
     },
     {
       id: 2,
-      title: "Compliance handled, not chased.",
+      title: "100% Compliance Focused",
       description:
-        "We manage statutory and regulatory compliance proactively throughout development, so approvals never become the obstacle between you and operations. 100% compliance-led.",
+        "Statutory and regulatory compliance is managed proactively through a live matrix, run parallel to development — not rediscovered at handover.",
     },
     {
       id: 3,
-      title: "Specialists in your kind of facility.",
+      title: "Industrial & Logistics Specialists",
       description:
-        "Deep, single-vertical focus across manufacturing, warehousing, logistics, ICDs, fulfilment, EV, and data centres means your facility is developed by a team that understands how it will run.",
+        "A dedicated single-vertical focus across parks, warehousing, manufacturing, ICDs, fulfilment, EV, and data centres — depth, not diluted diversification.",
     },
     {
       id: 4,
-      title: "50+ years behind your project.",
+      title: "50+ Years Combined Experience",
       description:
-        "Founder-led experience across master planning, engineering, and development of large-scale industrial, warehousing, and SEZ infrastructure, applied directly to your development.",
+        "Founder-led, with combined leadership experience spanning master planning, design engineering, and development management of large-scale industrial, warehousing, and SEZ infrastructure.",
     },
     {
       id: 5,
-      title: "Institutional standards, for your own facility.",
+      title: "Institutional Development Standards",
       description:
-        "Owner-side governance, transparent reporting, and institutional development discipline, so the facility you operate is built to a standard usually reserved for the largest developers.",
+        "Owner-side governance, transparent reporting, and an asset thesis that holds across the cycle — the discipline of an institutional developer.",
     },
   ];
 
@@ -469,8 +502,8 @@ export default function WhyUsAccordion() {
           <div className="flex flex-col space-y-4">
             <div className="flex items-center gap-3">
               <span className="w-6 h-[2px] bg-[#1E40AF]"></span>
-              <span className="text-xs md:text-sm tracking-[0.25em] text-[#1E40AF] font-semibold uppercase">
-                WHY BUILDINFRA{" "}
+              <span className="text-xs md:text-[10px] tracking-[3px] text-[#1E40AF] font-semibold uppercase">
+                Why BuildINFRA · Differentiation{" "}
               </span>
             </div>
 
@@ -484,7 +517,7 @@ export default function WhyUsAccordion() {
                 backgroundClip: "text",
               }}
             >
-              Why businesses build <br /> with BuildINFRA.
+              Why occupiers <br /> choose BuildINFRA.
             </h2>
 
             <p className="text-[16px] lg:text-[20px] text-[#222] leading-[140%] pb-8 font-normal">
@@ -566,7 +599,7 @@ export default function WhyUsAccordion() {
                   >
                     <div className="overflow-hidden">
                       <div
-                        className={`transition-opacity duration-300 ease-in-out pb-5 min-h-[90px] ${
+                        className={`transition-opacity duration-300 ease-in-out pb-0 min-h-[132px] ${
                           isOpen ? "opacity-100" : "opacity-0"
                         }`}
                       >

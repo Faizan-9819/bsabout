@@ -9,42 +9,79 @@ interface CapabilityCard {
 
 export default function CapabilitiesSection() {
   const capabilities: CapabilityCard[] = [
+    // {
+    //   id: "01",
+    //   title: "Long-Term Thinking",
+    //   description:
+    //     "Assets held and managed across full capital cycles, with value measured in durability and total return, not exit timing.",
+    //   isActive: true,
+    // },
     {
       id: "01",
       title: "Long-Term Thinking",
       description:
-        "Assets held and managed across full capital cycles, with value measured in durability and total return, not exit timing.",
+        "Assets held and managed across full cycles — value measured in durability, not in exit timing.",
       isActive: true,
     },
+    // {
+    //   id: "02",
+    //   title: "Infrastructure-Led Growth",
+    //   description:
+    //     "Direct exposure to the physical infrastructure underpinning real, demand-backed industrial and logistics activity.",
+    // },
     {
       id: "02",
       title: "Infrastructure-Led Growth",
       description:
-        "Direct exposure to the physical infrastructure underpinning real, demand-backed industrial and logistics activity.",
+        "Exposure to the physical infrastructure underpinning real industrial and logistics demand.",
     },
+    // {
+    //   id: "03",
+    //   title: "Development-Led Value Creation",
+    //   description:
+    //     "Value created at origin through development, so your basis is earned, not paid at acquisition.",
+    // },
     {
       id: "03",
       title: "Development-Led Value Creation",
       description:
-        "Value created at origin through development, so your basis is earned, not paid at acquisition.",
+        "Value created at origin through development, not paid for at acquisition.",
     },
+    // {
+    //   id: "04",
+    //   title: "Institutional Governance",
+    //   description:
+    //     "Transparent reporting, structured oversight, and independent discipline applied across every asset in the portfolio.",
+    // },
     {
       id: "04",
       title: "Institutional Governance",
       description:
-        "Transparent reporting, structured oversight, and independent discipline applied across every asset in the portfolio.",
+        "Transparent reporting, structured oversight, and independent discipline across every asset.",
     },
+    // {
+    //   id: "05",
+    //   title: "Disciplined Capital Allocation",
+    //   description:
+    //     "Project-specific theses with clear underwriting logic, capital committed selectively rather than deployed for volume.",
+    // },
     {
       id: "05",
       title: "Disciplined Capital Allocation",
       description:
-        "Project-specific theses with clear underwriting logic, capital committed selectively rather than deployed for volume.",
+        "Project-specific theses with clear logic — capital committed selectively, not deployed for volume.",
     },
+    // {
+    //   id: "06",
+    //   title: "Sustainable Asset Performance",
+    //   description:
+    //     "ESG-aligned, future-ready assets underwritten for long-term relevance, income resilience, and durable value.",
+    // },
     {
       id: "06",
       title: "Sustainable Asset Performance",
       description:
-        "ESG-aligned, future-ready assets underwritten for long-term relevance, income resilience, and durable value.",
+        "ESG-aligned, future-ready assets engineered for long-term relevance and resilience.",
     },
   ];
 
@@ -70,10 +107,15 @@ export default function CapabilitiesSection() {
 
           {/* Subtext description right aligned on large screens */}
           <div className="lg:col-span-5 lg:pt-12">
-            <p className="text-[14px] lg:text-[18px] text-[#54514C] leading-[140%]">
+            {/* <p className="text-[14px] lg:text-[18px] text-[#54514C] leading-[140%]">
               A disciplined, development-led philosophy, built for durable,{" "}
               <br className="hidden lg:inline-block" />
               risk-adjusted performance rather than speed.
+            </p> */}
+            <p className="text-[14px] lg:text-[18px] text-[#54514C] leading-[140%]">
+              A disciplined, development-led philosophy — built for
+              <br className="hidden lg:inline-block" />
+              durability, not for speed.
             </p>
           </div>
         </div>

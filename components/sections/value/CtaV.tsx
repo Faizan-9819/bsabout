@@ -22,6 +22,7 @@ export default function CTASection() {
         <div className="md:col-span-5 lg:col-span-4">
           <h2 className="text-[30px] lg:text-[37.5px] font-semibold tracking-[-1.12px] leading-[109%] text-white">
             {/* Unlock the value <br /> held in your land.{" "} */}
+            <span className="w-6 h-[1px] bg-[#a1a1a1] inline-block"></span>
             Your land may be worth
             <br />
             more than its current use.
