@@ -13,56 +13,71 @@ import { ArrowLeft, Plus, Minus } from "lucide-react";
 const stages = [
   {
     num: "01",
-    title: "Land Evaluation",
-    desc: "Assessing the industrial and logistics development potential of the land you already own.",
+    // title: "Land Evaluation",
+    title: "Land Identification",
+    desc: "Recognising parcels with genuine industrial and logistics development potential.",
     strategicValue:
-      "A clear starting point, grounded in what your site can realistically support.",
+      "The right starting point — opportunity grounded in real demand.",
     image: "/value/value2.jpg",
   },
   {
     num: "02",
     title: "Opportunity Assessment",
-    desc: "Feasibility and risk evaluation to confirm what your land can sustainably become.",
+    desc: "Due diligence, feasibility, and risk evaluation to confirm what the land can sustainably become.",
     strategicValue:
-      "Confidence before capital, with the development thesis tested early.",
+      // "Confidence before capital, with the development thesis tested early.",
+      "Confidence before capital — the development thesis is tested early.",
     image: "/value/value3.jpg",
   },
   {
     num: "03",
     title: "Development Strategy",
-    desc: "Defining the optimal asset type, scale, and phasing for your land and its market.",
+    // desc: "Defining the optimal asset type, scale, and phasing for your land and its market.",
+    desc: "Defining the optimal asset type, scale, and phasing for the location and the market.",
     strategicValue:
-      "A clear, value-maximising path from parcel to income-producing asset.",
+      // "A clear, value-maximising path from parcel to income-producing asset.",
+      "A clear, value-maximising path from parcel to asset.",
     image: "/value/value4.jpg",
   },
   {
     num: "04",
     title: "Infrastructure Planning",
-    desc: "Master planning and engineering the utilities, access, and envelope that make your land development-ready.",
+    // desc: "Master planning and engineering the utilities, access, and envelope that make your land development-ready.",
+    desc: "Master planning and engineering the utilities, access, and envelope that make the asset development-ready.",
     strategicValue:
-      "Development-readiness designed in from the start, not retrofitted later.",
+      // "Development-readiness designed in from the start, not retrofitted later.",
+      " Development-readiness designed in, not retrofitted.",
     image: "/value/value5.jpg",
   },
   {
     num: "05",
     title: "Market Positioning",
-    desc: "Positioning the developed asset within its corridor and tenant market.",
-    strategicValue: "The asset is built toward real demand, not in hope of it.",
+    // desc: "Positioning the developed asset within its corridor and tenant market.",
+    desc: "Positioning the developed asset within its corridor and occupier market.",
+    // strategicValue: "The asset is built toward real demand, not in hope of it.",
+    strategicValue: "The asset is built toward demand, not in hope of it.",
     image: "/value/val6.jpg",
   },
   {
     num: "06",
-    title: "Leasing & Tenant Alignment",
-    desc: "Attracting credible, long-term tenants aligned to the asset and your income objectives.",
+    // title: "Leasing & Tenant Alignment",
+    title: "Leasing & Occupier Alignment",
+    // desc: "Attracting credible, long-term tenants aligned to the asset and your income objectives.",
+    desc: "Attracting credible, long-term occupiers aligned to the asset and the landowner's income objectives.",
     strategicValue:
-      "Income security through quality tenancy, as the asset begins to perform.",
+      // "Income security through quality tenancy, as the asset begins to perform.",
+      "Income security through quality tenancy — the asset begins to perform.",
     image: "/value/value7.jpg",
   },
   {
     num: "07",
     title: "Asset Value Creation",
-    desc: "Long-term stewardship: optimisation, lifecycle planning, and sustained income and capital appreciation.",
-    strategicValue: "Value compounds, and ownership stays with you throughout.",
+    // desc: "Long-term stewardship: optimisation, lifecycle planning, and sustained income and capital appreciation.",
+    desc: "Long-term stewardship — optimisation, lifecycle planning, and sustained income and capital appreciation.",
+    // strategicValue: "Value compounds, and ownership stays with you throughout.",
+    strategicValue:
+      // " Value compounds, and ownership stays with the landowner throughout.",
+      " Value compounds, and ownership stays with the landowner throughout.",
     image: "/value/value1.jpg",
   },
 ];
@@ -217,7 +232,8 @@ export default function FullLifecycleApproach() {
             <div className="flex items-center mb-4">
               <div className="h-[2px] w-6 bg-white me-2" />
               <span className="text-[12px] font-semibold tracking-[2px] uppercase text-white">
-                LIFECYCLE
+                {/* LIFECYCLE */}
+                Value Creation Process · The Lifecycle
               </span>
             </div>
             <h2
@@ -229,14 +245,25 @@ export default function FullLifecycleApproach() {
             </h2>
           </motion.div>
 
-          <p className="lg:text-[18px] text-[14px] leading-[140%]">
+          {/* <p className="lg:text-[18px] text-[14px] leading-[140%]">
             Value is created in stages, each building on the last. BuildVALUE
             <br className="hidden lg:inline-block" />
             manages the full journey, running planning, approvals, and
             <br className="hidden lg:inline-block" />
             infrastructure in parallel rather than in sequence, so your dormant
             <br className="hidden lg:inline-block" />
-            parcel becomes a performing asset faster, and with less risk to you.
+            parcel becomes a performing asset faster, and with less risk to the
+            owner.
+          </p> */}
+          <p className="lg:text-[18px] text-[14px] leading-[140%]">
+            Value is created in stages, each building on the last. BuildVALUE
+            <br className="hidden lg:inline-block" />
+            manages the full journey — running planning, approvals, and
+            <br className="hidden lg:inline-block" />
+            infrastructure in parallel rather than in sequence — so a dormant
+            <br className="hidden lg:inline-block" />
+            parcel becomes a performing asset faster, and with less risk to the
+            owner.
           </p>
         </div>
 

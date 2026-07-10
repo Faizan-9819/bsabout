@@ -10,7 +10,8 @@ export default function OverviewSection() {
           <div className="flex items-center gap-3">
             <span className="w-8 h-[2px] bg-[#1E40AF]"></span>
             <span className="text-xs md:text-sm tracking-[0.25em] text-[#1E40AF] font-semibold uppercase">
-              Overview
+              {/* Overview */}
+              Overview · The Problem & The Model
             </span>
           </div>
 
@@ -26,15 +27,11 @@ export default function OverviewSection() {
             <br className="hidden lg:inline-block" />
             potential but generate little or no return. Across India's
             industrial corridors,
-            <br className="hidden lg:inline-block" /> strong land sits dormant,
-            held without a strategy, while demand for industrial
-            <br className="hidden lg:inline-block" /> and logistics
-            infrastructure keeps rising. The gap is rarely the land itself. It
-            is
-            <br className="hidden lg:inline-block" /> the absence of a credible
-            path from raw parcel to a developed, income-
-            <br className="hidden lg:inline-block" />
-            producing asset.
+            <br className="hidden lg:inline-block" /> strong land sits dormant —
+            held without a strategy, while demand for industrial and logistics
+            infrastructure continues to rise. The gap is rarely the land itself.
+            It's the absence of a credible path from raw parcel to a developed,
+            income-producing asset.
           </p>
         </div>
         <div className="hidden lg:block absolute -top-40 -bottom-50 left-1/2 -translate-x-1/2 w-px bg-[rgba(0,59,157,0.05)]" />
@@ -42,7 +39,7 @@ export default function OverviewSection() {
         {/* Right Column */}
         <div className="flex flex-col h-full justify-between space-y-10 lg:pt-4">
           {/* Secondary Informational Paragraph */}
-          <p className="text-sm lg:text-[18px] lg:mb-22 text-[#54514C] leading-[140%]">
+          {/* <p className="text-sm lg:text-[18px] lg:mb-22 text-[#54514C] leading-[140%]">
             BuildVALUE is your solution partner across that entire path, taking
             your <br className="hidden lg:inline-block" />
             land from evaluation and feasibility through development and into
@@ -56,6 +53,27 @@ export default function OverviewSection() {
             you retain ownership throughout, earning from the income and value
             uplift <br className="hidden lg:inline-block" />
             of a professionally managed development rather than a one-time sale.
+          </p> */}
+          <p>
+            BuildVALUE bridges that gap through integrated development
+            management
+            <br className="hidden lg:inline-block" />
+            taking land from assessment and feasibility through development and
+            <br className="hidden lg:inline-block" />
+            long-term asset performance under a single line of accountability.
+            We
+            <br className="hidden lg:inline-block" />
+            bring the capital partners, development expertise, and execution
+            capability
+            <br className="hidden lg:inline-block" />
+            to convert a parcel into a Grade-A industrial or logistics asset .
+            Critically, the
+            <br className="hidden lg:inline-block" />
+            the landowner retains ownership, benefiting from the income and
+            value
+            <br className="hidden lg:inline-block" />
+            uplift of a professionally managed development rather than a
+            one-time sale.
           </p>
 
           {/* Testimonial / Quote Box */}
@@ -66,7 +84,7 @@ export default function OverviewSection() {
               <img className="lg:ps-4 lg:w-auto w-10" src="/over.png" alt="" />
             </div>{" "}
             {/* Quote Statement */}
-            <p className="text-[20px] md:text-[27px] py-4 lg:py-1 bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent leading-[140%]">
+            <p className="text-[20px] md:text-[25px] px-4 py-4 lg:py-1 bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent leading-[140%]">
               We are creating value, not simply infrastructure.
             </p>
             {/* Closing Quote Icon Background */}

@@ -15,37 +15,43 @@ export default function WhyUsAccordion() {
       id: 1,
       title: "Unlocking Land Potential",
       description:
-        "Your underperforming parcel becomes a Grade-A, income-producing industrial or logistics asset, working for you rather than sitting idle.",
+        "Convert an underperforming parcel into a Grade-A, income-producing industrial or logistics asset.",
+      // "Your underperforming parcel becomes a Grade-A, income-producing industrial or logistics asset, working for you rather than sitting idle.",
     },
     {
       id: 2,
       title: "Retain Ownership",
       description:
-        "You monetise through development, not disposal, keeping ownership while earning from the income and value uplift your land creates.",
+        // "You monetise through development, not disposal, keeping ownership while earning from the income and value uplift your land creates.",
+        "Monetise through development, not disposal — keep ownership while benefiting from income and value uplift.",
     },
     {
       id: 3,
       title: "Development Expertise",
       description:
-        "Founder-led capability across master planning, engineering, and development of large-scale industrial and warehousing infrastructure, applied directly to your land.",
+        // "Founder-led capability across master planning, engineering, and development of large-scale industrial and warehousing infrastructure, applied directly to your land.",
+        "Founder-led capability across master planning, engineering, and development management of large-scale industrial and warehousing infrastructure.",
     },
     {
       id: 4,
       title: "Risk Reduction",
       description:
-        "We manage the development for you, with proactive compliance and transparent governance, so you carry none of the risk of doing it alone.",
+        // "We manage the development for you, with proactive compliance and transparent governance, so you carry none of the risk of doing it alone.",
+        "Owner-side development management, proactive compliance, and transparent governance reduce the risk of going it alone.",
     },
     {
       id: 5,
       title: "Industrial & Logistics Focus",
       description:
-        "A dedicated single-vertical platform with real depth in the asset classes that define industrial growth, not diluted diversification.",
+        // "A dedicated single-vertical platform with real depth in the asset classes that define industrial growth, not diluted diversification.",
+        "A dedicated single-vertical platform — depth in the asset classes that define industrial growth, not diluted diversification.",
     },
     {
       id: 6,
       title: "Long-Term Value Creation",
       description:
-        "Institutional thinking applied to your land, with an asset thesis that holds and compounds across the cycle.",
+        // "Institutional thinking applied to your land, with an asset thesis that holds and compounds across the cycle.",
+        "Institutional thinking applied to your land — an asset thesis that holds and compounds across the cycle.",
     },
   ];
   const selectAccordion = (id: number) => {
@@ -72,7 +78,7 @@ export default function WhyUsAccordion() {
             <div className="flex items-center gap-3">
               <span className="w-6 h-[2px] bg-[#003B9D]"></span>
               <span className="text-xs md:text-[12px] tracking-[3.3px] text-[#003B9D] font-semibold uppercase">
-                why BUILDVALUE{" "}
+                {/* why BUILDVALUE{" "} */}Benefits · Differentiation
               </span>
             </div>
 

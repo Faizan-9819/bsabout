@@ -67,17 +67,17 @@ export const sectors: Sector[] = [
       "BuildSpace develops fulfilment infrastructure for the demands of modern e-commerce, planning each facility around throughput, automation-readiness, and the power and floor performance that high-velocity operations require. Specifications anticipate future technology integration, so the asset adapts as the occupier's fulfilment model evolves. Location strategy is built around last-mile reach and consumption proximity, while compliance and utilities are managed within the development mandate. Delivered through integrated development management under a single line of accountability, the result is a fulfilment centre that performs at peak from day one and scales with the operation's growth.",
     image: "/sector/sector6.jpg",
   },
-  // {
-  //   id: "ev-manufacturing",
-  //   title: "Manufacturing",
-  //   subtitleOne: "The future of clean mobility platforms.",
-  //   descriptionOne:
-  //     "Electric vehicle setups dictate strictly structured safety fire safety zones, specialized thermal monitoring networks, and high-capacity grid drop capabilities to accommodate heavy battery test cells and stamping equipment lines.",
-  //   subtitleTwo: "Sustainable spaces for zero-emission tooling.",
-  //   descriptionTwo:
-  //     "Integrated hazardous waste flow planning, reinforced battery storage vaults, and scalable automation pathways come pre-configured in our specialized clean-mobility frameworks.",
-  //   image: "/sector/sector7.jpg",
-  // },
+  {
+    id: "ev-manufacturing",
+    title: "EV Manufacturing",
+    subtitleOne: "A new class of industrial facility.",
+    descriptionOne:
+      "EV, battery, and component manufacturing brings infrastructure requirements that conventional industrial development is not built to meet. These facilities carry specialised fire and process-load demands, heightened safety and compliance standards, significant and stable power requirements, and clean or controlled environments for sensitive production. As a fast-emerging sector, it also operates within an evolving regulatory and incentive landscape, where zone selection and government schemes can materially shape project viability. For manufacturers entering or scaling within this space, the facility is a strategic asset that must satisfy exacting technical standards while remaining adaptable to a rapidly changing industry.",
+    subtitleTwo: "Engineered for emerging-industry demands.",
+    descriptionTwo:
+      "BuildSpace develops EV and battery manufacturing infrastructure around its specialised technical profile, engineering for elevated fire and process loads, power stability, and the safety and compliance standards the sector demands. We bring industrial intelligence to location and incentive strategy, helping manufacturers navigate zone-specific benefits and an evolving policy environment. Through integrated development management, the specialised approvals and engineering these facilities require advance in parallel under single accountability, protecting the timeline. The outcome is future-ready manufacturing infrastructure built to stringent standards and positioned to scale as one of India's fastest-growing industrial sectors matures.",
+    image: "/sector/sector9.webp",
+  },
   {
     id: "data-centers",
     title: "Data Centers",

@@ -13,38 +13,44 @@ export default function CapabilitiesSection() {
       id: "01",
       title: "Site Assessment",
       description:
-        "We evaluate the land you hold (its physical characteristics, title, and zoning) to establish a clear, confident baseline for what can be developed.",
+        // "We evaluate the land you hold (its physical characteristics, title, and zoning) to establish a clear, confident baseline for what can be developed.",
+        "Parcel due diligence, title and zoning review, and physical site evaluation to establish a clear development baseline.",
       isActive: true,
     },
     {
       id: "02",
       title: "Feasibility Analysis",
       description:
-        "We confirm what your land can sustainably support: what can be built, at what scale, and what income it can realistically return.",
+        // "We confirm what your land can sustainably support: what can be built, at what scale, and what income it can realistically return.",
+        "Technical and commercial feasibility — what can be built, at what scale, and what it can sustainably return.",
     },
     {
       id: "03",
       title: "Location Strategy",
       description:
-        "We analyse corridor, catchment, and connectivity to position your parcel within real industrial and logistics demand, not assumed demand.",
+        // "We analyse corridor, catchment, and connectivity to position your parcel within real industrial and logistics demand, not assumed demand.",
+        "Corridor, catchment, and connectivity analysis to position the parcel within real industrial and logistics demand.",
     },
     {
       id: "04",
       title: "Industrial Positioning",
       description:
-        "We define the highest-value use for your land (park, warehousing, manufacturing, ICD, or fulfilment) so it is developed toward its strongest return.",
+        // "We define the highest-value use for your land (park, warehousing, manufacturing, ICD, or fulfilment) so it is developed toward its strongest return.",
+        "Defining the highest-value asset use — park, warehousing, manufacturing, ICD, or fulfilment — for the location.",
     },
     {
       id: "05",
       title: "Development Potential",
       description:
-        "We master-plan your parcel for scale and future expansion, unlocking its full potential rather than just its immediate footprint.",
+        // "We master-plan your parcel for scale and future expansion, unlocking its full potential rather than just its immediate footprint.",
+        "Master-planning the parcel for scale, parcelisation, and future expansion, not just immediate footprint.",
     },
     {
       id: "06",
       title: "Market Alignment",
       description:
-        "We match the development thesis to occupier demand and capital appetite before you commit, so the asset is built toward income from the start.",
+        // "We match the development thesis to occupier demand and capital appetite before you commit, so the asset is built toward income from the start.",
+        "Matching the development thesis to occupier demand and capital appetite before commitment.",
     },
   ];
   return (
@@ -57,7 +63,8 @@ export default function CapabilitiesSection() {
             <div className="flex items-center gap-3">
               <span className="w-6 h-[2px] bg-[#1E40AF]"></span>
               <span className="text-xs md:text-sm tracking-[0.25em] text-[#1E40AF] font-semibold uppercase">
-                Capabilities
+                {/* Capabilities */}
+                Land Activation Strategy · The Approach
               </span>
             </div>
 
@@ -70,9 +77,12 @@ export default function CapabilitiesSection() {
           {/* Subtext description right aligned on large screens */}
           <div className="lg:col-span-5 lg:pt-12">
             <p className="text-[14px] lg:text-[18px] text-[#54514C] leading-[140%]">
-              Value is not assumed. It is identified. Activation begins with{" "}
+              {/* Value is not assumed. It is identified. Activation begins with{" "}
               <br className="hidden lg:inline-block" />
-              understanding exactly what your parcel can become.
+              understanding exactly what your parcel can become. */}
+              Value isn't assumed — it's identified. Activation begins with
+              <br className="hidden lg:inline-block" />
+              understanding exactly what a parcel can become.
             </p>
           </div>
         </div>

@@ -274,6 +274,11 @@ export default function BuildSpaceHero() {
               Development unlocks it.
             </span>
           </h1>
+          <p className="md:text-[18px] pb-6">
+            Transforming underutilised land into institutional-grade industrial
+            and logistics assets <br />— developed, positioned, and managed for
+            long-term income, while ownership stays with you.
+          </p>
 
           <button className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] cursor-pointer hover:bg-[#bd534b] text-white font-semibold text-[14px] lg:text-[16px] p-3 py-2 lg:px-6 lg:py-4 flex items-center gap-4 tracking-wide transition-colors group">
             Explore More

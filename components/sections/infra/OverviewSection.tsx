@@ -64,7 +64,7 @@ export default function OverviewSection() {
               <img className="lg:ps-4 lg:w-auto w-10" src="/over.png" alt="" />
             </div>{" "}
             {/* Quote Statement */}
-            <p className="text-[20px] md:text-[27px] py-4 lg:py-1 bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent leading-[140%]">
+            <p className="text-[20px] md:text-[27px] py-4 px-2 lg:py-1 bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent leading-[140%]">
               We act more like a client than a contractor.{" "}
             </p>
             {/* Closing Quote Icon Background */}

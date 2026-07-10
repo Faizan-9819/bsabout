@@ -21,7 +21,10 @@ export default function CTASection() {
         {/* Left Column: Heading */}
         <div className="md:col-span-5 lg:col-span-4">
           <h2 className="text-[30px] lg:text-[37.5px] font-semibold tracking-[-1.12px] leading-[109%] text-white">
-            Unlock the value <br /> held in your land.{" "}
+            {/* Unlock the value <br /> held in your land.{" "} */}
+            Your land may be worth
+            <br />
+            more than its current use.
           </h2>
         </div>
 
@@ -29,10 +32,14 @@ export default function CTASection() {
         <div className="md:col-span-4 lg:col-span-5">
           <p className="text-[13px] lg:text-start lg:text-[16.5px] font-[300] leading-[160%] ">
             Whether you hold a single strategic parcel or an <br />{" "}
-            institutional land bank, BuildVALUE charts a development <br /> path
+            {/* institutional land bank, BuildVALUE charts a development <br /> path
             that turns it into a Grade-A, income-producing asset, <br />{" "}
             aligned, developed, and stewarded for the long term, with <br />{" "}
-            ownership remaining yours throughout.
+            ownership remaining yours throughout. */}
+            institutional land bank, BuildVALUE can assess <br />
+            its potential and chart a development path <br />
+            that creates long-term value — with ownership <br /> remaining yours
+            throughout.
           </p>
         </div>
 
