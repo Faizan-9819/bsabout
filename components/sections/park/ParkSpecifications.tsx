@@ -186,20 +186,33 @@ const specsByTab: Record<Tab, { label: string; value: string }[]> = {
     { label: "Drainage", value: "Stormwater drainage across the site" },
   ],
   "Smart & Safety": [
-    { label: "Access Control", value: "RFID + CCTV controlled gates" },
     {
-      label: "Surveillance",
-      value: "24×7 CCTV monitoring, central command room",
+      label: "CCTV Surveillance",
+      value: "Hi-resolution PTZ & IR cameras at gates",
     },
     {
-      label: "Fire Detection",
-      value: "Automated fire detection & alarm systems",
+      label: "Access Control",
+      value: "Motorised sliding gate with boom barriers",
     },
-    { label: "Security", value: "Trained on-site security personnel" },
-    { label: "Perimeter", value: "Boundary wall with controlled entry points" },
     {
-      label: "Compliance",
-      value: "Fire NOC (provisional) and statutory clearances",
+      label: "Visitor Management",
+      value: "Digital visitor & gate management system",
+    },
+    {
+      label: "EV Charging",
+      value: "2 common charging points + future-ready infrastructure",
+    },
+    {
+      label: "Admin Building",
+      value: "RCC/PEB structure with facility management office",
+    },
+    {
+      label: "Gate House",
+      value: "RCC/PEB with glass paneling & access control",
+    },
+    {
+      label: "Driver Rest Area",
+      value: "RCC block with toilets & resting facilities",
     },
   ],
 };
@@ -342,7 +355,7 @@ export default function ParkSpecifications() {
                         !isLastRow ? "border-b" : ""
                       } ${i % 2 === 1 ? "bg-[#f6f6f6]" : ""}`}
                     >
-                      <p className="text-black font-medium text-[14px] sm:text-[16px]">
+                      <p className="text-black font-light text-[14px] sm:text-[16px]">
                         {row.label}
                       </p>
                     </div>

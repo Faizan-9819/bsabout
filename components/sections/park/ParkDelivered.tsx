@@ -44,7 +44,7 @@ const items = [
 export default function ParkDelivered() {
   const [hoveredCard, setHoveredCard] = useState(null);
   return (
-    <section className="bg-[#eeeeeb]">
+    <section className="bg-[url('/home/Spotlight/bgspot.webp')] bg-cover bg-center bg-no-repeat">
       <div className="fix py-[60px] lg:py-[80px]">
         <motion.div
           variants={fadeUp}
@@ -81,60 +81,18 @@ export default function ParkDelivered() {
           className="flex flex-col lg:flex-row gap-6 lg:gap-5 items-stretch"
         >
           {/* Image */}
-          <div className="rounded-2xl overflow-hidden bg-[#e4e4e4] w-full lg:w-[570px] shrink-0 h-[280px] sm:h-[380px] lg:h-[557px] relative">
+          <div className="rounded-2xl overflow-hidden w-full lg:w-[570px] shrink-0 h-[280px] sm:h-[380px] lg:h-auto lg:self-stretch relative">
             <img
-              src="/park/builtto.jpg"
+              src="/infra/lifecycle/infraCap.webp"
               alt="Sahakar Logistics Park — construction"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/30" />
+            {/* <div className="absolute inset-0 bg-black/30" /> */}
           </div>
 
           {/* Cards grid */}
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
-            {/* {items.map((item) => (
-              <div
-                key={item.num}
-                className={`flex flex-col gap-3 rounded-2xl px-6 py-5 tracking-[-0.145px] ${
-                  item.wide ? "sm:col-span-2" : ""
-                } ${
-                  item.active
-                    ? "text-white"
-                    : "border border-[#f56e6a] bg-gradient-to-r from-[rgba(191,88,79,0.05)] to-[rgba(246,115,106,0.05)] backdrop-blur-[20px]"
-                }`}
-                style={
-                  item.active
-                    ? {
-                        background:
-                          "linear-gradient(90deg, #bf584f 0%, #f6736a 100%)",
-                      }
-                    : undefined
-                }
-              >
-                <span
-                  className={`text-[20px] font-semibold ${
-                    item.active ? "text-white" : "text-[#f56e6a]"
-                  }`}
-                >
-                  {item.num}
-                </span>
-                <p
-                  className={`text-[18px] font-semibold leading-[1.3] ${
-                    item.active ? "text-white" : "text-[#222]"
-                  }`}
-                >
-                  {item.title}
-                </p>
-                <p
-                  className={`text-[14px] leading-[1.4] ${
-                    item.active ? "text-[#e0e0e0]" : "text-[#54514c]"
-                  }`}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))} */}
-            {items.map((item, index) => {
+            {/* {items.map((item, index) => {
               const isActive = hoveredCard === index;
 
               return (
@@ -142,14 +100,10 @@ export default function ParkDelivered() {
                   key={item.num}
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
-                  className={`flex flex-col justify-between gap-3 rounded-2xl px-6 py-5 tracking-[-0.145px box-border border backdrop-blur-[20px] transition-colors duration-300
-        ${item.wide ? "sm:col-span-2" : ""}
-        ${
-          isActive
-            ? "text-white border-transparent"
-            : "text-[#222] border-[#f56e6a]"
-        }
-      `}
+                  className={`flex h-full flex-col justify-between gap-3 rounded-2xl px-6 py-5 tracking-[-0.145px] box-border border backdrop-blur-[20px] transition-colors duration-300
+  ${item.wide ? "sm:col-span-2" : ""}
+  ${isActive ? "text-white border-transparent" : "text-[#222] border-[#f56e6a]"}
+`}
                   style={{
                     background: isActive
                       ? "linear-gradient(90deg, #bf584f 0%, #f6736a 100%)"
@@ -177,6 +131,64 @@ export default function ParkDelivered() {
                   <p
                     className={`text-[14px] leading-[1.4] ${
                       isActive ? "text-[#e0e0e0]" : "text-[#54514c]"
+                    }`}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
+              );
+            })} */}
+
+            {items.map((item, index) => {
+              const isActive = hoveredCard === index;
+
+              return (
+                <div
+                  key={item.num}
+                  onMouseEnter={() => setHoveredCard(index)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                  className={`flex h-full flex-col justify-between gap-3
+        rounded-2xl
+        px-6 py-5
+        tracking-[-0.145px]
+        box-border
+        border 
+        backdrop-blur-[20px]
+        transition-colors duration-300
+        ${item.wide ? "sm:col-span-2" : ""}
+        ${
+          isActive
+            ? "text-white border-transparent"
+            : "text-[#222] border-[#F59B98]/50"
+        }
+      `}
+                  style={{
+                    background: isActive
+                      ? "linear-gradient(90deg, #BF584F 0%, #F6736A 100%)"
+                      : "linear-gradient(90deg, rgba(191, 88, 79, 0.05) 0%, rgba(246, 115, 106, 0.05) 100%)",
+                  }}
+                >
+                  <div>
+                    <span
+                      className={`text-[20px] font-semibold leading-none ${
+                        isActive ? "text-white" : "text-[#F56E6A]"
+                      }`}
+                    >
+                      {item.num}
+                    </span>
+
+                    <p
+                      className={`pt-3 text-[18px] font-semibold leading-[1.3] ${
+                        isActive ? "text-white" : "text-[#222]"
+                      }`}
+                    >
+                      {item.title}
+                    </p>
+                  </div>
+
+                  <p
+                    className={`text-[14px] leading-[1.4] ${
+                      isActive ? "text-[#E0E0E0]" : "text-[#54514C]"
                     }`}
                   >
                     {item.desc}

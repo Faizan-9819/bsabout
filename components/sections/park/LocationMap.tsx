@@ -1453,7 +1453,7 @@ export default function LocationMap() {
   }, []);
 
   return (
-    <section className="relative bg-white">
+    <section className="relative bg-[linear-gradient(0deg,_#FAFAF8_0%,_#FAFAF8_100%)]">
       <div className="absolute inset-y-0 left-1/2 w-px bg-[rgba(0,59,157,0.05)] -translate-x-1/2 hidden lg:block" />
 
       <div className="fix py-[60px] lg:py-[80px]">
@@ -1493,10 +1493,10 @@ export default function LocationMap() {
                       : "bg-transparent"
                   }`}
                 >
-                  <span className="font-dm-sans text-white text-[14px] sm:text-[16px] leading-[1.4]">
+                  <span className="font-dm-sans text-white text-[14px] 2xl:text-[16px] leading-[1.4]">
                     {loc.name}
                   </span>
-                  <span className="font-dm-sans text-white font-semibold text-[18px] sm:text-[20px] leading-[1.4]">
+                  <span className="font-dm-sans text-white font-semibold text-[18px] 2xl:text-[20px] lg:text-[16px] leading-[1.4]">
                     {loc.distance}
                   </span>
                 </button>
