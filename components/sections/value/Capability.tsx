@@ -78,10 +78,8 @@ export default function CapabilitiesSection() {
           <div className="lg:col-span-5 lg:pt-12">
             <p className="text-[14px] lg:text-[18px] text-[#54514C] leading-[140%]">
               {/* Value is not assumed. It is identified. Activation begins with{" "}
-              <br className="hidden lg:inline-block" />
               understanding exactly what your parcel can become. */}
               Value isn't assumed — it's identified. Activation begins with
-              <br className="hidden lg:inline-block" />
               understanding exactly what a parcel can become.
             </p>
           </div>

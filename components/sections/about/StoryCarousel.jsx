@@ -111,7 +111,7 @@ export default function StoryCarousel() {
         <div className="fix flex flex-row items-start justify-between relative w-full px-3! -mt-20! md:mt-0 md:px-8 md:gap-4 gap-8">
           {/* Left Text Column — Preserved widths and layout flow */}
           <div className="relative w-9/12 md:w-7/12 flex flex-col justify-start text-white">
-            <div className="text-orange text-[26px] md:text-[44px]! font-extrabold leading-[1.1] font-title flex items-center gap-2 mb-4 md:mb-8">
+            <div className="text-orange text-[26px] md:text-[44px]! font-bold leading-[1.1] font-title flex items-center gap-2 mb-4 md:mb-8">
               Guided by purpose.
               <br />
               Driven by long-term thinking.
@@ -132,7 +132,7 @@ export default function StoryCarousel() {
                     {SLIDES[activeIndex].sub}
                   </div>
 
-                  <p className="font-body text-white/80 max-w-[428px] text-[20px] md:text-[26px] md:text-[40px]! mt-4 md:mt-0 leading-[1.2] md:leading-[1.1] tracking-[0%]">
+                  <p className="font-body text-white/80 max-w-[428px] text-[20px] md:text-[26px] md:text-[40px]! mt-4 md:mt-0 leading-[1.2] md:leading-[1.1] tracking-[0%] font-light">
                     {SLIDES[activeIndex].text}
                   </p>
                 </motion.div>

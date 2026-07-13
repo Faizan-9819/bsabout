@@ -116,10 +116,10 @@ export default function ProjectSpotlights() {
                     </div>
 
                     <div>
-                      <h3 className="text-[22px] font-bold leading-[1.2] text-[#003b9d] lg:text-[26px] tracking-[-0.3px]">
+                      <h3 className="text-[19px] font-bold leading-[1.2] text-[#003b9d] tracking-[-0.3px]">
                         {project.title}
                       </h3>
-                      <p className="text-[15px] lg:w-[90%] leading-[150%] mt-4 text-[#54514c] lg:text-[17px] font-normal line-clamp-3">
+                      <p className="text-[20px] lg:w-[90%] leading-[150%] mt-4 text-[#54514c] font-normal line-clamp-3">
                         {project.desc}
                       </p>
                     </div>

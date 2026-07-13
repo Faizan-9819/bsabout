@@ -314,7 +314,7 @@ function PillarCard({
         {pillar.points.map((point, idx) => (
           <li
             key={idx}
-            className="text-[#2c3a47] text-[13px] leading-[18px] font-medium marker:text-[#46566a]"
+            className="text-[#2c3a47] text-[14px] leading-[18px] font-normal marker:text-[#46566a]"
           >
             {point}
           </li>

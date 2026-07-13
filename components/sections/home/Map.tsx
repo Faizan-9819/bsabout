@@ -3963,9 +3963,9 @@ export default function PortfolioSection() {
           </div>
           <h2 className="font-bold leading-[1.15] text-[24px] md:text-[43.2px] tracking-[-0.5px]">
             <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
-              A Diverse Development Portfolio
+              A Diverse Development Portfolio{" "}
             </span>
-            <br />
+            <br className="hidden lg:flex" />
             <span className="bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent">
               Across Region
             </span>

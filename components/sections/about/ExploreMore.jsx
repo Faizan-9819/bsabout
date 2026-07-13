@@ -68,7 +68,7 @@ export default function ExploreMore() {
                 </h3>
 
                 <p
-                  className="text-body font-body text-[#54514C] leading-[var(--lh-body)] md:mb-8 mb-4 max-sm:mb-6"
+                  className="text-body font-body text-[#54514C] leading-[var(--lh-body)] md:mb-8 mb-4 max-sm:mb-6 text-[16px]! font-light"
                   dangerouslySetInnerHTML={{ __html: card.description }}
                 >
                   {/* {card.description}  */}

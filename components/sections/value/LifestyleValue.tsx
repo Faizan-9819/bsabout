@@ -240,8 +240,7 @@ export default function FullLifecycleApproach() {
               className="font-bold text-white leading-[1.1] tracking-[-1.3px]"
               style={{ fontSize: "clamp(28px, 3.8vw, 44px)" }}
             >
-              From land to long-term value{" "}
-              <br className="hidden lg:inline-block" />A continuous process.
+              From land to long-term value A continuous process.
             </h2>
           </motion.div>
 
@@ -255,13 +254,10 @@ export default function FullLifecycleApproach() {
             parcel becomes a performing asset faster, and with less risk to the
             owner.
           </p> */}
-          <p className="lg:text-[18px] text-[14px] leading-[140%]">
+          <p className="lg:text-[18px] w-[60%] text-[14px] leading-[140%]">
             Value is created in stages, each building on the last. BuildVALUE
-            <br className="hidden lg:inline-block" />
             manages the full journey — running planning, approvals, and
-            <br className="hidden lg:inline-block" />
             infrastructure in parallel rather than in sequence — so a dormant
-            <br className="hidden lg:inline-block" />
             parcel becomes a performing asset faster, and with less risk to the
             owner.
           </p>

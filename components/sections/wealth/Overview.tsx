@@ -15,7 +15,7 @@ export default function OverviewSection() {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-[30px] lg:text-[44px] xl:text-[56px] font-bold tracking-[-1.5px] bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent leading-[1.15]">
+          <h2 className="text-[30px] xl:text-[42px] 2xl:text-[56px] font-bold tracking-[-1.5px] bg-gradient-to-r from-[#BF584F] to-[#F6736A] bg-clip-text text-transparent leading-[1.15]">
             The infrastructure beneath India's industrial growth is an asset
             class in itself.
           </h2>

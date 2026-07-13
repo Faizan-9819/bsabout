@@ -19,20 +19,20 @@ export default function ProjectsSection() {
         </svg>
       </div>
 
-      <div className="relative z-10 fix flex flex-col gap-8 md:gap-14">
-        {/* Header Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 items-end">
-          <div className="lg:col-span-7 flex flex-col space-y-4">
-            {/* Subsection Subtitle Tag */}
-            <div className="flex items-center gap-3">
+      {/* <div className="relative z-10 fix flex flex-col gap-8 md:gap-14"> */}
+      {/* Header Layout */}
+      {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 items-end">
+          <div className="lg:col-span-7 flex flex-col space-y-4"> */}
+      {/* Subsection Subtitle Tag */}
+      {/* <div className="flex items-center gap-3">
               <span className="w-6 h-[2px] bg-[#1E40AF]"></span>
               <span className="text-xs md:text-sm tracking-[0.25em] text-[#1E40AF] font-bold uppercase">
                 Projects
               </span>
-            </div>
+            </div> */}
 
-            {/* Main Heading with requested Linear Gradient */}
-            <h2
+      {/* Main Heading with requested Linear Gradient */}
+      {/* <h2
               className="text-4xl sm:text-5xl md:text-[56px] font-bold tracking-tight bg-clip-text text-transparent pb-1 leading-[1.15]"
               style={{
                 backgroundImage:
@@ -41,11 +41,46 @@ export default function ProjectsSection() {
             >
               Proof in delivery.
             </h2>
+          </div> */}
+
+      {/* Right-aligned Subdescription text */}
+      {/* <div className="lg:col-span-5 lg:pb-2">
+            <p className="text-[16px] md:text-[20px] text-[#222] font-normal">
+              Selected developments — curated, not catalogued.
+            </p>
+          </div>
+        </div> */}
+
+      <div className="relative z-10 fix flex flex-col gap-[20px] lg:gap-[29px]">
+        {/* Header Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 lg:items-center">
+          {/* Left */}
+          <div className="lg:col-span-6 flex flex-col gap-4">
+            {/* Subtitle */}
+            <div className="flex items-center gap-[13px]">
+              <span className="w-7 h-px bg-[#003B9D]" />
+              <span className="text-[12px] font-semibold tracking-[3.36px] uppercase text-[#003B9D]">
+                Projects
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h2
+              className="font-bold leading-[1.1] tracking-[-1.568px]
+          text-[28px] sm:text-[40px] lg:text-[56px]
+          bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #BF584F 0%, #F6736A 100%)",
+              }}
+            >
+              Proof in delivery.
+            </h2>
           </div>
 
-          {/* Right-aligned Subdescription text */}
-          <div className="lg:col-span-5 lg:text-right lg:pb-2">
-            <p className="text-[16px] md:text-[20px] text-[#222] font-normal">
+          {/* Right */}
+          <div className="lg:col-span-6 flex lg:justify-end lg:items-start">
+            <p className="max-w-[600px] lg:mt-6 text-[#222] text-[16px] sm:text-[18px] lg:text-[20px] leading-[1.4] text-left lg:text-left">
               Selected developments — curated, not catalogued.
             </p>
           </div>

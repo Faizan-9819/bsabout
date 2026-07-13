@@ -33,7 +33,7 @@ export default function CTASection() {
 
           {/* Middle Column: Explanatory Subtext */}
           <div className="md:col-span-4 lg:col-span-5">
-            <p className="text-[13px] lg:max-w-[90%] text-start lg:text-[16.5px] lg:ps-8 font-[300] leading-[160%] text-neutral-200">
+            <p className="text-[13px] lg:max-w-[80%] text-start lg:text-[16.5px] lg:ps-8 font-[300] leading-[160%] text-neutral-200">
               Whether you're establishing a manufacturing plant, a logistics
               hub, or a fulfilment facility, BuildINFRA turns the infrastructure
               decision into an operational outcome — faster, compliant, and

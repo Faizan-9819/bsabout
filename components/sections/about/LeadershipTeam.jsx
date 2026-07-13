@@ -65,8 +65,8 @@ export default function LeadershipTeam() {
           </div>
 
           <h2 className="text-h1 bg-gradient-to-r from-[rgba(191,88,79,1)] to-[rgba(246,115,106,1)] bg-clip-text text-transparent  text-[56px] font-bold tracking-[-1.568px] leading-[1.08] md:leading-[110%] mb-5">
-            Built by people who have shaped <br /> industrial infrastructure at
-            scale.
+            Built by people who have shaped <br className="hidden lg:flex" />{" "}
+            industrial infrastructure at scale.
           </h2>
 
           <p className="text-[#000] text-[17px] font-light leading-[normal]">
