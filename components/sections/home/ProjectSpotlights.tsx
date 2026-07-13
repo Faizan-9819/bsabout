@@ -129,7 +129,29 @@ export default function ProjectSpotlights() {
                         View Case Study
                       </span>
                       <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#003b9d] text-white ">
-                        <ArrowUpRight size={17} strokeWidth={2.5} />
+                        {/* <ArrowUpRight size={17} strokeWidth={2.5} />   */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                        >
+                          <path
+                            d="M17.975 14.1602L17.975 7.86215L14.7773 11.0765L17.9275 7.90969L17.975 14.1602Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M17.975 7.86215L13.7763 7.86215L11.6769 7.86215L17.9523 7.88486L14.7773 11.0765L17.975 7.86215Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M17.975 7.86215L14.7773 11.0765L8.81031 17.0269M17.975 16.2596V14.1602L17.975 7.86215L13.7763 7.86215L11.6769 7.86215M9.57756 7.86215L11.6769 7.86215M11.6769 7.86215L17.9523 7.88486L14.7773 11.0765M17.975 14.1602L17.9275 7.90969L14.7773 11.0765"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
                       </div>
                     </div>
                   </div>
@@ -220,14 +242,58 @@ export default function ProjectSpotlights() {
               className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 bg-white text-[#003B9D] hover:bg-black hover:text-white transition-all shadow-sm"
               aria-label="Previous card"
             >
-              <ArrowLeft size={16} strokeWidth={2} />
+              {/* <ArrowLeft size={16} strokeWidth={2} /> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+              >
+                <path
+                  d="M14.25 9H3.75"
+                  stroke="#003B9D"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M8.25 14.25L3 9L8.25 3.75"
+                  stroke="#003B9D"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </button>
             <button
               onClick={handleNext}
               className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 bg-white text-[#003B9D] hover:bg-black hover:text-white transition-all shadow-sm"
               aria-label="Next card"
             >
-              <ArrowRight size={16} strokeWidth={2} />
+              {/* <ArrowRight size={16} strokeWidth={2} /> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+              >
+                <path
+                  d="M3.75 9H14.25"
+                  stroke="#003B9D"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.75 3.75L15 9L9.75 14.25"
+                  stroke="#003B9D"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </button>
           </div>
         </div>

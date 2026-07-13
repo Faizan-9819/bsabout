@@ -508,7 +508,7 @@ export default function Industries() {
               style={{ flex: "0 0 calc(49.5% - 12px)" }}
             >
               {/* Manufacturing — full width of right, ~170px */}
-              <div style={{ height: "170px" }}>
+              <div style={{ height: "200px" }}>
                 <IndustryCard
                   industry={industries[1]}
                   index={1}

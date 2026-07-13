@@ -95,10 +95,13 @@ export default function Ecosystem() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="w-full group relative rounded-xl flex-1 flex flex-col gap-3 p-[14.8px] border border-white/22 backdrop-blur-[8.8px] shadow-[0px_24px_57.6px_0px_rgba(0,10,30,0.42)] hover:border-white/40 transition-colors"
+                className="w-full group relative rounded-xl flex-1 flex flex-col gap-3 p-[14.8px] border border-white/22 backdrop-blur-[8.8px] shadow-lg hover:border-white/40 transition-colors"
                 style={{
                   background: "rgba(255,255,255,0.25)",
-                  boxShadow: "inset 0px 0.8px 0px 0px rgba(255,255,255,0.24)",
+                  // boxShadow: "inset 0px 0.8px 0px 0px rgba(255,255,255,0.24)",
+                  // boxShadow:
+                  //   "0 24px 57.6px 0 rgba(0, 5, 15, 0.9), inset 0 0.8px 0 0.8px rgba(255, 255, 255, 0.15)", // Darker shadow drop + subtle top edge highlight
+                  backdropFilter: "blur(12px)",
                 }}
               >
                 {/* Brand name */}
