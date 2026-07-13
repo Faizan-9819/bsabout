@@ -52,9 +52,11 @@ const stages = [
     num: "05",
     // title: "Tenant Alignment",
     title: "Occupier Alignment",
-    desc: "Securing credible, long-term tenants whose covenants underwrite the asset's income.",
+    // desc: "Securing credible, long-term tenants whose covenants underwrite the asset's income.",
+    desc: "Securing credible, long-term occupiers that underwrite the asset's income.",
     strategicValue:
-      "Income durability through quality tenancy, as the asset begins to perform.",
+      // "Income durability through quality tenancy, as the asset begins to perform.",
+      "Income durability through quality tenancy — the asset begins to perform.",
     image: "/wealth/weal5.webp",
   },
   {
@@ -62,15 +64,18 @@ const stages = [
     title: "Asset Stabilisation",
     desc: "Bringing the asset to stabilised, income-producing performance.",
     strategicValue:
-      "A de-risked, cash-generating asset with an established operating record.",
+      // "A de-risked, cash-generating asset with an established operating record.",
+      "A de-risked, cash-generating asset with an established track record.",
     image: "/wealth/weal6.webp",
   },
   {
     num: "07",
     title: "Long-Term Asset Management",
-    desc: "Lifecycle stewardship: optimisation, capital-cycle planning, and sustained value creation.",
+    // desc: "Lifecycle stewardship: optimisation, capital-cycle planning, and sustained value creation.",
+    desc: "Lifecycle stewardship — optimisation, capital-cycle planning, and sustained value creation.",
     strategicValue:
-      "Returns compound, with ownership and alignment held throughout the hold.",
+      // "Returns compound, with ownership and alignment held throughout the hold.",
+    "Performance compounds, with ownership and alignment held throughout",
     image: "/wealth/w1.jpg",
   },
 ];
