@@ -205,14 +205,15 @@ export default function FullLifecycleApproach() {
     >
       <div className="fix">
         {/* ── Header Block ── */}
-        <div className="flex flex-col w-full md:flex-row md:items-start justify-between mb-7 lg:mb-16">
+        <div className="flex flex-col w-full lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-7 lg:mb-16">
+          {/* Left Side: Header & Subtitle */}
           <motion.div
             variants={fadeUp}
             custom={0}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-60px" }}
-            className="max-w-[840px]"
+            className="w-full lg:max-w-[55%] xl:max-w-[60%]"
           >
             <div className="flex items-center mb-4">
               <div className="h-[2px] w-6 bg-white me-2" />
@@ -224,23 +225,19 @@ export default function FullLifecycleApproach() {
               className="font-bold text-white leading-[1.1] tracking-[-1.3px]"
               style={{ fontSize: "clamp(28px, 3.8vw, 44px)" }}
             >
-              From land to operational readiness{" "}
+              From land to operational readiness
               <br className="hidden lg:inline-block" /> One continuous
               lifecycle.
             </h2>
           </motion.div>
 
-          <p className="lg:text-[18px] pt-5 lg:pt-0 text-[14px] leading-[140%]">
-            Traditional EPC delivery runs sequentially: each stage hands off to{" "}
-            <br className="hidden 2xl:flex" />
-            the next, and risk accumulates at every handover. BuildINFRA runs{" "}
-            <br className="hidden 2xl:flex" />
-            the lifecycle as a single, parallelised mandate — approvals,{" "}
-            <br className="hidden 2xl:flex" />
-            engineering, and pre-mobilisation advancing concurrently. The{" "}
-            <br className="hidden 2xl:flex" />
-            compression isn't a shortcut; it's the removal of the dead time{" "}
-            <br className="hidden 2xl:flex" />
+          {/* Right Side: Description Paragraph */}
+          <p className="w-full xl:max-w-[35%] 2xl:max-w-[38%] text-[14px] lg:text-[18px] leading-[140%] text-white/80 pt-2 lg:pt-1">
+            Traditional EPC delivery runs sequentially: each stage hands off to
+            the next, and risk accumulates at every handover. BuildINFRA runs
+            the lifecycle as a single, parallelised mandate — approvals,
+            engineering, and pre-mobilisation advancing concurrently. The
+            compression isn't a shortcut; it's the removal of the dead time
             between disconnected vendors.
           </p>
         </div>

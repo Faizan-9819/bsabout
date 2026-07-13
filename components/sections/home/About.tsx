@@ -84,18 +84,18 @@ export default function About() {
           >
             <p className="text-[#222] text-[20px] font-normal leading-[1.4]">
               The success of industrial and logistics infrastructure is{" "}
-              <br className="hidden lg:inline-block" />
+              <br className="hidden 2xl:inline-block" />
               determined long before construction begins.
             </p>
-            <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
+            <p className="text-[#54514c] text-[16px] 2xl:text-[18px] font-normal leading-[1.4]">
               With over 50 years of combined experience, BuildSpace develops
-              <br className="hidden lg:inline-block" />
+              <br className="hidden 2xl:inline-block" />
               industrial and logistics assets through a fully integrated
               approach that
-              <br className="hidden lg:inline-block" /> brings together land
+              <br className="hidden 2xl:inline-block" /> brings together land
               strategy, master planning, engineering, approvals,
-              <br className="hidden lg:inline-block" /> compliance, development,
-              and operational readiness.
+              <br className="hidden 2xl:inline-block" /> compliance,
+              development, and operational readiness.
             </p>
             <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
               As a 100% compliant industrial & logistics infrastructure
