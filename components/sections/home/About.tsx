@@ -18,7 +18,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen  bg-white overflow-hidden flex flex-col justify-center"
+      className="relative min-h-screen xl:pt-10 min-[1439px]:pt-0! sm:pt-0 bg-white overflow-hidden flex flex-col justify-center"
     >
       {/* Background building photo — lower half */}
       <div className="absolute bottom-0 hidden lg:block left-0 right-0 h-[50%] lg:h-[80%] pointer-events-none">
@@ -82,7 +82,7 @@ export default function About() {
             viewport={{ once: true, margin: "-80px" }}
             className="flex flex-col gap-[10px] pt-2 w-full lg:w-1/2"
           >
-            <p className="text-[#222] text-[20px] font-normal leading-[1.4]">
+            <p className="text-[#222] text-[18px] font-normal leading-[1.4]">
               The success of industrial and logistics infrastructure is{" "}
               <br className="hidden 2xl:inline-block" />
               determined long before construction begins.

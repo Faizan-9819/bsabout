@@ -1249,7 +1249,7 @@ export default function Insights() {
         <div className="flex items-center justify-between mt-7">
           <a
             href="#"
-            className="flex sm:hidden justify-between w-auto flex-shrink-0 items-center gap-3 bg-[#e27244] text-white font-semibold text-[15.5px] pl-[26px] pr-4 py-[15px] hover:bg-[#c9603a] transition-colors"
+            className="flex sm:hidden justify-between w-auto flex-shrink-0 items-center gap-3 bg-gradient-to-r from-[#BF584F] to-[#F6736A]  hover:bg-[#c9603a] transition-colors text-white font-semibold text-[15.5px] pl-[26px] pr-4 py-[15px]"
           >
             View All
             <span className="w-[30px] h-[30px] bg-white/16 flex items-center justify-center flex-shrink-0">

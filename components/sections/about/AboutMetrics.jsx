@@ -541,11 +541,11 @@ export default function AboutMetrics() {
         >
           <div className="relative z-10 w-full">
             {/* Header Content Section */}
-            <div className="px-6 md:px-[120px] text-[12px] tracking-[3.36px] eyebrow text-white/80 mb-4 uppercase">
+            <div className="px-6 md:px-[70px] 2xl:px-[100px] min-[1900]:px-[300px]! text-[12px] tracking-[3.36px] eyebrow text-white/80 mb-4 uppercase">
               by the numbers
             </div>
 
-            <p className="px-6 md:px-[120px] text-[24px] md:text-[28px] text-white font-semibold leading-[1.15] tracking-[-0.56px]  mb-[64px]">
+            <p className="px-6 md:px-[70px] 2xl:px-[100px] min-[1900]:px-[300px]! text-[24px] md:text-[28px] text-white font-semibold leading-[1.15] tracking-[-0.56px]  mb-[64px]">
               Meaningful scale and expertise across the industrial & logistics
               infrastructure lifecycle.
             </p>

@@ -776,11 +776,11 @@ export default function TrustMetrics() {
         >
           <div className="relative z-10 w-full">
             {/* Header Content Section */}
-            <div className="px-6 md:px-[120px] text-[12px] tracking-[3.36px] eyebrow text-white/80 mb-4 uppercase">
+            <div className="px-6 md:px-[90px] min-[1900px]:pl-[350px]! text-[12px] tracking-[3.36px] eyebrow text-white/80 mb-4 uppercase">
               Proof & Scale
             </div>
 
-            <p className="px-6 md:pl-[120px] text-[24px] md:text-[32px] text-white font-semibold leading-[1.15] tracking-[-0.56px] mb-[64px]">
+            <p className="px-6 md:pl-[90px]  min-[1900px]:pl-[350px]! text-[24px] md:text-[28px] text-white font-semibold leading-[1.15] tracking-[-0.56px] mb-[64px]">
               Meaningful scale and expertise across the industrial & logistics
               infrastructure lifecycle.
             </p>
