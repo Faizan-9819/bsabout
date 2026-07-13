@@ -87,7 +87,7 @@ export default function About() {
               <br className="hidden 2xl:inline-block" />
               determined long before construction begins.
             </p>
-            <p className="text-[#54514c] text-[16px] 2xl:text-[18px] font-normal leading-[1.4]">
+            <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
               With over 50 years of combined experience, BuildSpace develops
               <br className="hidden 2xl:inline-block" />
               industrial and logistics assets through a fully integrated
@@ -99,13 +99,10 @@ export default function About() {
             </p>
             <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4]">
               As a 100% compliant industrial & logistics infrastructure
-              developer, we
-              <br className="hidden lg:inline-block" /> manage every stage of
-              the development lifecycle—from identifying the
-              <br className="hidden lg:inline-block" /> right opportunity and
-              securing approvals to delivering institutional-
-              <br className="hidden lg:inline-block" />
-              grade assets built for long-term performance.
+              developer, we manage every stage of the development lifecycle—from
+              identifying the right opportunity and securing approvals to
+              delivering institutional- grade assets built for long-term
+              performance.
             </p>
             <p className="text-[#54514c] text-[16px] lg:text-[18px] font-normal leading-[1.4] max-w-[554px]">
               By integrating development expertise, execution capability, and
@@ -114,7 +111,7 @@ export default function About() {
               efficiency, and enduring value creation.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-5">
+            <div className="flex flex-wrap items-center lg:pb-15 gap-4 sm:gap-6 pt-5">
               <Btn label="Learn More About Us" icon="arrow-right" />
               <Btn
                 label="Meet Our Team"

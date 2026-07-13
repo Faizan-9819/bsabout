@@ -9,7 +9,7 @@ import { useCallback, useEffect, useState } from "react";
 
 const slides = [
   {
-    bg: "/home/Spotlight/homespot1.webp",
+    bg: "/home/Spotlight/hero_bg.webp",
     eyebrow: "Value Creation Platform",
     headline: "Unlocking land value.",
     sub: "Engineering long-term returns.",

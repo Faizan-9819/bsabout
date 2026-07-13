@@ -32,16 +32,7 @@ const Second = () => {
   return (
     <>
       <section className="z-10 w-full bg-gradient-to-r from-[#BF584F] to-[#F6736A] py-8 xl:py-7">
-        <div
-          className="fix grid grid-cols-1 md:grid-cols-2 xl:flex max-w-full"
-          style={{
-            width: "100%",
-            maxWidth: "1280px",
-            minHeight: "156px",
-            justifyContent: "center",
-            alignItems: "flex-start",
-          }}
-        >
+        <div className="fix grid grid-cols-1 md:grid-cols-2 xl:flex">
           {statsData.map((box, index) => {
             const isLast = index === statsData.length - 1;
             return (
