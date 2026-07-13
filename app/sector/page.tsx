@@ -16,11 +16,7 @@ const page = () => {
       <Hero />
       <IndustryInfrastructure />
       <IndustryInfrastructureScannable />
-<<<<<<< HEAD
-      <Ctas />
-=======
       <CtaS />
->>>>>>> 698b07bedd3b85c4ed72f0c9bd0cb1989960995d
       <Footer />
     </>
   );
