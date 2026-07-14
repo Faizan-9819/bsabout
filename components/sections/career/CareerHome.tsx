@@ -25,7 +25,7 @@ const CareerHome: FC = () => {
             Build what comes next.{" "}
           </h1>
         </div>
-        <button className="bg-[#D26158] hover:bg-[#bd534b] mt-10 text-white font-normal text-[16px] lg:px-6 p-3 lg:py-4 flex items-center gap-4 tracking-wide transition-colors group">
+        <button className="bg-[#D26158] hover:bg-[#bd534b] mt-7 text-white font-normal text-[16px] lg:px-6 p-3 lg:py-4 flex items-center gap-4 tracking-wide transition-colors group">
           Explore More
           <svg
             xmlns="http://www.w3.org/2000/svg"

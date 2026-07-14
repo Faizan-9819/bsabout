@@ -186,7 +186,7 @@ const ContactFormSection: FC = () => {
               <div className="flex justify-end pt-2">
                 <button
                   type="submit"
-                  className="flex items-center gap-3 bg-[linear-gradient(90deg,#BF584F_0%,#F6736A_100%)] hover:bg-[#b84d46] text-white font-medium text-sm ps-6 pr-4 py-[15px]  shadow transition-all duration-200 group"
+                  className="flex items-center gap-3 bg-[linear-gradient(90deg,#BF584F_0%,#F6736A_100%)] hover:bg-[#b84d46] text-white font-medium text-sm ps-6 pr-4 py-[15px] shadow cursor-pointer"
                 >
                   <span>Submit</span>
                   <FiArrowRight className="text-base group-hover:translate-x-1 transition-transform" />

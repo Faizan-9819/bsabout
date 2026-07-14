@@ -3945,7 +3945,7 @@ export default function PortfolioSection() {
   const rightStates = RIGHT_STATES.filter((s) => visibleIds.includes(s.id));
 
   return (
-    <section className="bg-white py-20 lg:py-20 overflow-x-hidden">
+    <section className="bg-white py-[50px] lg:py-20 overflow-x-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
