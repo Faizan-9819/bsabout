@@ -88,8 +88,8 @@ export default function WhyUsAccordion() {
             </h2>
 
             <p className="text-[16px] lg:text-[20px] text-[#222] leading-[140%] pb-4 lg:pb-8 font-normal">
-              The difference is in retaining control while gaining a <br />{" "}
-              developer's capability, capital, and discipline.
+              The difference is in retaining control while gaining a developer's
+              capability, capital, and discipline.
             </p>
           </div>
 

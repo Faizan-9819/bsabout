@@ -3,7 +3,7 @@ import React from "react";
 export default function OverviewSection() {
   return (
     <section className="w-full bg-[#F8F9FA] text-[#2D3142] py-16 md:py-24 lg:py-32 font-sans overflow-hidden">
-      <div className="fix relative grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 xl:gap-24 justify-between w-full">
+      <div className="fix relative grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 xl:gap-24 justify-between w-full">
         {/* Left Column */}
         <div className="flex flex-col space-y-9 w-full">
           {/* Section Subtitle Tag */}
@@ -15,7 +15,7 @@ export default function OverviewSection() {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-[30px] xl:text-[42px] 2xl:text-[56px] font-bold tracking-[-1.5px] bg-gradient-to-r from-[rgba(191,88,79,1)] to-[rgba(246,115,106,1)] bg-clip-text text-transparent leading-[1.15]">
+          <h2 className="text-[30px] xl:text-[42px] 2xl:text-[56px] font-bold tracking-[-1.5px] bg-gradient-to-r from-[rgba(191,88,79,1)] to-[rgba(246,115,106,1)] bg-clip-text text-transparent mb-5.5 leading-[1.15]">
             Most land underperforms — not for lack of value, but for lack of a
             development path.
           </h2>

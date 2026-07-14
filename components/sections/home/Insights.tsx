@@ -1158,7 +1158,7 @@ export default function Insights() {
                     duration: 0.55,
                     ease: "easeOut",
                   }}
-                  className="flex-shrink-0 bg-white rounded-t-[20px] border border-[#ece8e0] flex flex-col overflow-hidden shadow-[0px_1px_3px_0px_rgba(0,20,51,0.04)]"
+                  className="flex-shrink-0 bg-white rounded-[20px] border border-[#ece8e0] flex flex-col overflow-hidden shadow-[0px_1px_3px_0px_rgba(0,20,51,0.04)]"
                   style={{
                     width: `calc((100% - ${(Math.ceil(DESKTOP_PEEK_FACTOR) - 1) * 26}px) / ${DESKTOP_PEEK_FACTOR})`,
                   }}
@@ -1209,7 +1209,7 @@ export default function Insights() {
               {articles.map((article) => (
                 <div
                   key={`mobile-${article.id}`}
-                  className="w-full min-w-full flex-shrink-0 bg-white rounded-t-[20px] border border-[#ece8e0] flex flex-col overflow-hidden shadow-[0px_1px_3px_0px_rgba(0,20,51,0.04)]"
+                  className="w-full min-w-full flex-shrink-0 bg-white rounded-[20px] border border-[#ece8e0] flex flex-col overflow-hidden shadow-[0px_1px_3px_0px_rgba(0,20,51,0.04)]"
                 >
                   <div className="relative aspect-[343/214] bg-[#06173a] overflow-hidden flex-shrink-0">
                     <img

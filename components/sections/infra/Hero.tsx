@@ -13,7 +13,7 @@ export default function BuildSpaceHero() {
   return (
     <section className="w-full min-h-screen bg-neutral-900 text-white font-sans overflow-x-hidden flex flex-col justify-between bg-cover bg-center bg-no-repeat plcont bg-[url(/infra/lifecycle/infraHome.webp)] bg-cover bg-no-repeat">
       {/* Main Content Row containing Left Hero text and Right/Bottom text */}
-      <div className="plcont pt-40 flex-grow flex flex-col md:flex-row justify-end lg:justify-between items-start md:items-center gap-8 md:gap-8">
+      <div className="lg:plcont pt-40 flex-grow flex flex-col md:flex-row justify-end lg:justify-between items-start md:items-center gap-8 md:gap-8">
         {/* Hero Content Area (Left Side) */}
         <main className="flex flex-col justify-between lg:justify-center items-start">
           <p className="text-xs md:text-[12px] tracking-[3.12px] font-semibold text-neutral-400 uppercase mb-4 lg:mb-2 flex items-center gap-2">

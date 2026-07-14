@@ -254,7 +254,7 @@ export default function FullLifecycleApproach() {
             parcel becomes a performing asset faster, and with less risk to the
             owner.
           </p> */}
-          <p className="lg:text-[18px] w-[60%] text-[14px] leading-[140%]">
+          <p className="lg:text-[18px] lg:w-[60%] text-[14px] leading-[140%]">
             Value is created in stages, each building on the last. BuildVALUE
             manages the full journey — running planning, approvals, and
             infrastructure in parallel rather than in sequence — so a dormant

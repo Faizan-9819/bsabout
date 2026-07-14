@@ -285,8 +285,11 @@ function PillarCard({
     border: "1px solid rgba(255, 255, 255, 0.25)",
   };
 
+  // const cardClassName =
+  //   "relative overflow-hidden p-5 backdrop-blur-[16px] rounded-[24px] w-full flex flex-col justify-between";
+
   const cardClassName =
-    "relative overflow-hidden p-5 backdrop-blur-[16px] rounded-[24px] w-full flex flex-col justify-between";
+    "relative overflow-hidden p-5 backdrop-blur-[16px] rounded-[24px] w-full flex flex-col justify-between min-h-[250px] lg:min-h-0";
 
   const cardContent = (
     <div>
@@ -303,12 +306,10 @@ function PillarCard({
           </span>
         </div>
       </div>
-
       {/* Card Content Titles */}
       <h3 className="text-[#003b9d] font-bold text-[20px] leading-[21px] mb-[8.8px] tracking-[-0.38px]">
         {pillar.title}
       </h3>
-
       {/* Bullet Points Rendered list */}
       <ul className="list-disc pl-4 space-y-1">
         {pillar.points.map((point, idx) => (
@@ -385,10 +386,7 @@ function MobilePillarCarousel() {
       <div className="w-full overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {pillars.map((pillar, index) => (
-            <div
-              key={pillar.num}
-              className="flex-[0_0_88%] min-w-0 px-2 first:pl-0 last:pr-0"
-            >
+            <div key={pillar.num} className="flex-[0_0_100%] min-w-0 px-3">
               <PillarCard pillar={pillar} index={index} noAnimation />
             </div>
           ))}

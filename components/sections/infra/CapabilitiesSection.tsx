@@ -52,7 +52,7 @@ export default function CapabilitiesSection() {
     <section className="relative w-full min-h-screen bg-[url('/home/Spotlight/bgspot.webp')] bg-cover bg-center bg-no-repeat text-[#2D3142] py-16 md:py-24 overflow-hidden">
       <div className="relative z-10 fix flex flex-col gap-8 lg:gap-16">
         {/* Header Section */}
-        <div className="flex justify-between  gap-6 lg:gap-12 items-center">
+        <div className="flex flex-col lg:flex-row justify-between  gap-6 lg:gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col space-y-4">
             {/* Tag Badge */}
             <div className="flex items-center gap-3">

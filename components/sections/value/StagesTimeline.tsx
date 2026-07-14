@@ -58,7 +58,7 @@ function CheckpointCircle() {
 
 function StageCardContent({ stage }: { stage: StageCard }) {
   return (
-    <div className="w-full bg-[#F8F9FA] border border-[#E9EBEF] rounded-2xl pt-10 pb-10 px-6 flex flex-col items-center text-center min-h-[250px] font-sans! transition-all duration-300">
+    <div className="w-full bg-[#F8F9FA] border border-[#E9EBEF] rounded-2xl pt-10 pb-10 lg:px-6 px-3 flex flex-col items-center text-center min-h-[250px] font-sans! transition-all duration-300">
       <h3 className="text-[20px] font-normal font-sans! tracking-tight text-[#333A42] mb-5">
         {stage.title}
       </h3>
@@ -107,9 +107,9 @@ export default function StagesTimeline() {
 
   return (
     <section className="w-full bg-white py-16 md:py-20 font-sans overflow-hidden">
-      <div className="w-full fix flex flex-col gap-12 md:gap-14">
+      <div className="w-full fix flex flex-col gap-8 md:gap-14">
         {/* Top Header Section — Flex Layout */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 ">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 lg:gap-8 ">
           <div className="flex flex-col space-y-5 lg:max-w-[48%]">
             {/* Header Accent Line Indicator */}
             <div className="flex items-center gap-3">
