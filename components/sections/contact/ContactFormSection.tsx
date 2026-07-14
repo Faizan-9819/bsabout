@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, ChangeEvent, FormEvent, FC } from "react";
 import { FiMail, FiPhone, FiMapPin, FiArrowRight } from "react-icons/fi";
+import { SlSocialLinkedin } from "react-icons/sl";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { SlSocialYoutube } from "react-icons/sl";
 import { FaXTwitter } from "react-icons/fa6";
@@ -84,7 +85,7 @@ const ContactFormSection: FC = () => {
             <h3 className="lg:text-[30px] text-[20px] leading-[130%] tracking-wide">
               Follow us on
             </h3>
-            <div className="flex items-center gap-6 gap-x-15 text-xl sm:text-2xl">
+            <div className="flex items-center gap-6 gap-x-12 text-xl sm:text-2xl">
               <a
                 href="#"
                 aria-label="Instagram"
@@ -105,6 +106,13 @@ const ContactFormSection: FC = () => {
                 className="hover:scale-110 transition-transform text-white/90 hover:text-white"
               >
                 <FaXTwitter />
+              </a>
+              <a
+                href="#"
+                aria-label="linkedin"
+                className="hover:scale-110 transition-transform text-white/90 hover:text-white"
+              >
+                <SlSocialLinkedin />
               </a>
             </div>
           </div>
